@@ -1,0 +1,6 @@
+framework module Pods_DreamCacher {
+  umbrella header "Pods-DreamCacher-umbrella.h"
+
+  export *
+  module * { export * }
+}

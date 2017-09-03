@@ -8,8 +8,17 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+protocol HomeTableViewData {
+    func displayItem(article: Article)
+}
 
+class HomeTableViewCell: UITableViewCell, HomeTableViewData {
+
+    @IBOutlet weak var featuredImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var contributorLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +30,10 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    internal func displayItem(article: Article) {
+        titleLabel.text = article.title
+        contributorLabel.text = article.writer
+        categoryLabel.text = article.category
+        featuredImage.image = UIImage(named: article.image)
+    }
 }

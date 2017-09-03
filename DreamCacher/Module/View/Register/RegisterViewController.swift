@@ -35,6 +35,10 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func registerAction(_ sender: Any) {
+        let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
+        self.navigationController?.pushViewController(interestViewController, animated: true)
+    }
 
     /*
     // MARK: - Navigation

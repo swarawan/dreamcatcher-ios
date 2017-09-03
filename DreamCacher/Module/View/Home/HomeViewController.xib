@@ -21,16 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nlt-PI-Wrd">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="8" y="0.0" width="359" height="667"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="nlt-PI-Wrd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5W2-um-rf7"/>
+                <constraint firstItem="nlt-PI-Wrd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="5W2-um-rf7"/>
                 <constraint firstItem="nlt-PI-Wrd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="84N-oy-Ssa"/>
                 <constraint firstAttribute="bottom" secondItem="nlt-PI-Wrd" secondAttribute="bottom" id="KoW-oa-3dG"/>
-                <constraint firstAttribute="trailing" secondItem="nlt-PI-Wrd" secondAttribute="trailing" id="kaS-8z-4HD"/>
+                <constraint firstAttribute="trailing" secondItem="nlt-PI-Wrd" secondAttribute="trailing" constant="8" id="kaS-8z-4HD"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

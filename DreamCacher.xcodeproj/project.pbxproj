@@ -18,6 +18,8 @@
 		2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */; };
 		269DB6701F5BD10F005B941D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DB66E1F5BD10F005B941D /* RegisterViewController.swift */; };
 		269DB6711F5BD10F005B941D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269DB66F1F5BD10F005B941D /* RegisterViewController.xib */; };
+		269DB6751F5BD826005B941D /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DB6731F5BD826005B941D /* InterestViewController.swift */; };
+		269DB6761F5BD826005B941D /* InterestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269DB6741F5BD826005B941D /* InterestViewController.xib */; };
 		26A1410C1F57A05700085762 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1410A1F57A05700085762 /* LoginViewController.swift */; };
 		26A1410D1F57A05700085762 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A1410B1F57A05700085762 /* LoginViewController.xib */; };
 		26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F3E1F55054A00944844 /* AppDelegate.swift */; };
@@ -72,6 +74,8 @@
 		2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
 		269DB66E1F5BD10F005B941D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		269DB66F1F5BD10F005B941D /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		269DB6731F5BD826005B941D /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
+		269DB6741F5BD826005B941D /* InterestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestViewController.xib; sourceTree = "<group>"; };
 		26A1410A1F57A05700085762 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26A1410B1F57A05700085762 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		26BB2F3B1F55054A00944844 /* DreamCacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamCacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +209,15 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		269DB6721F5BD818005B941D /* Interest */ = {
+			isa = PBXGroup;
+			children = (
+				269DB6731F5BD826005B941D /* InterestViewController.swift */,
+				269DB6741F5BD826005B941D /* InterestViewController.xib */,
+			);
+			path = Interest;
+			sourceTree = "<group>";
+		};
 		26BB2F321F55054A00944844 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +285,7 @@
 		26BB2F6D1F5505DC00944844 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				269DB6721F5BD818005B941D /* Interest */,
 				269DB66B1F5BD0E9005B941D /* Register */,
 				26CAA6C21F5A48E700DE4AC6 /* Home */,
 				26779EDB1F56A1EB00C32225 /* Login */,
@@ -457,6 +471,7 @@
 				26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */,
 				2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */,
 				26442B581F5BAB9800542790 /* JustAnotherHand-Regular.ttf in Resources */,
+				269DB6761F5BD826005B941D /* InterestViewController.xib in Resources */,
 				26CAA6D51F5A514800DE4AC6 /* Oswald-ExtraLight.ttf in Resources */,
 				26BB2F461F55054A00944844 /* Assets.xcassets in Resources */,
 				26CAA6D81F5A514800DE4AC6 /* Oswald-Regular.ttf in Resources */,
@@ -631,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269DB6751F5BD826005B941D /* InterestViewController.swift in Sources */,
 				26CAA6C81F5A4D3300DE4AC6 /* HomeTableViewCell.swift in Sources */,
 				26A1410C1F57A05700085762 /* LoginViewController.swift in Sources */,
 				26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */,

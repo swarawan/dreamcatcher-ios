@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var articleTable: UITableView!
     
@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
      */
 }
 
-extension MainViewController : UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -52,12 +52,12 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
-//        cell.displayCellData(article: samples[indexPath.row])
+        cell.displayItem(article: samples[indexPath.row])
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 230
     }
 }

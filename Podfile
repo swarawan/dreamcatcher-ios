@@ -13,6 +13,7 @@ target 'DreamCacher' do
   pod 'SwiftyJSON'
   pod 'ALThreeCircleSpinner'
   pod 'SCLAlertView'
+  pod 'Material'
 
   # Pods for Taps
   target 'DreamCacherTests' do

@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26779ED71F56A1CD00C32225 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26779ED21F56A1CD00C32225 /* MainViewController.swift */; };
-		26779ED81F56A1CD00C32225 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26779ED31F56A1CD00C32225 /* MainViewController.xib */; };
-		26779ED91F56A1CD00C32225 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26779ED51F56A1CD00C32225 /* ArticleTableViewCell.swift */; };
-		26779EDA1F56A1CD00C32225 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26779ED61F56A1CD00C32225 /* ArticleTableViewCell.xib */; };
-		26779EDD1F56A47400C32225 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26779EDC1F56A47400C32225 /* LoginView.xib */; };
+		26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26442B531F5BA9E000542790 /* ColorTheme.swift */; };
+		26442B581F5BAB9800542790 /* JustAnotherHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26442B561F5BAB9800542790 /* JustAnotherHand-Regular.ttf */; };
+		26442B591F5BAB9800542790 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26442B571F5BAB9800542790 /* LICENSE.txt */; };
+		26779ED71F56A1CD00C32225 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26779ED21F56A1CD00C32225 /* HomeViewController.swift */; };
+		26779ED81F56A1CD00C32225 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26779ED31F56A1CD00C32225 /* HomeViewController.xib */; };
+		2692B4C51F571BDD0044DE79 /* LobsterTwo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C11F571BDD0044DE79 /* LobsterTwo-Bold.ttf */; };
+		2692B4C61F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C21F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf */; };
+		2692B4C71F571BDD0044DE79 /* LobsterTwo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */; };
+		2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */; };
+		269DB6701F5BD10F005B941D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DB66E1F5BD10F005B941D /* RegisterViewController.swift */; };
+		269DB6711F5BD10F005B941D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269DB66F1F5BD10F005B941D /* RegisterViewController.xib */; };
+		26A1410C1F57A05700085762 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1410A1F57A05700085762 /* LoginViewController.swift */; };
+		26A1410D1F57A05700085762 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A1410B1F57A05700085762 /* LoginViewController.xib */; };
 		26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F3E1F55054A00944844 /* AppDelegate.swift */; };
 		26BB2F411F55054A00944844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F401F55054A00944844 /* ViewController.swift */; };
 		26BB2F441F55054A00944844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F421F55054A00944844 /* Main.storyboard */; };
@@ -19,6 +27,16 @@
 		26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F471F55054A00944844 /* LaunchScreen.storyboard */; };
 		26BB2F541F55054A00944844 /* DreamCacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F531F55054A00944844 /* DreamCacherTests.swift */; };
 		26BB2F5F1F55054A00944844 /* DreamCacherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */; };
+		26CAA6C81F5A4D3300DE4AC6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAA6C61F5A4D3300DE4AC6 /* HomeTableViewCell.swift */; };
+		26CAA6C91F5A4D3300DE4AC6 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6C71F5A4D3300DE4AC6 /* HomeTableViewCell.xib */; };
+		26CAA6D31F5A514800DE4AC6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CC1F5A514800DE4AC6 /* OFL.txt */; };
+		26CAA6D41F5A514800DE4AC6 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CD1F5A514800DE4AC6 /* Oswald-Bold.ttf */; };
+		26CAA6D51F5A514800DE4AC6 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CE1F5A514800DE4AC6 /* Oswald-ExtraLight.ttf */; };
+		26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CF1F5A514800DE4AC6 /* Oswald-Light.ttf */; };
+		26CAA6D71F5A514800DE4AC6 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6D01F5A514800DE4AC6 /* Oswald-Medium.ttf */; };
+		26CAA6D81F5A514800DE4AC6 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6D11F5A514800DE4AC6 /* Oswald-Regular.ttf */; };
+		26CAA6D91F5A514800DE4AC6 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6D21F5A514800DE4AC6 /* Oswald-SemiBold.ttf */; };
+		26F7E7111F575C3500102DEA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7E7101F575C3500102DEA /* Article.swift */; };
 		49873FECB31824906CEB18CB /* Pods_DreamCacherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E9905B3B44BAEA34159D6E /* Pods_DreamCacherUITests.framework */; };
 		548DA214FE15B6AE1353B4F5 /* Pods_DreamCacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C11CD1F375E5C6B811A03DE /* Pods_DreamCacher.framework */; };
 		58A6A929FF4EA33798112CFD /* Pods_DreamCacherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB715A2E8A6375A9F3F6B5F /* Pods_DreamCacherTests.framework */; };
@@ -43,11 +61,19 @@
 
 /* Begin PBXFileReference section */
 		0C11CD1F375E5C6B811A03DE /* Pods_DreamCacher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamCacher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26779ED21F56A1CD00C32225 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		26779ED31F56A1CD00C32225 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		26779ED51F56A1CD00C32225 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
-		26779ED61F56A1CD00C32225 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
-		26779EDC1F56A47400C32225 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		26442B531F5BA9E000542790 /* ColorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		26442B561F5BAB9800542790 /* JustAnotherHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JustAnotherHand-Regular.ttf"; sourceTree = "<group>"; };
+		26442B571F5BAB9800542790 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		26779ED21F56A1CD00C32225 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		26779ED31F56A1CD00C32225 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2692B4C11F571BDD0044DE79 /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
+		2692B4C21F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
+		2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
+		269DB66E1F5BD10F005B941D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		269DB66F1F5BD10F005B941D /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		26A1410A1F57A05700085762 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		26A1410B1F57A05700085762 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		26BB2F3B1F55054A00944844 /* DreamCacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamCacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F3E1F55054A00944844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26BB2F401F55054A00944844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +87,16 @@
 		26BB2F5A1F55054A00944844 /* DreamCacherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamCacherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCacherUITests.swift; sourceTree = "<group>"; };
 		26BB2F601F55054A00944844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26CAA6C61F5A4D3300DE4AC6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = TableViewCell/HomeTableViewCell.swift; sourceTree = "<group>"; };
+		26CAA6C71F5A4D3300DE4AC6 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableViewCell.xib; path = TableViewCell/HomeTableViewCell.xib; sourceTree = "<group>"; };
+		26CAA6CC1F5A514800DE4AC6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		26CAA6CD1F5A514800DE4AC6 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		26CAA6CE1F5A514800DE4AC6 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26CAA6CF1F5A514800DE4AC6 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		26CAA6D01F5A514800DE4AC6 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		26CAA6D11F5A514800DE4AC6 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		26CAA6D21F5A514800DE4AC6 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		26F7E7101F575C3500102DEA /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		3FB715A2E8A6375A9F3F6B5F /* Pods_DreamCacherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamCacherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552869B9D08D4772F647B3E0 /* Pods-DreamCacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamCacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamCacher/Pods-DreamCacher.release.xcconfig"; sourceTree = "<group>"; };
 		5625584A1FA78CC6AC6F5462 /* Pods-DreamCacherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamCacherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamCacherTests/Pods-DreamCacherTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,31 +148,61 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		26779ED11F56A1CD00C32225 /* Main */ = {
+		26442B551F5BAB9800542790 /* JustAnotherHand */ = {
 			isa = PBXGroup;
 			children = (
-				26779ED21F56A1CD00C32225 /* MainViewController.swift */,
-				26779ED31F56A1CD00C32225 /* MainViewController.xib */,
-				26779ED41F56A1CD00C32225 /* TableViewCell */,
+				26442B561F5BAB9800542790 /* JustAnotherHand-Regular.ttf */,
+				26442B571F5BAB9800542790 /* LICENSE.txt */,
 			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		26779ED41F56A1CD00C32225 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				26779ED51F56A1CD00C32225 /* ArticleTableViewCell.swift */,
-				26779ED61F56A1CD00C32225 /* ArticleTableViewCell.xib */,
-			);
-			path = TableViewCell;
+			path = JustAnotherHand;
 			sourceTree = "<group>";
 		};
 		26779EDB1F56A1EB00C32225 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				26779EDC1F56A47400C32225 /* LoginView.xib */,
+				26A1410A1F57A05700085762 /* LoginViewController.swift */,
+				26A1410B1F57A05700085762 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2692B4AE1F571B840044DE79 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2692B4AF1F571B840044DE79 /* Font */,
+				26442B531F5BA9E000542790 /* ColorTheme.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2692B4AF1F571B840044DE79 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				26442B551F5BAB9800542790 /* JustAnotherHand */,
+				26CAA6CB1F5A514800DE4AC6 /* Oswald */,
+				2692B4C01F571BDD0044DE79 /* LobsterTwo */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2692B4C01F571BDD0044DE79 /* LobsterTwo */ = {
+			isa = PBXGroup;
+			children = (
+				2692B4C11F571BDD0044DE79 /* LobsterTwo-Bold.ttf */,
+				2692B4C21F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf */,
+				2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */,
+				2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */,
+			);
+			path = LobsterTwo;
+			sourceTree = "<group>";
+		};
+		269DB66B1F5BD0E9005B941D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				269DB66E1F5BD10F005B941D /* RegisterViewController.swift */,
+				269DB66F1F5BD10F005B941D /* RegisterViewController.xib */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		26BB2F321F55054A00944844 = {
@@ -165,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				26BB2F6C1F5505DC00944844 /* Module */,
+				2692B4AE1F571B840044DE79 /* Resource */,
 				26BB2F3E1F55054A00944844 /* AppDelegate.swift */,
 				26BB2F401F55054A00944844 /* ViewController.swift */,
 				26BB2F421F55054A00944844 /* Main.storyboard */,
@@ -196,6 +263,7 @@
 		26BB2F6C1F5505DC00944844 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				26F7E70F1F575C2600102DEA /* Model */,
 				26BB2F6D1F5505DC00944844 /* View */,
 			);
 			path = Module;
@@ -204,10 +272,52 @@
 		26BB2F6D1F5505DC00944844 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				269DB66B1F5BD0E9005B941D /* Register */,
+				26CAA6C21F5A48E700DE4AC6 /* Home */,
 				26779EDB1F56A1EB00C32225 /* Login */,
-				26779ED11F56A1CD00C32225 /* Main */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		26CAA6C21F5A48E700DE4AC6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				26CAA6C31F5A4CE100DE4AC6 /* TableViewCell */,
+				26779ED21F56A1CD00C32225 /* HomeViewController.swift */,
+				26779ED31F56A1CD00C32225 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		26CAA6C31F5A4CE100DE4AC6 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				26CAA6C61F5A4D3300DE4AC6 /* HomeTableViewCell.swift */,
+				26CAA6C71F5A4D3300DE4AC6 /* HomeTableViewCell.xib */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		26CAA6CB1F5A514800DE4AC6 /* Oswald */ = {
+			isa = PBXGroup;
+			children = (
+				26CAA6CC1F5A514800DE4AC6 /* OFL.txt */,
+				26CAA6CD1F5A514800DE4AC6 /* Oswald-Bold.ttf */,
+				26CAA6CE1F5A514800DE4AC6 /* Oswald-ExtraLight.ttf */,
+				26CAA6CF1F5A514800DE4AC6 /* Oswald-Light.ttf */,
+				26CAA6D01F5A514800DE4AC6 /* Oswald-Medium.ttf */,
+				26CAA6D11F5A514800DE4AC6 /* Oswald-Regular.ttf */,
+				26CAA6D21F5A514800DE4AC6 /* Oswald-SemiBold.ttf */,
+			);
+			path = Oswald;
+			sourceTree = "<group>";
+		};
+		26F7E70F1F575C2600102DEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26F7E7101F575C3500102DEA /* Article.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D18B74FC5E0A01BA71F50CB8 /* Frameworks */ = {
@@ -339,12 +449,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26779ED81F56A1CD00C32225 /* MainViewController.xib in Resources */,
+				26CAA6D91F5A514800DE4AC6 /* Oswald-SemiBold.ttf in Resources */,
+				26779ED81F56A1CD00C32225 /* HomeViewController.xib in Resources */,
+				26CAA6D31F5A514800DE4AC6 /* OFL.txt in Resources */,
 				26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */,
+				26442B591F5BAB9800542790 /* LICENSE.txt in Resources */,
+				26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */,
+				2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */,
+				26442B581F5BAB9800542790 /* JustAnotherHand-Regular.ttf in Resources */,
+				26CAA6D51F5A514800DE4AC6 /* Oswald-ExtraLight.ttf in Resources */,
 				26BB2F461F55054A00944844 /* Assets.xcassets in Resources */,
-				26779EDA1F56A1CD00C32225 /* ArticleTableViewCell.xib in Resources */,
-				26779EDD1F56A47400C32225 /* LoginView.xib in Resources */,
+				26CAA6D81F5A514800DE4AC6 /* Oswald-Regular.ttf in Resources */,
+				269DB6711F5BD10F005B941D /* RegisterViewController.xib in Resources */,
+				2692B4C51F571BDD0044DE79 /* LobsterTwo-Bold.ttf in Resources */,
+				26CAA6C91F5A4D3300DE4AC6 /* HomeTableViewCell.xib in Resources */,
+				26A1410D1F57A05700085762 /* LoginViewController.xib in Resources */,
+				2692B4C71F571BDD0044DE79 /* LobsterTwo-Italic.ttf in Resources */,
 				26BB2F441F55054A00944844 /* Main.storyboard in Resources */,
+				26CAA6D71F5A514800DE4AC6 /* Oswald-Medium.ttf in Resources */,
+				2692B4C61F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf in Resources */,
+				26CAA6D41F5A514800DE4AC6 /* Oswald-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,10 +631,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CAA6C81F5A4D3300DE4AC6 /* HomeTableViewCell.swift in Sources */,
+				26A1410C1F57A05700085762 /* LoginViewController.swift in Sources */,
+				26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */,
+				269DB6701F5BD10F005B941D /* RegisterViewController.swift in Sources */,
 				26BB2F411F55054A00944844 /* ViewController.swift in Sources */,
 				26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */,
-				26779ED91F56A1CD00C32225 /* ArticleTableViewCell.swift in Sources */,
-				26779ED71F56A1CD00C32225 /* MainViewController.swift in Sources */,
+				26779ED71F56A1CD00C32225 /* HomeViewController.swift in Sources */,
+				26F7E7111F575C3500102DEA /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import UIKit
 import Material
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, RegisterDelegateView {
 
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
@@ -36,8 +36,12 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: Any) {
-        let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
-        self.navigationController?.pushViewController(interestViewController, animated: true)
+        nextButton()
+    }
+    
+    func nextButton() {
+        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        self.navigationController?.pushViewController(homeViewController, animated: true)
     }
 
     /*

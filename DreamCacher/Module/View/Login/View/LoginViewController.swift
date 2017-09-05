@@ -17,12 +17,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var credentialContainerView: UIView!
     @IBOutlet weak var loginButton: UIButton!
     
+    fileprivate let presenter = LoginPresenter(service: LoginService())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.isNavigationBarHidden = true
         
         setupView()
+        
+        presenter.attachView(delegate: self)
 
         // Do any additional setup after loading the view.
     }
@@ -43,6 +46,11 @@ class LoginViewController: UIViewController {
     */
 
     @IBAction func loginAction(_ sender: Any) {
+        let email: String = emailTextField.text!
+        let password: String = passwordTextField.text!
+        let param = LoginParam(email: email, password: password)
+        
+        presenter.login(param: param)
     }
     
     @IBAction func joinNowAction(_ sender: Any) {

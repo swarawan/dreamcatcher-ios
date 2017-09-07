@@ -6,15 +6,17 @@ target 'DreamCacher' do
   use_frameworks!
 
   # Pods for DreamCacher
+  pod 'Moya'
   pod 'Alamofire'
   pod 'ObjectMapper', '~> 2.2'
   pod 'Kingfisher'
   pod 'Hue'
   pod 'SwiftyJSON'
-  pod 'ALThreeCircleSpinner'
   pod 'SCLAlertView'
   pod 'Material'
-
+  pod 'Toast-Swift', '~> 2.0.0'
+  pod 'WRUserSettings', :git => 'https://github.com/azanium/WRUserSettings.git', :branch => 'master'
+  
   # Pods for Taps
   target 'DreamCacherTests' do
     inherit! :search_paths

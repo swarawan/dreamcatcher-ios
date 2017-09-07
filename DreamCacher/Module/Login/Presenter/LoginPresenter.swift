@@ -11,6 +11,8 @@ import UIKit
 protocol LoginDelegate : NSObjectProtocol {
     func nextView()
     func onError(message: String)
+    func startLoading()
+    func stopLoading()
 }
 
 class LoginPresenter {
@@ -29,12 +31,23 @@ class LoginPresenter {
         self.delegate = nil
     }
     
+    func checkLoggedUser() {
+        if !(CacheManager.shared.accessToken.isEmpty) {
+            delegate?.nextView()
+        }
+    }
+    
     func login(param: LoginParam) {
-        service.login(param: param, callback: { model in
-            if model.success {
+        
+        self.delegate?.startLoading()
+        service.login(param: param, completionHandler: { success, login in
+            
+            self.delegate?.stopLoading()
+            if login.success! {
+                CacheManager.shared.accessToken = login.token!
                 self.delegate?.nextView()
             } else {
-                self.delegate?.onError(message: model.message)
+                self.delegate?.onError(message: login.message!)
             }
         })
     }

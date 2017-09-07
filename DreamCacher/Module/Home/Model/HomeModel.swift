@@ -7,16 +7,26 @@
 //
 
 import UIKit
+import ObjectMapper
 
-struct HomeModel {
-    var articles: [Article]
-}
-
-struct Article {
-    var id: Int
-    var post_title: String
-    var id_background: Int
-    var categories: String
-    var content: String
-    var published_at : String
+struct HomeModel : Mappable {
+    var id: Int?
+    var postTitle: String?
+    var idBackground: Int?
+    var categories: String?
+    var content: String?
+    var publishedAt : String?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        id <- map["id"]
+        postTitle <- map["post_title"]
+        idBackground <- map["id_background"]
+        categories <- map["categories"]
+        content <- map["content"]
+        publishedAt <- map["published_at"]
+    }
 }

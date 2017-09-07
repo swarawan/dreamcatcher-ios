@@ -19,15 +19,27 @@ class LoginViewController: UIViewController {
     
     fileprivate let presenter = LoginPresenter(service: LoginService())
     
+    let loading: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
         
-        setupView()
         
         presenter.attachView(delegate: self)
+        presenter.checkLoggedUser()
+        
+        setupView()
+        setupLoadingView()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +61,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func laterAction(_ sender: Any) {
+        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        self.navigationController?.pushViewController(homeViewController, animated: true)
     }
 }
 
@@ -70,5 +84,14 @@ extension LoginViewController {
         self.passwordTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.passwordTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.passwordTextField.clearButtonMode = .whileEditing
+    }
+    
+    func setupLoadingView() {
+        self.loading.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        self.loading.center = self.view.center
+        self.loading.hidesWhenStopped = true
+        self.loading.activityIndicatorViewStyle = .whiteLarge
+        
+        self.view.addSubview(self.loading)
     }
 }

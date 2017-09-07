@@ -21,6 +21,7 @@
             <connections>
                 <outlet property="credentialContainerView" destination="ONA-BY-3dz" id="zYv-6b-pK0"/>
                 <outlet property="emailTextField" destination="xyc-Hg-BW1" id="JaS-Rh-2Ix"/>
+                <outlet property="fullnameTextField" destination="Lqw-7w-ijU" id="TMH-47-nts"/>
                 <outlet property="passwordTextField" destination="x0f-yR-WoX" id="iMi-Me-xWu"/>
                 <outlet property="retypePasswordTextField" destination="AJf-El-K8L" id="y39-aR-MiJ"/>
                 <outlet property="submitButton" destination="CRH-ag-Tz9" id="yah-CN-dUs"/>
@@ -98,25 +99,31 @@
                     <color key="backgroundColor" red="0.98823529409999999" green="0.38431372549999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-BY-3dz">
-                    <rect key="frame" x="42" y="295" width="291" height="211"/>
+                    <rect key="frame" x="42" y="295" width="291" height="266"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-Hg-BW1" customClass="TextField" customModule="Material">
-                            <rect key="frame" x="32" y="30" width="226" height="30"/>
+                            <rect key="frame" x="32" y="85" width="226" height="30"/>
                             <color key="textColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="10"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x0f-yR-WoX" customClass="TextField" customModule="Material">
-                            <rect key="frame" x="32" y="80" width="226" height="30"/>
+                            <rect key="frame" x="32" y="135" width="226" height="30"/>
                             <color key="textColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="10"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJf-El-K8L" customClass="TextField" customModule="Material">
-                            <rect key="frame" x="32" y="130" width="226" height="30"/>
+                            <rect key="frame" x="32" y="185" width="226" height="30"/>
                             <color key="textColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="10"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-7w-ijU" customClass="TextField" customModule="Material">
+                            <rect key="frame" x="32" y="35" width="226" height="30"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="10"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,15 +133,18 @@
                         <constraint firstAttribute="bottom" secondItem="AJf-El-K8L" secondAttribute="bottom" constant="51" id="NKl-Ya-cms"/>
                         <constraint firstItem="AJf-El-K8L" firstAttribute="leading" secondItem="ONA-BY-3dz" secondAttribute="leading" constant="32" id="NSb-OL-H8x"/>
                         <constraint firstItem="x0f-yR-WoX" firstAttribute="top" secondItem="xyc-Hg-BW1" secondAttribute="bottom" constant="20" id="O7U-TN-Umo"/>
-                        <constraint firstItem="xyc-Hg-BW1" firstAttribute="top" secondItem="ONA-BY-3dz" secondAttribute="top" constant="30" id="OXp-bg-vih"/>
                         <constraint firstItem="xyc-Hg-BW1" firstAttribute="leading" secondItem="ONA-BY-3dz" secondAttribute="leading" constant="32" id="YSR-Un-gXK"/>
+                        <constraint firstAttribute="trailing" secondItem="Lqw-7w-ijU" secondAttribute="trailing" constant="33" id="f1H-Th-tck"/>
+                        <constraint firstItem="xyc-Hg-BW1" firstAttribute="top" secondItem="Lqw-7w-ijU" secondAttribute="bottom" constant="20" id="hyC-ER-NdU"/>
                         <constraint firstAttribute="trailing" secondItem="AJf-El-K8L" secondAttribute="trailing" constant="33" id="j4j-2b-Lhg"/>
                         <constraint firstItem="x0f-yR-WoX" firstAttribute="leading" secondItem="ONA-BY-3dz" secondAttribute="leading" constant="32" id="l6q-FQ-xVm"/>
+                        <constraint firstItem="Lqw-7w-ijU" firstAttribute="top" secondItem="ONA-BY-3dz" secondAttribute="top" constant="35" id="l84-7W-JAe"/>
+                        <constraint firstItem="Lqw-7w-ijU" firstAttribute="leading" secondItem="ONA-BY-3dz" secondAttribute="leading" constant="32" id="sGj-xW-dZl"/>
                         <constraint firstAttribute="trailing" secondItem="x0f-yR-WoX" secondAttribute="trailing" constant="33" id="xDe-oh-fFB"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-ag-Tz9">
-                    <rect key="frame" x="112" y="486" width="150" height="40"/>
+                    <rect key="frame" x="112" y="541" width="150" height="40"/>
                     <color key="backgroundColor" red="0.98823529409999999" green="0.38431372549999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="fhY-w7-wcL"/>

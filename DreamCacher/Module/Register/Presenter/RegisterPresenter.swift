@@ -8,17 +8,40 @@
 
 import UIKit
 
-protocol RegisterDelegateView {
-    func nextButton()
+protocol RegisterDelegate {
+    func nextView()
+    func onError(message: String)
+    func startLoading()
+    func stopLoading()
 }
 
 class RegisterPresenter {
-    private var registerDelegateView: RegisterDelegateView?
-    private var registerModel: RegisterModel
+    private var delegate: RegisterDelegate?
+    private let service: RegisterService
     
-    init(registerModel: RegisterModel) {
-        self.registerModel = registerModel
+    init(service: RegisterService) {
+        self.service = service
     }
     
+    func attachView(delegate: RegisterDelegate) {
+        self.delegate = delegate
+    }
     
+    func detachView() {
+        self.delegate = nil
+    }
+    
+    func register(param: RegisterParam) {
+        
+        self.delegate?.startLoading()
+        service.register(param: param, completionHandler: { success, register in
+            
+            self.delegate?.stopLoading()
+            if register.success! {
+                self.delegate?.nextView()
+            } else {
+                self.delegate?.onError(message: register.message!)
+            }
+        })
+    }
 }

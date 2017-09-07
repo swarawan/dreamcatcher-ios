@@ -7,6 +7,7 @@
 //
 
 extension LoginViewController : LoginDelegate {
+    
     func nextView() {
         let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         self.navigationController?.pushViewController(homeViewController, animated: true)
@@ -14,5 +15,13 @@ extension LoginViewController : LoginDelegate {
     
     func onError(message: String) {
         print(message)
+    }
+    
+    func startLoading() {
+        loading.startAnimating()
+    }
+    
+    func stopLoading() {
+        loading.stopAnimating()
     }
 }

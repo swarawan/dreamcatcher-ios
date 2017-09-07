@@ -12,8 +12,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var articleTable: UITableView!
     
-    fileprivate var samples = ArticleSample.generateSample
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,16 +26,6 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
@@ -47,12 +35,12 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return samples.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
-        cell.displayItem(article: samples[indexPath.row])
+//        cell.displayItem(article: samples[indexPath.row])
         
         return cell
     }

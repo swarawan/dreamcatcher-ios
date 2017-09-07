@@ -7,29 +7,33 @@
 //
 
 import UIKit
-import Alamofire
+import Moya
+import SwiftyJSON
+import ObjectMapper
 
 class LoginService {
     
     // mocked login logic
-    func login(param: LoginParam, callback: (LoginModel) -> Void) {
+    func login(param: LoginParam, completionHandler: @escaping (Bool, Login) -> Void) {
         
-        Alamofire.request("http://private-2bc143-morpheus3.apiary-mock.com/v1/login").responseJSON(completionHandler: { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
-        })
-        
-        
-//        var response: LoginModel
-//        
-//        if(param.email != "swarawan.rio@gmail.com") {
-//            response = LoginModel(success: false, message: "Email not found!")
-//        } else if(param.password != "123456") {
-//            response = LoginModel(success: false, message: "Password didn't match!")
-//        } else {
-//            response = LoginModel(success: true, message: "Welcome Rio~")
-//        }
-//        callback(response)
+        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        provider.request(.login(request: param)) { (result) -> Void in
+            
+            switch result {
+            case let .success(response):
+                
+                let json: String = JSON(response.data).rawString()!
+                let login = Mapper<Login>().map(JSONString: json)
+                
+                completionHandler(true, login!)
+                
+            case let .failure(error):
+                
+                var login = Login()
+                login.message = error.errorDescription
+                
+                completionHandler(false, login)
+            }
+        }
     }
 }

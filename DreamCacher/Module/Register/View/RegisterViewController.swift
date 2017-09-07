@@ -9,21 +9,30 @@
 import UIKit
 import Material
 
-class RegisterViewController: UIViewController, RegisterDelegateView {
+class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var fullnameTextField: TextField!
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
     @IBOutlet weak var retypePasswordTextField: TextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var credentialContainerView: UIView!
     
+    fileprivate let presenter = RegisterPresenter(service: RegisterService())
+    
+    let loading: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: ColorTheme.lightNavy)
+        self.navigationController?.navigationBar.tintColor = UIColor(hex: ColorTheme.duckEggBlue)
+        
+        self.presenter.attachView(delegate: self)
         
         setupView()
-        // Do any additional setup after loading the view.
+        setupLoadingView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -36,24 +45,15 @@ class RegisterViewController: UIViewController, RegisterDelegateView {
     }
     
     @IBAction func registerAction(_ sender: Any) {
-        nextButton()
+        if passwordTextField.text!.validatePassword(confirmationPassword: retypePasswordTextField.text!) {
+            let fullname: String = fullnameTextField.text!
+            let email: String = emailTextField.text!
+            let password: String = passwordTextField.text!
+            let param = RegisterParam(name: fullname, email: email, password: password)
+            
+            presenter.register(param: param)
+        }
     }
-    
-    func nextButton() {
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        self.navigationController?.pushViewController(homeViewController, animated: true)
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension RegisterViewController {
@@ -65,20 +65,33 @@ extension RegisterViewController {
         self.submitButton.layer.borderWidth = 1.0
         self.submitButton.layer.borderColor = UIColor(hex: ColorTheme.white).cgColor
         
-        self.emailTextField.placeholder = NSLocalizedString("Email", comment: "")
+        self.fullnameTextField.placeholder = "Full Name"
+        self.fullnameTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
+        self.fullnameTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
+        self.fullnameTextField.clearButtonMode = .whileEditing
+        
+        self.emailTextField.placeholder = "Email"
         self.emailTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.emailTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.emailTextField.clearButtonMode = .whileEditing
         
-        self.passwordTextField.placeholder = NSLocalizedString("Password", comment: "")
+        self.passwordTextField.placeholder = "Password"
         self.passwordTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.passwordTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.passwordTextField.clearButtonMode = .whileEditing
         
-        self.retypePasswordTextField.placeholder = NSLocalizedString("Re-Type Password", comment: "")
+        self.retypePasswordTextField.placeholder = "Password Confirmation"
         self.retypePasswordTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.retypePasswordTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.retypePasswordTextField.clearButtonMode = .whileEditing
     }
 
+    func setupLoadingView() {
+        self.loading.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        self.loading.center = self.view.center
+        self.loading.hidesWhenStopped = true
+        self.loading.activityIndicatorViewStyle = .whiteLarge
+        
+        self.view.addSubview(self.loading)
+    }
 }

@@ -11,7 +11,7 @@ import Toast_Swift
 
 extension InterestViewController : InterestDelegate {
     
-    func displayNextPage() {
+    func displayMainPage() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let rootViewController = MainViewController()
         

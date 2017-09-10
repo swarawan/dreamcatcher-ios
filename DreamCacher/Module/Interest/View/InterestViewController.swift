@@ -51,6 +51,7 @@ class InterestViewController: UIViewController {
     }
     
     func doneAction() {
+        presenter.storeInterest(interests: selectedInterest)
         presenter.displayNextPage()
     }
     

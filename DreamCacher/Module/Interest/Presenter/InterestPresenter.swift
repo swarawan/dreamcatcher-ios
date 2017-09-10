@@ -9,7 +9,7 @@
 import Foundation
 
 protocol InterestDelegate : NSObjectProtocol {
-    func displayNextPage()
+    func displayMainPage()
     func displayInterest(interest: [InterestItemModel])
     func onError(message: String)
     func startLoading()
@@ -33,7 +33,16 @@ class InterestPresenter {
     }
     
     func displayNextPage() {
-        self.delegate?.displayNextPage()
+        self.delegate?.displayMainPage()
+    }
+    
+    func storeInterest(interests: [InterestItemModel]) {
+        var interestBuilder: String = ""
+        for value in interests {
+            interestBuilder.append(value.category!)
+            interestBuilder.append(",")
+        }
+        Interest.saveInterests(interests: interestBuilder)
     }
     
     func loadInterest() {

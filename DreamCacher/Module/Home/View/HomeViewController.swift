@@ -20,10 +20,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Dreamcatcher"
-        self.navigationController?.navigationBar.barTintColor = UIColor(hex: ColorTheme.lightNavy)
-        self.navigationController?.navigationBar.tintColor = UIColor(hex: ColorTheme.duckEggBlue)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
-                                                                         NSForegroundColorAttributeName: UIColor.white ]
+                                                                         NSForegroundColorAttributeName: UIColor.black ]
         
         self.articleTable.delegate = self
         self.articleTable.dataSource = self
@@ -73,6 +71,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 230
+        return 160
     }
 }

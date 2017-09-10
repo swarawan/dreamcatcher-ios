@@ -15,6 +15,19 @@ extension HomeViewController : HomeDelegate {
         
     }
     
+    func displayInterest() {
+//        let selectedInterest = Interest.getInterests()
+//        let interests = selectedInterest.components(separatedBy: ",")
+//        
+//        for interest in interests {
+//            var label = UILabel()
+//            label.text = interest
+//            label.backgroundColor = UIColor.gray
+//            
+//            self.scroll
+//        }
+    }
+    
     func displayArticles(articles: [ArticleModel]) {
         self.articles = articles
         self.articleTable.reloadData()

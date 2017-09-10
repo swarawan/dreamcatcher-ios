@@ -12,4 +12,17 @@ extension String {
     func validatePassword(confirmationPassword password: String) -> Bool{
         return self == password
     }
+    
+    func asDate(format: String) -> Date {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = format
+        
+        return dateFormat.date(from: self)!
+    }
+    
+    func convertDateSystem() -> String {
+        let date: Date? = self.asDate(format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+        
+        return date!.asString(format: "dd MMMM yyyy")
+    }
 }

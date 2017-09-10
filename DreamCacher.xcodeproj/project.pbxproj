@@ -53,6 +53,9 @@
 		26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F471F55054A00944844 /* LaunchScreen.storyboard */; };
 		26BB2F541F55054A00944844 /* DreamCacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F531F55054A00944844 /* DreamCacherTests.swift */; };
 		26BB2F5F1F55054A00944844 /* DreamCacherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */; };
+		26C802481F658D67003FBBBA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C802471F658D67003FBBBA /* Date.swift */; };
+		26C8024A1F65A5B0003FBBBA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C802491F65A5B0003FBBBA /* UIImage.swift */; };
+		26C8024C1F65A94B003FBBBA /* InterestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8024B1F65A94B003FBBBA /* InterestCache.swift */; };
 		26CAA6D31F5A514800DE4AC6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CC1F5A514800DE4AC6 /* OFL.txt */; };
 		26CAA6D41F5A514800DE4AC6 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CD1F5A514800DE4AC6 /* Oswald-Bold.ttf */; };
 		26CAA6D51F5A514800DE4AC6 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26CAA6CE1F5A514800DE4AC6 /* Oswald-ExtraLight.ttf */; };
@@ -146,6 +149,9 @@
 		26BB2F5A1F55054A00944844 /* DreamCacherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamCacherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCacherUITests.swift; sourceTree = "<group>"; };
 		26BB2F601F55054A00944844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C802471F658D67003FBBBA /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		26C802491F65A5B0003FBBBA /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		26C8024B1F65A94B003FBBBA /* InterestCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCache.swift; sourceTree = "<group>"; };
 		26CAA6CC1F5A514800DE4AC6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		26CAA6CD1F5A514800DE4AC6 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		26CAA6CE1F5A514800DE4AC6 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				2631E1721F5E85C100D3AA72 /* String.swift */,
+				26C802471F658D67003FBBBA /* Date.swift */,
+				26C802491F65A5B0003FBBBA /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				26ADD94B1F62300400F67CDF /* TokenAuth.swift */,
+				26C8024B1F65A94B003FBBBA /* InterestCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -990,9 +999,12 @@
 				26B47CC21F5E395A00CACAD1 /* Login.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
 				26BB2F411F55054A00944844 /* ViewController.swift in Sources */,
+				26C8024C1F65A94B003FBBBA /* InterestCache.swift in Sources */,
+				26C802481F658D67003FBBBA /* Date.swift in Sources */,
 				26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */,
 				26A1D3CD1F60F04B00E8670F /* ProfileViewController.swift in Sources */,
 				26B47CC51F5E395A00CACAD1 /* LoginViewController.swift in Sources */,
+				26C8024A1F65A5B0003FBBBA /* UIImage.swift in Sources */,
 				26EDE6C11F63E69800F6026F /* InterestPresenter.swift in Sources */,
 				2689ABE01F5E56B0008B0658 /* LoginParam.swift in Sources */,
 			);

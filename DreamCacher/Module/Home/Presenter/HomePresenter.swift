@@ -11,6 +11,7 @@ import Foundation
 protocol HomeDelegate : NSObjectProtocol {
     func nextSingleArticle()
     func displayArticles(articles: [ArticleModel])
+    func displayInterest()
     func onError(message: String)
     func startLoading()
     func stopLoading()
@@ -32,8 +33,11 @@ class HomePresenter {
         self.delegate = nil
     }
     
+    func loadInterest() {
+        self.delegate?.displayInterest()
+    }
+    
     func loadArticles() {
-        
         self.delegate?.startLoading()
         service.getAllArticle(completionHandler: { homeModel in
             if homeModel.success! {

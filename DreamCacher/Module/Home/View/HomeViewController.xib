@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="DreamCacher" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DreamCacher" customModuleProvider="target">
             <connections>
                 <outlet property="articleTable" destination="nlt-PI-Wrd" id="Nn2-GL-aXM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,15 +22,15 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nlt-PI-Wrd">
                     <rect key="frame" x="8" y="0.0" width="359" height="667"/>
-                    <color key="backgroundColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="nlt-PI-Wrd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="5W2-um-rf7"/>
-                <constraint firstItem="nlt-PI-Wrd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="84N-oy-Ssa"/>
                 <constraint firstAttribute="bottom" secondItem="nlt-PI-Wrd" secondAttribute="bottom" id="KoW-oa-3dG"/>
                 <constraint firstAttribute="trailing" secondItem="nlt-PI-Wrd" secondAttribute="trailing" constant="8" id="kaS-8z-4HD"/>
+                <constraint firstItem="nlt-PI-Wrd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lIe-G3-3wY"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

@@ -14,7 +14,7 @@ import ObjectMapper
 class LoginService {
     
     // mocked login logic
-    func login(param: LoginParam, completionHandler: @escaping (Bool, Login) -> Void) {
+    func login(param: LoginParam, completionHandler: @escaping (Login) -> Void) {
         
         let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
         provider.request(.login(request: param)) { (result) -> Void in
@@ -25,14 +25,14 @@ class LoginService {
                 let json: String = JSON(response.data).rawString()!
                 let login = Mapper<Login>().map(JSONString: json)
                 
-                completionHandler(true, login!)
+                completionHandler(login!)
                 
             case let .failure(error):
                 
                 var login = Login()
                 login.message = error.errorDescription
                 
-                completionHandler(false, login)
+                completionHandler(login)
             }
         }
     }

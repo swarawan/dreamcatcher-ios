@@ -15,7 +15,6 @@ PODS:
   - SCLAlertView (0.7.0)
   - SwiftyJSON (3.1.4)
   - Toast-Swift (2.0.0)
-  - WRUserSettings (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -27,17 +26,6 @@ DEPENDENCIES:
   - SCLAlertView
   - SwiftyJSON
   - Toast-Swift (~> 2.0.0)
-  - WRUserSettings (from `https://github.com/azanium/WRUserSettings.git`, branch `master`)
-
-EXTERNAL SOURCES:
-  WRUserSettings:
-    :branch: master
-    :git: https://github.com/azanium/WRUserSettings.git
-
-CHECKOUT OPTIONS:
-  WRUserSettings:
-    :commit: 45f591f96f6067c583de831766c62e206297aed2
-    :git: https://github.com/azanium/WRUserSettings.git
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -50,8 +38,7 @@ SPEC CHECKSUMS:
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
-  WRUserSettings: 23e431841d6b97f8f50e1cbe33c17d61ee45b54d
 
-PODFILE CHECKSUM: 0e023c7793010045da95147bb5386a226d48a19c
+PODFILE CHECKSUM: fcda595bd34274255f98c343f7d4e2ab2c2b5cec
 
 COCOAPODS: 1.1.0.rc.2

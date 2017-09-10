@@ -24,10 +24,13 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.isNavigationBarHidden = false
+
+        self.title = "Dreamcatcher"
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: ColorTheme.lightNavy)
         self.navigationController?.navigationBar.tintColor = UIColor(hex: ColorTheme.duckEggBlue)
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
+                                                                         NSForegroundColorAttributeName: UIColor.white ]
+        self.navigationController?.isNavigationBarHidden = false
         
         self.presenter.attachView(delegate: self)
         

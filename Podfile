@@ -15,7 +15,6 @@ target 'DreamCacher' do
   pod 'SCLAlertView'
   pod 'Material'
   pod 'Toast-Swift', '~> 2.0.0'
-  pod 'WRUserSettings', :git => 'https://github.com/azanium/WRUserSettings.git', :branch => 'master'
   
   # Pods for Taps
   target 'DreamCacherTests' do

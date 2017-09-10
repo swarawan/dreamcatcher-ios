@@ -23,10 +23,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        presenter.attachView(delegate: self)
-        presenter.checkLoggedUser()
+        self.presenter.attachView(delegate: self)
         
         setupView()
         setupLoadingView()
@@ -56,13 +53,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func joinNowAction(_ sender: Any) {
-        let registerViewController = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
-        self.navigationController?.pushViewController(registerViewController, animated: true)
+        presenter.displayRegisterView()
     }
     
     @IBAction func laterAction(_ sender: Any) {
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        self.navigationController?.pushViewController(homeViewController, animated: true)
+        presenter.displayInterestPage()
     }
 }
 

@@ -9,7 +9,9 @@
 import UIKit
 
 protocol LoginDelegate : NSObjectProtocol {
-    func nextView()
+    func displayMainView()
+    func displayRegisterView()
+    func displayInterestView()
     func onError(message: String)
     func startLoading()
     func stopLoading()
@@ -32,20 +34,28 @@ class LoginPresenter {
     }
     
     func checkLoggedUser() {
-        if !(CacheManager.shared.accessToken.isEmpty) {
-            delegate?.nextView()
+        if !Token.getAccessToken().isEmpty {
+            self.delegate?.displayMainView()
         }
+    }
+    
+    func displayRegisterView() {
+        self.delegate?.displayRegisterView()
+    }
+    
+    func displayInterestPage() {
+        self.delegate?.displayInterestView()
     }
     
     func login(param: LoginParam) {
         
         self.delegate?.startLoading()
-        service.login(param: param, completionHandler: { success, login in
+        service.login(param: param, completionHandler: { login in
             
             self.delegate?.stopLoading()
             if login.success! {
-                CacheManager.shared.accessToken = login.token!
-                self.delegate?.nextView()
+                Token.saveAccessToken(accessToken: login.token!)
+                self.delegate?.displayInterestView()
             } else {
                 self.delegate?.onError(message: login.message!)
             }

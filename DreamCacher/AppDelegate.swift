@@ -17,10 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Setup navigation title
+        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)! ]
+        
         // Route to Main
-        let loginVC = LoginViewController()
+//        let rootViewController = (Token.getAccessToken().isEmpty ? LoginViewController() : HomeViewController())
+        let rootViewController = LoginViewController()
         window = UIWindow.init(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: loginVC)
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         window?.makeKeyAndVisible()
         
         return true

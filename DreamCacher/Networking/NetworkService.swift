@@ -13,6 +13,7 @@ enum NetworkService {
     case login(request: LoginParam)
     case register(request: RegisterParam)
     case getArticles()
+    case getInterests()
 }
 
 extension NetworkService : TargetType {
@@ -29,6 +30,8 @@ extension NetworkService : TargetType {
             return "/v1/register"
         case .getArticles(_):
             return "/v1/posts"
+        case .getInterests(_):
+            return "/v1/categories"
         }
     }
     
@@ -39,6 +42,8 @@ extension NetworkService : TargetType {
         case .register(_):
             return .post
         case .getArticles(_):
+            return .get
+        case .getInterests(_):
             return .get
         }
     }
@@ -57,6 +62,8 @@ extension NetworkService : TargetType {
             ]
         case .getArticles():
             return [:]
+        case .getInterests():
+            return [:]
         }
     }
     
@@ -67,6 +74,8 @@ extension NetworkService : TargetType {
         case .register:
             return URLEncoding.default
         case .getArticles():
+            return URLEncoding.default
+        case .getInterests():
             return URLEncoding.default
         }
     }

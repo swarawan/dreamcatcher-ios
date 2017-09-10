@@ -1,6 +1,0 @@
-framework module WRUserSettings {
-  umbrella header "WRUserSettings-umbrella.h"
-
-  export *
-  module * { export * }
-}

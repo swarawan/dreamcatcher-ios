@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeTableViewData {
-    func displayItem()
+    func displayItem(article: ArticleModel)
 }
 
 class HomeTableViewCell: UITableViewCell, HomeTableViewData {
@@ -30,10 +30,9 @@ class HomeTableViewCell: UITableViewCell, HomeTableViewData {
         // Configure the view for the selected state
     }
     
-    internal func displayItem() {
-//        titleLabel.text = article.title
-//        contributorLabel.text = article.writer
-//        categoryLabel.text = article.category
-//        featuredImage.image = UIImage(named: article.image)
+    internal func displayItem(article: ArticleModel) {
+        titleLabel.text = article.postTitle
+        contributorLabel.text = article.name
+        categoryLabel.text = article.categories
     }
 }

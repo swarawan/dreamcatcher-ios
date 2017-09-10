@@ -8,24 +8,31 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 import ObjectMapper
+import Moya
 
 class ArticleService {
     
-    func getAllArticle(callback: @escaping ([HomeModel]) -> Void) {
-        let headers: [String:String] = [
-            "Authorization" : "Bearer abcd"
-        ]
+    func getAllArticle(completionHandler: @escaping (HomeModel) -> Void) {
         
-        Alamofire.request("http://private-2bc143-morpheus3.apiary-mock.com/v1/posts", method: .get, parameters: [:], encoding: URLEncoding(), headers: headers).responseJSON(completionHandler: { response in
-            do{
-                if let data = response.data {
-                    let JSON = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(JSON)
-                }
-            } catch {
+        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        provider.request(.getArticles()) { (result) -> Void in
+            switch result {
+            case let .success(response):
                 
+                let json: String = JSON(response.data).rawString()!
+                let homeModel = Mapper<HomeModel>().map(JSONString: json)
+                
+                completionHandler(homeModel!)
+                
+            case let .failure(error):
+                
+                var homeModel = HomeModel()
+                homeModel.message = error.errorDescription
+                
+                completionHandler(homeModel)
             }
-        })
+        }
     }
 }

@@ -10,23 +10,21 @@ import UIKit
 import ObjectMapper
 
 struct HomeModel : Mappable {
-    var id: Int?
-    var postTitle: String?
-    var idBackground: Int?
-    var categories: String?
-    var content: String?
-    var publishedAt : String?
+    var success: Bool?
+    var message: String?
+    var posts: [ArticleModel]?
+    
+    init() {
+
+    }
     
     init?(map: Map) {
         
     }
     
     mutating func mapping(map: Map) {
-        id <- map["id"]
-        postTitle <- map["post_title"]
-        idBackground <- map["id_background"]
-        categories <- map["categories"]
-        content <- map["content"]
-        publishedAt <- map["published_at"]
+        self.success <- map["success"]
+        self.message <- map["message"]
+        self.posts <- map["posts"]
     }
 }

@@ -9,9 +9,10 @@
 import UIKit
 
 extension RegisterViewController : RegisterDelegate {
-    func nextView() {
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        self.navigationController?.pushViewController(homeViewController, animated: true)
+    
+    func displayNextView() {
+        let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
+        self.navigationController?.pushViewController(interestViewController, animated: true)
     }
     
     func onError(message: String) {

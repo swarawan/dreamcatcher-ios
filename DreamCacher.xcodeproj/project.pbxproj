@@ -20,11 +20,10 @@
 		2692B4C61F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C21F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf */; };
 		2692B4C71F571BDD0044DE79 /* LobsterTwo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */; };
 		2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */; };
+		269878E51F66269800DA69E6 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269878E41F66269800DA69E6 /* UILabel.swift */; };
 		26A1D3C61F60ECC200E8670F /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D3C51F60ECC200E8670F /* ArticleModel.swift */; };
 		26A1D3CD1F60F04B00E8670F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D3CB1F60F04B00E8670F /* ProfileViewController.swift */; };
 		26A1D3CE1F60F04B00E8670F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A1D3CC1F60F04B00E8670F /* ProfileViewController.xib */; };
-		26A1D3D51F61005B00E8670F /* DetailArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D3D31F61005B00E8670F /* DetailArticleTableViewController.swift */; };
-		26A1D3D61F61005B00E8670F /* DetailArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A1D3D41F61005B00E8670F /* DetailArticleTableViewController.xib */; };
 		26A1D3DA1F61009200E8670F /* DetailArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D3D81F61009200E8670F /* DetailArticleTableViewCell.swift */; };
 		26A1D3DB1F61009200E8670F /* DetailArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A1D3D91F61009200E8670F /* DetailArticleTableViewCell.xib */; };
 		26ADD94A1F622A8900F67CDF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADD9491F622A8900F67CDF /* HomePresenter.swift */; };
@@ -53,6 +52,8 @@
 		26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F471F55054A00944844 /* LaunchScreen.storyboard */; };
 		26BB2F541F55054A00944844 /* DreamCacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F531F55054A00944844 /* DreamCacherTests.swift */; };
 		26BB2F5F1F55054A00944844 /* DreamCacherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */; };
+		26C423781F6600DC001F8521 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C423761F6600DC001F8521 /* DetailArticleViewController.swift */; };
+		26C423791F6600DC001F8521 /* DetailArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C423771F6600DC001F8521 /* DetailArticleViewController.xib */; };
 		26C802481F658D67003FBBBA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C802471F658D67003FBBBA /* Date.swift */; };
 		26C8024A1F65A5B0003FBBBA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C802491F65A5B0003FBBBA /* UIImage.swift */; };
 		26C8024C1F65A94B003FBBBA /* InterestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8024B1F65A94B003FBBBA /* InterestCache.swift */; };
@@ -110,11 +111,10 @@
 		2692B4C21F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
 		2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
 		2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
+		269878E41F66269800DA69E6 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		26A1D3C51F60ECC200E8670F /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		26A1D3CB1F60F04B00E8670F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		26A1D3CC1F60F04B00E8670F /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		26A1D3D31F61005B00E8670F /* DetailArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleTableViewController.swift; sourceTree = "<group>"; };
-		26A1D3D41F61005B00E8670F /* DetailArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailArticleTableViewController.xib; sourceTree = "<group>"; };
 		26A1D3D81F61009200E8670F /* DetailArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleTableViewCell.swift; sourceTree = "<group>"; };
 		26A1D3D91F61009200E8670F /* DetailArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailArticleTableViewCell.xib; sourceTree = "<group>"; };
 		26ADD9491F622A8900F67CDF /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -149,6 +149,8 @@
 		26BB2F5A1F55054A00944844 /* DreamCacherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamCacherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCacherUITests.swift; sourceTree = "<group>"; };
 		26BB2F601F55054A00944844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C423761F6600DC001F8521 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
+		26C423771F6600DC001F8521 /* DetailArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailArticleViewController.xib; sourceTree = "<group>"; };
 		26C802471F658D67003FBBBA /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		26C802491F65A5B0003FBBBA /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		26C8024B1F65A94B003FBBBA /* InterestCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCache.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				2631E1721F5E85C100D3AA72 /* String.swift */,
 				26C802471F658D67003FBBBA /* Date.swift */,
 				26C802491F65A5B0003FBBBA /* UIImage.swift */,
+				269878E41F66269800DA69E6 /* UILabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -347,8 +350,8 @@
 			isa = PBXGroup;
 			children = (
 				26A1D3D71F61007200E8670F /* TableViewCell */,
-				26A1D3D31F61005B00E8670F /* DetailArticleTableViewController.swift */,
-				26A1D3D41F61005B00E8670F /* DetailArticleTableViewController.xib */,
+				26C423761F6600DC001F8521 /* DetailArticleViewController.swift */,
+				26C423771F6600DC001F8521 /* DetailArticleViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -788,7 +791,6 @@
 				26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */,
 				26442B591F5BAB9800542790 /* LICENSE.txt in Resources */,
 				26B47CBF1F5E395A00CACAD1 /* HomeTableViewCell.xib in Resources */,
-				26A1D3D61F61005B00E8670F /* DetailArticleTableViewController.xib in Resources */,
 				26E011F41F62E277007058F5 /* InterestViewController.xib in Resources */,
 				26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */,
 				2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */,
@@ -803,6 +805,7 @@
 				26BB2F441F55054A00944844 /* Main.storyboard in Resources */,
 				26E011F91F62E2A1007058F5 /* InterestTableViewCell.xib in Resources */,
 				26B47CBD1F5E395A00CACAD1 /* HomeViewController.xib in Resources */,
+				26C423791F6600DC001F8521 /* DetailArticleViewController.xib in Resources */,
 				26CAA6D71F5A514800DE4AC6 /* Oswald-Medium.ttf in Resources */,
 				2692B4C61F571BDD0044DE79 /* LobsterTwo-BoldItalic.ttf in Resources */,
 				26CAA6D41F5A514800DE4AC6 /* Oswald-Bold.ttf in Resources */,
@@ -971,6 +974,7 @@
 				26EDE6BD1F63E06D00F6026F /* InterestItemModel.swift in Sources */,
 				26B47CBE1F5E395A00CACAD1 /* HomeTableViewCell.swift in Sources */,
 				26E011F81F62E2A1007058F5 /* InterestTableViewCell.swift in Sources */,
+				26C423781F6600DC001F8521 /* DetailArticleViewController.swift in Sources */,
 				2631E16C1F5E7DE900D3AA72 /* Register.swift in Sources */,
 				26B47CBC1F5E395A00CACAD1 /* HomeViewController.swift in Sources */,
 				2631E1701F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift in Sources */,
@@ -982,7 +986,6 @@
 				2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */,
 				26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */,
 				26A1D3C61F60ECC200E8670F /* ArticleModel.swift in Sources */,
-				26A1D3D51F61005B00E8670F /* DetailArticleTableViewController.swift in Sources */,
 				26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */,
 				26A1D3DA1F61009200E8670F /* DetailArticleTableViewCell.swift in Sources */,
 				26ADD94C1F62300400F67CDF /* TokenAuth.swift in Sources */,
@@ -998,6 +1001,7 @@
 				2631E16E1F5E81F700D3AA72 /* RegisterService.swift in Sources */,
 				26B47CC21F5E395A00CACAD1 /* Login.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
+				269878E51F66269800DA69E6 /* UILabel.swift in Sources */,
 				26BB2F411F55054A00944844 /* ViewController.swift in Sources */,
 				26C8024C1F65A94B003FBBBA /* InterestCache.swift in Sources */,
 				26C802481F658D67003FBBBA /* Date.swift in Sources */,
@@ -1159,8 +1163,10 @@
 			baseConfigurationReference = 9D62FEEF953C407C947CFEBC /* Pods-DreamCacher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D7X2P7E75;
 				INFOPLIST_FILE = DreamCacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swarawan.DreamCacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1173,8 +1179,10 @@
 			baseConfigurationReference = 552869B9D08D4772F647B3E0 /* Pods-DreamCacher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D7X2P7E75;
 				INFOPLIST_FILE = DreamCacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swarawan.DreamCacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";

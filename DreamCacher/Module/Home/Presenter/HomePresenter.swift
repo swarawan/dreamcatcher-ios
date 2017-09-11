@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeDelegate : NSObjectProtocol {
-    func nextSingleArticle()
+    func nextSingleArticle(article: ArticleModel)
     func displayArticles(articles: [ArticleModel])
     func displayInterest()
     func onError(message: String)
@@ -35,6 +35,10 @@ class HomePresenter {
     
     func loadInterest() {
         self.delegate?.displayInterest()
+    }
+    
+    func loadSingleArticle(article: ArticleModel) {
+        self.delegate?.nextSingleArticle(article: article)
     }
     
     func loadArticles() {

@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Dreamcatcher"
+//        self.title = "Dreamcatcher"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.black ]
         
@@ -68,6 +68,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         cell.displayItem(article: articles[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = articles[indexPath.row]
+        presenter.loadSingleArticle(article: article)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

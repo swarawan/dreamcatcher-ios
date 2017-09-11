@@ -19,6 +19,10 @@ struct ArticleModel : Mappable {
     var content: String?
     var publishedAt : String?
     
+    init() {
+        
+    }
+    
     init?(map: Map) {
         
     }

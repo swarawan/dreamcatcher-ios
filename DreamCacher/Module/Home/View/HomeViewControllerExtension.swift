@@ -11,8 +11,12 @@ import Toast_Swift
 
 extension HomeViewController : HomeDelegate {
     
-    func nextSingleArticle() {
+    func nextSingleArticle(article: ArticleModel) {
+        let detailArticleViewController = DetailArticleViewController(nibName: "DetailArticleViewController", bundle: nil)
+        detailArticleViewController.article = article
+        detailArticleViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(detailArticleViewController, animated: true)
     }
     
     func displayInterest() {

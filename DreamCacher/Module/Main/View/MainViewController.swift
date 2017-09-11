@@ -24,12 +24,15 @@ class MainViewController: UITabBarController {
     
     private func setupUI() {
         let homeViewController = HomeViewController()
+        homeViewController.tabBarItem.title = "Home"
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         
         let categoryViewController = HomeViewController()
+        categoryViewController.tabBarItem.title = "Categories"
         categoryViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         
         let profileViewController = HomeViewController()
+        profileViewController.tabBarItem.title = "Profile"
         profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         
         let viewControllerList = [

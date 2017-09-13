@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toast_Swift
 
 extension InterestViewController : InterestDelegate {
     
@@ -26,9 +25,7 @@ extension InterestViewController : InterestDelegate {
     }
     
     func onError(message: String) {
-        if !message.isEmpty {
-            self.view.makeToast(message)
-        }
+        
     }
     
     func startLoading() {

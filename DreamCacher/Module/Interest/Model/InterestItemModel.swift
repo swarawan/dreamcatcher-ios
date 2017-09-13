@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 struct InterestItemModel : Mappable {
-    var backgroundId: String?
+    var backgroundId: Int?
     var category: String?
     
     init() {

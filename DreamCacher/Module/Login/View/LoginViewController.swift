@@ -9,6 +9,7 @@
 import UIKit
 import Material
 import Hue
+import NVActivityIndicatorView
 
 class LoginViewController: UIViewController {
 
@@ -18,8 +19,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     fileprivate let presenter = LoginPresenter(service: LoginService())
-    
-    let loading: UIActivityIndicatorView = UIActivityIndicatorView()
+    let loading = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40),
+                                          type: .ballScaleRippleMultiple,
+                                          color: .black, padding: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,9 +86,10 @@ extension LoginViewController {
     func setupLoadingView() {
         self.loading.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         self.loading.center = self.view.center
-        self.loading.hidesWhenStopped = true
-        self.loading.activityIndicatorViewStyle = .whiteLarge
+        self.loading.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(self.loading)
+        self.view.addConstraint(NSLayoutConstraint(item: self.loading, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.loading, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0))
     }
 }

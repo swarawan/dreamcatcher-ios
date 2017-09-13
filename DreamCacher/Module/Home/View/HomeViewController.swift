@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toast_Swift
 
 class HomeViewController: UIViewController {
     
@@ -19,7 +18,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.title = "Dreamcatcher"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.black ]
         
@@ -45,11 +43,11 @@ class HomeViewController: UIViewController {
     }
     
     func loginAction() {
-        self.view.makeToast("Feature not implemented yet")
+        
     }
     
     func composeAction() {
-        self.view.makeToast("Feature not implemented yet")
+        
     }
 }
 

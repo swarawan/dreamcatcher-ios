@@ -10,11 +10,12 @@ PODS:
   - Moya/Core (8.0.5):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
   - ObjectMapper (2.2.8)
   - Result (3.2.3)
-  - SCLAlertView (0.7.0)
   - SwiftyJSON (3.1.4)
-  - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -22,10 +23,9 @@ DEPENDENCIES:
   - Kingfisher
   - Material
   - Moya
+  - NVActivityIndicatorView
   - ObjectMapper (~> 2.2)
-  - SCLAlertView
   - SwiftyJSON
-  - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -33,12 +33,11 @@ SPEC CHECKSUMS:
   Kingfisher: c8911a7672c6217dec8c0520fb6e76ec4b7e0780
   Material: 06fa0a5f29c45c42608ae32f3be96f1c46558d13
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
-  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: fcda595bd34274255f98c343f7d4e2ab2c2b5cec
+PODFILE CHECKSUM: 88c65706cc760a87e51bcb2aa03db84372a4a549
 
 COCOAPODS: 1.1.0.rc.2

@@ -27,7 +27,7 @@ class MainViewController: UITabBarController {
         homeViewController.tabBarItem.title = "Home"
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         
-        let categoryViewController = HomeViewController()
+        let categoryViewController = CategoryViewController()
         categoryViewController.tabBarItem.title = "Categories"
         categoryViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         

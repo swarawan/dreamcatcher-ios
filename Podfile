@@ -12,10 +12,9 @@ target 'DreamCacher' do
   pod 'Kingfisher'
   pod 'Hue'
   pod 'SwiftyJSON'
-  pod 'SCLAlertView'
   pod 'Material'
-  pod 'Toast-Swift', '~> 2.0.0'
-  
+  pod 'NVActivityIndicatorView' 
+ 
   # Pods for Taps
   target 'DreamCacherTests' do
     inherit! :search_paths

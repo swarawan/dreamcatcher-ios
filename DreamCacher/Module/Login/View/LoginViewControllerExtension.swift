@@ -34,10 +34,10 @@ extension LoginViewController : LoginDelegate {
     }
     
     func startLoading() {
-        loading.startAnimating()
+        self.loading.startAnimating()
     }
     
     func stopLoading() {
-        loading.stopAnimating()
+        self.loading.stopAnimating()
     }
 }

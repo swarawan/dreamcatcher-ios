@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toast_Swift
 
 extension HomeViewController : HomeDelegate {
     
@@ -38,9 +37,7 @@ extension HomeViewController : HomeDelegate {
     }
     
     func onError(message: String) {
-        if !message.isEmpty {
-            self.view.makeToast(message)
-        }
+        
     }
     
     func startLoading() {

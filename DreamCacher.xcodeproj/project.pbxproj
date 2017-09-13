@@ -21,6 +21,12 @@
 		2692B4C71F571BDD0044DE79 /* LobsterTwo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */; };
 		2692B4C81F571BDD0044DE79 /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */; };
 		269878E51F66269800DA69E6 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269878E41F66269800DA69E6 /* UILabel.swift */; };
+		2698C0D81F677B4200E19355 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0D71F677B4200E19355 /* CategoryPresenter.swift */; };
+		2698C0DB1F677C9A00E19355 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0D91F677C9A00E19355 /* CategoryViewController.swift */; };
+		2698C0DC1F677C9A00E19355 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698C0DA1F677C9A00E19355 /* CategoryViewController.xib */; };
+		2698C0E01F677D6E00E19355 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0DE1F677D6E00E19355 /* CategoryTableViewCell.swift */; };
+		2698C0E11F677D6E00E19355 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698C0DF1F677D6E00E19355 /* CategoryTableViewCell.xib */; };
+		2698C0E51F6782B400E19355 /* CategoryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0E41F6782B400E19355 /* CategoryViewControllerExtension.swift */; };
 		26A1D3C61F60ECC200E8670F /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D3C51F60ECC200E8670F /* ArticleModel.swift */; };
 		26A1D3CD1F60F04B00E8670F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D3CB1F60F04B00E8670F /* ProfileViewController.swift */; };
 		26A1D3CE1F60F04B00E8670F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A1D3CC1F60F04B00E8670F /* ProfileViewController.xib */; };
@@ -112,6 +118,12 @@
 		2692B4C31F571BDD0044DE79 /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
 		2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
 		269878E41F66269800DA69E6 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		2698C0D71F677B4200E19355 /* CategoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		2698C0D91F677C9A00E19355 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		2698C0DA1F677C9A00E19355 /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		2698C0DE1F677D6E00E19355 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		2698C0DF1F677D6E00E19355 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		2698C0E41F6782B400E19355 /* CategoryViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewControllerExtension.swift; sourceTree = "<group>"; };
 		26A1D3C51F60ECC200E8670F /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		26A1D3CB1F60F04B00E8670F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		26A1D3CC1F60F04B00E8670F /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -278,6 +290,51 @@
 				2692B4C41F571BDD0044DE79 /* LobsterTwo-Regular.ttf */,
 			);
 			path = LobsterTwo;
+			sourceTree = "<group>";
+		};
+		2698C0D31F677AD800E19355 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2698C0D41F677AD800E19355 /* Model */,
+				2698C0D51F677AD800E19355 /* Presenter */,
+				2698C0D61F677AD800E19355 /* View */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2698C0D41F677AD800E19355 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2698C0D51F677AD800E19355 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2698C0D71F677B4200E19355 /* CategoryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2698C0D61F677AD800E19355 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2698C0DD1F677D5900E19355 /* TableViewCell */,
+				2698C0D91F677C9A00E19355 /* CategoryViewController.swift */,
+				2698C0DA1F677C9A00E19355 /* CategoryViewController.xib */,
+				2698C0E41F6782B400E19355 /* CategoryViewControllerExtension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2698C0DD1F677D5900E19355 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2698C0DE1F677D6E00E19355 /* CategoryTableViewCell.swift */,
+				2698C0DF1F677D6E00E19355 /* CategoryTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		26A1D3C21F60E98900E8670F /* Cache */ = {
@@ -592,6 +649,7 @@
 		26BB2F6C1F5505DC00944844 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2698C0D31F677AD800E19355 /* Category */,
 				26A1D3CF1F61003700E8670F /* Detail */,
 				26B47C9C1F5E395A00CACAD1 /* Home */,
 				26B47CA61F5E395A00CACAD1 /* Interest */,
@@ -787,6 +845,7 @@
 				26B47CC61F5E395A00CACAD1 /* LoginViewController.xib in Resources */,
 				26B47CCB1F5E395A00CACAD1 /* RegisterViewController.xib in Resources */,
 				26CAA6D91F5A514800DE4AC6 /* Oswald-SemiBold.ttf in Resources */,
+				2698C0E11F677D6E00E19355 /* CategoryTableViewCell.xib in Resources */,
 				26CAA6D31F5A514800DE4AC6 /* OFL.txt in Resources */,
 				26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */,
 				26442B591F5BAB9800542790 /* LICENSE.txt in Resources */,
@@ -800,6 +859,7 @@
 				26CAA6D81F5A514800DE4AC6 /* Oswald-Regular.ttf in Resources */,
 				2692B4C51F571BDD0044DE79 /* LobsterTwo-Bold.ttf in Resources */,
 				2692B4C71F571BDD0044DE79 /* LobsterTwo-Italic.ttf in Resources */,
+				2698C0DC1F677C9A00E19355 /* CategoryViewController.xib in Resources */,
 				26A1D3DB1F61009200E8670F /* DetailArticleTableViewCell.xib in Resources */,
 				26A1D3CE1F60F04B00E8670F /* ProfileViewController.xib in Resources */,
 				26BB2F441F55054A00944844 /* Main.storyboard in Resources */,
@@ -981,14 +1041,17 @@
 				26B47CBB1F5E395A00CACAD1 /* HomeModel.swift in Sources */,
 				26B47CC81F5E395A00CACAD1 /* RegisterParam.swift in Sources */,
 				26ADD94A1F622A8900F67CDF /* HomePresenter.swift in Sources */,
+				2698C0E51F6782B400E19355 /* CategoryViewControllerExtension.swift in Sources */,
 				26B47CCD1F5E484100CACAD1 /* ArticleService.swift in Sources */,
 				26EDE6BF1F63E1B000F6026F /* InterestService.swift in Sources */,
 				2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */,
 				26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */,
 				26A1D3C61F60ECC200E8670F /* ArticleModel.swift in Sources */,
 				26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */,
+				2698C0DB1F677C9A00E19355 /* CategoryViewController.swift in Sources */,
 				26A1D3DA1F61009200E8670F /* DetailArticleTableViewCell.swift in Sources */,
 				26ADD94C1F62300400F67CDF /* TokenAuth.swift in Sources */,
+				2698C0D81F677B4200E19355 /* CategoryPresenter.swift in Sources */,
 				26B47CC41F5E395A00CACAD1 /* LoginPresenter.swift in Sources */,
 				26EDE6BB1F63D8D400F6026F /* InterestModel.swift in Sources */,
 				26B47CCA1F5E395A00CACAD1 /* RegisterViewController.swift in Sources */,
@@ -1000,6 +1063,7 @@
 				26B47CC91F5E395A00CACAD1 /* RegisterPresenter.swift in Sources */,
 				2631E16E1F5E81F700D3AA72 /* RegisterService.swift in Sources */,
 				26B47CC21F5E395A00CACAD1 /* Login.swift in Sources */,
+				2698C0E01F677D6E00E19355 /* CategoryTableViewCell.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
 				269878E51F66269800DA69E6 /* UILabel.swift in Sources */,
 				26BB2F411F55054A00944844 /* ViewController.swift in Sources */,

@@ -21,7 +21,7 @@ class DetailArticleTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        featuredImage.layer.cornerRadius = 40
+        featuredImage.layer.cornerRadius = 10
         
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.layer.borderWidth = 5

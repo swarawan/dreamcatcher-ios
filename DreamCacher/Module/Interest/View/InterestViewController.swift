@@ -23,7 +23,7 @@ class InterestViewController: UIViewController {
         self.title = "Dreamcatcher"
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: ColorTheme.lightNavy)
         self.navigationController?.navigationBar.tintColor = UIColor(hex: ColorTheme.duckEggBlue)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.white ]
         self.navigationController?.isNavigationBarHidden = false
         
@@ -44,7 +44,7 @@ class InterestViewController: UIViewController {
     
     func checkValidInterest(){
         if selectedInterest.count >= 3 {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(doneAction))
         } else {
             self.navigationItem.rightBarButtonItem = nil
         }

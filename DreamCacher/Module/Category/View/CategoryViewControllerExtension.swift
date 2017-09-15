@@ -9,8 +9,12 @@
 import UIKit
 
 extension CategoryViewController : CategoryDelegate {
-    func displaySingleCategoryPage() {
+    func displaySingleCategoryPage(category: InterestItemModel) {
+        let categoryDetailViewController = CategoryDetailViewController(nibName: "CategoryDetailViewController", bundle: nil)
+        categoryDetailViewController.interest = category
+        categoryDetailViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(categoryDetailViewController, animated: true)
     }
     
     func displayInterest(interest: [InterestItemModel]) {

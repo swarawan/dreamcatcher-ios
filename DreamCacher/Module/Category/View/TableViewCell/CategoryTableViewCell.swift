@@ -24,16 +24,6 @@ class CategoryTableViewCell: UITableViewCell {
     }
     
     func displayCategory(interest: InterestItemModel) {
-        if interest.backgroundId == 1 {
-            categoryImage.image = #imageLiteral(resourceName: "Courses")
-        } else if interest.backgroundId == 2 {
-            categoryImage.image = #imageLiteral(resourceName: "Opportunities")
-        } else if interest.backgroundId == 3 {
-            categoryImage.image = #imageLiteral(resourceName: "Facilities")
-        } else if interest.backgroundId == 4 {
-            categoryImage.image = #imageLiteral(resourceName: "Finances")
-        } else if interest.backgroundId == 5 {
-            categoryImage.image = #imageLiteral(resourceName: "Skills")
-        }
+        categoryImage.image = UIImage().getInterestImage(id: interest.backgroundId!)
     }
 }

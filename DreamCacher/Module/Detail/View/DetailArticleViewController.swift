@@ -19,7 +19,7 @@ class DetailArticleViewController: UIViewController {
 
         self.title = "Dreamcatcher"
         self.navigationController?.navigationBar.backItem?.title = "Back"
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.black ]
         
         self.detailTableView.rowHeight = UITableViewAutomaticDimension

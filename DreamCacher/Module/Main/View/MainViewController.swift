@@ -31,7 +31,7 @@ class MainViewController: UITabBarController {
         categoryViewController.tabBarItem.title = "Categories"
         categoryViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         
-        let profileViewController = HomeViewController()
+        let profileViewController = ProfileViewController()
         profileViewController.tabBarItem.title = "Profile"
         profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "ic_home_inactive.png"), selectedImage: UIImage(named: "ic_home_active.png"))
         

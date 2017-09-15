@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Setup navigation title
-        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)! ]
+        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)! ]
         
         // Route to Main
 //        let rootViewController = (Token.getAccessToken().isEmpty ? LoginViewController() : HomeViewController())

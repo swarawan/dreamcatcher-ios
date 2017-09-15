@@ -13,7 +13,10 @@ enum NetworkService {
     case login(request: LoginParam)
     case register(request: RegisterParam)
     case getArticles()
+    case getArticlesByCategory(request: CategoryDetailParam)
+    case getArticlesByUser(request: ProfileParam)
     case getInterests()
+    case getProfile()
 }
 
 extension NetworkService : TargetType {
@@ -30,8 +33,14 @@ extension NetworkService : TargetType {
             return "/v1/register"
         case .getArticles(_):
             return "/v1/posts"
+        case .getArticlesByCategory(_):
+            return "/v1/categories/showposts"
+        case .getArticlesByUser(_):
+            return "/v1/profile/posts"
         case .getInterests(_):
             return "/v1/categories"
+        case .getProfile(_):
+            return "/v1/profile"
         }
     }
     
@@ -43,7 +52,13 @@ extension NetworkService : TargetType {
             return .post
         case .getArticles(_):
             return .get
+        case .getArticlesByCategory(_):
+            return .get
+        case .getArticlesByUser(_):
+            return .get
         case .getInterests(_):
+            return .get
+        case .getProfile(_):
             return .get
         }
     }
@@ -64,6 +79,16 @@ extension NetworkService : TargetType {
             return [:]
         case .getInterests():
             return [:]
+        case .getArticlesByCategory(let request):
+            return [
+                "categories" : request.category
+            ]
+        case .getArticlesByUser(let request):
+            return [
+                "id_user" : request.userId
+            ]
+        case .getProfile(_):
+            return [:]
         }
     }
     
@@ -73,9 +98,15 @@ extension NetworkService : TargetType {
             return URLEncoding.default
         case .register:
             return URLEncoding.default
-        case .getArticles():
+        case .getArticles:
             return URLEncoding.default
-        case .getInterests():
+        case .getInterests:
+            return URLEncoding.default
+        case .getArticlesByCategory:
+            return URLEncoding.default
+        case .getArticlesByUser:
+            return URLEncoding.default
+        case .getProfile():
             return URLEncoding.default
         }
     }
@@ -91,5 +122,5 @@ extension NetworkService : TargetType {
     public var headers: [String : String] {
         return ["Content-type" : "application/json"]
     }
-
+    
 }

@@ -23,6 +23,10 @@ class CategoryViewController: UIViewController {
         self.categoryTable.register(UINib.init(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryTableViewCell")
         
         // setup navigation bar
+        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        image.contentMode = .scaleAspectFit
+        
+        self.navigationItem.titleView = image
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
         if Token.getAccessToken().isEmpty {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(loginAction))
@@ -49,6 +53,7 @@ class CategoryViewController: UIViewController {
 }
 
 extension CategoryViewController : UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -58,7 +63,8 @@ extension CategoryViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let interest = interests[indexPath.row]
+        presenter.displaySingleCategory(category: interest)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

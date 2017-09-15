@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="LobsterTwo-Regular.ttf">
-            <string>LobsterTwo</string>
+        <array key="RockoFLF-Bold.ttf">
+            <string>RockoFLF-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -25,8 +25,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-fv-Ew6">
-                        <rect key="frame" x="24" y="11" width="39.5" height="21"/>
-                        <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="20"/>
+                        <rect key="frame" x="24" y="11" width="51.5" height="21"/>
+                        <fontDescription key="fontDescription" name="RockoFLF-Bold" family="RockoFLF" pointSize="20"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

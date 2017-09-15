@@ -18,7 +18,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster Two", size: 18)!,
+        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        image.contentMode = .scaleAspectFit
+        
+        self.navigationItem.titleView = image
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.black ]
         
         self.articleTable.delegate = self
@@ -31,6 +35,7 @@ class HomeViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(loginAction))
         } else {
             self.navigationItem.setHidesBackButton(true, animated: true)
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
         }
         
         presenter.attachView(delegate: self)
@@ -47,6 +52,10 @@ class HomeViewController: UIViewController {
     }
     
     func composeAction() {
+        
+    }
+    
+    func editAction() {
         
     }
 }

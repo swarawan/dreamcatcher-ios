@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CategoryDelegate : NSObjectProtocol {
-    func displaySingleCategoryPage()
+    func displaySingleCategoryPage(category: InterestItemModel)
     func displayInterest(interest: [InterestItemModel])
     func startLoading()
     func stopLoading()
@@ -31,8 +31,8 @@ class CategoryPresenter {
         self.delegate = nil
     }
     
-    func displaySingleCategory() {
-        self.delegate?.displaySingleCategoryPage()
+    func displaySingleCategory(category: InterestItemModel) {
+        self.delegate?.displaySingleCategoryPage(category: category)
     }
     
     func loadInterest() {

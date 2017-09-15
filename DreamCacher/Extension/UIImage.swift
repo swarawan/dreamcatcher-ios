@@ -12,39 +12,66 @@ extension UIImage {
     func getAvatar(id: Int) -> UIImage {
         switch id {
         case 1:
-            return UIImage(named: "boy-1")!
+            return #imageLiteral(resourceName: "boy-1")
         case 2:
-            return UIImage(named: "boy-2")!
+            return #imageLiteral(resourceName: "boy-2")
         case 3:
-            return UIImage(named: "girl-1")!
+            return #imageLiteral(resourceName: "girl-1")
         case 4:
-            return UIImage(named: "girl-2")!
+            return #imageLiteral(resourceName: "girl-2")
         case 5:
-            return UIImage(named: "man-1")!
+            return #imageLiteral(resourceName: "man-1")
         case 6:
-            return UIImage(named: "man-2")!
+            return #imageLiteral(resourceName: "man-2")
         case 7:
-            return UIImage(named: "man-3")!
+            return #imageLiteral(resourceName: "man-3")
         case 8:
-            return UIImage(named: "man-4")!
+            return #imageLiteral(resourceName: "man-4")
         default:
-            return UIImage(named: "man-5")!
+            return #imageLiteral(resourceName: "man-5")
         }
     }
     
     func getPostBackground(id: Int) -> UIImage {
         switch id {
         case 1:
-            return UIImage(named: "blue")!
+            return #imageLiteral(resourceName: "blue")
         case 2:
-            return UIImage(named: "green")!
+            return #imageLiteral(resourceName: "green")
         case 3:
-            return UIImage(named: "red")!
+            return #imageLiteral(resourceName: "red")
         case 4:
-            return UIImage(named: "violet")!
+            return #imageLiteral(resourceName: "violet")
         default:
-            return UIImage(named: "yellow")!
+            return #imageLiteral(resourceName: "yellow")
         }
     }
-
+    
+    func getInterestImage(id: Int) -> UIImage {
+        if id == 1 {
+            return #imageLiteral(resourceName: "Courses")
+        } else if id == 2 {
+            return #imageLiteral(resourceName: "Opportunities")
+        } else if id == 3 {
+            return #imageLiteral(resourceName: "Facilities")
+        } else if id == 4 {
+            return #imageLiteral(resourceName: "Finances")
+        } else {
+            return #imageLiteral(resourceName: "Skills")
+        }
+    }
+    
+    func getCoverProgile(id: Int) -> UIImage {
+        if id == 1 {
+            return #imageLiteral(resourceName: "cover-1")
+        } else if id == 2 {
+            return #imageLiteral(resourceName: "cover-2")
+        } else if id == 3 {
+            return #imageLiteral(resourceName: "cover-3.1")
+        } else if id == 4 {
+            return #imageLiteral(resourceName: "cover-4")
+        } else {
+            return #imageLiteral(resourceName: "cover-5")
+        }
+    }
 }

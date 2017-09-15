@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="LobsterTwo-Regular.ttf">
-            <string>LobsterTwo</string>
+        <array key="Lobster-Regular.ttf">
+            <string>Lobster-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -34,13 +34,13 @@
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vM7-Vx-RsN" customClass="TextField" customModule="Material">
                             <rect key="frame" x="32" y="30" width="226" height="30"/>
                             <color key="textColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="10"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ckp-tW-jvW" customClass="TextField" customModule="Material">
                             <rect key="frame" x="32" y="80" width="226" height="30"/>
                             <color key="textColor" red="0.094117647060000004" green="0.34509803919999998" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="10"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                         </textField>
                     </subviews>
@@ -63,9 +63,9 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihR-NE-k0c">
                     <rect key="frame" x="217" y="514" width="142" height="50"/>
-                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="30"/>
                     <state key="normal" title="Join Now">
-                        <color key="titleColor" red="0.98823529409999999" green="0.38431372549999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.67843137249999996" green="0.86274509799999999" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="joinNowAction:" destination="-1" eventType="touchUpInside" id="Csu-9H-e9m"/>
@@ -73,9 +73,9 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bka-WY-n1j">
                     <rect key="frame" x="16" y="514" width="142" height="50"/>
-                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="30"/>
                     <state key="normal" title="Skip">
-                        <color key="titleColor" red="0.98823529409999999" green="0.38431372549999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.67843137254901964" green="0.86274509803921573" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="laterAction:" destination="-1" eventType="touchUpInside" id="ZRn-bb-gyh"/>
@@ -83,7 +83,7 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have no account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tz7-ea-scj">
                     <rect key="frame" x="106" y="468" width="165" height="25"/>
-                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -93,7 +93,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Sh8-Ry-VQW"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="20"/>
                     <state key="normal" title="Login">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>

@@ -12,7 +12,6 @@ protocol LoginDelegate : NSObjectProtocol {
     func displayMainView()
     func displayRegisterView()
     func displayInterestView()
-    func onError(message: String)
     func startLoading()
     func stopLoading()
 }
@@ -56,8 +55,6 @@ class LoginPresenter {
             if login.success! {
                 Token.saveAccessToken(accessToken: login.token!)
                 self.delegate?.displayInterestView()
-            } else {
-                self.delegate?.onError(message: login.message!)
             }
         })
     }

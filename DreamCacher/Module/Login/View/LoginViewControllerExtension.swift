@@ -29,15 +29,11 @@ extension LoginViewController : LoginDelegate {
         self.navigationController?.pushViewController(registerViewController, animated: true)
     }
     
-    func onError(message: String) {
-        print(message)
-    }
-    
     func startLoading() {
-        self.loading.startAnimating()
+        present(loadingAlert, animated: true, completion: nil)
     }
     
     func stopLoading() {
-        self.loading.stopAnimating()
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -20,7 +20,8 @@ class RegisterViewController: UIViewController {
     
     fileprivate let presenter = RegisterPresenter(service: RegisterService())
     
-    let loading: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,6 @@ class RegisterViewController: UIViewController {
         self.presenter.attachView(delegate: self)
         
         setupView()
-        setupLoadingView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +61,8 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController {
     func setupView() {
+        self.loadingAlert.initLoading()
+        
         self.credentialContainerView.backgroundColor = UIColor(hex: ColorTheme.white)
         self.credentialContainerView.layer.cornerRadius = 30.0
         
@@ -87,14 +89,5 @@ extension RegisterViewController {
         self.retypePasswordTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.retypePasswordTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.retypePasswordTextField.clearButtonMode = .whileEditing
-    }
-
-    func setupLoadingView() {
-        self.loading.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        self.loading.center = self.view.center
-        self.loading.hidesWhenStopped = true
-        self.loading.activityIndicatorViewStyle = .whiteLarge
-        
-        self.view.addSubview(self.loading)
     }
 }

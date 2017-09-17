@@ -39,6 +39,7 @@ class CategoryPresenter {
         
         self.delegate?.startLoading()
         service.loadInterest(completionHandler: { interestModel in
+            self.delegate?.stopLoading()
             if interestModel.success! {
                 self.delegate?.displayInterest(interest: interestModel.interests!)
             }

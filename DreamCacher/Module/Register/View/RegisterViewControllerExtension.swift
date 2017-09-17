@@ -15,15 +15,11 @@ extension RegisterViewController : RegisterDelegate {
         self.navigationController?.pushViewController(interestViewController, animated: true)
     }
     
-    func onError(message: String) {
-        print(message)
-    }
-    
     func startLoading() {
-        loading.startAnimating()
+        present(loadingAlert, animated: true, completion: nil)
     }
     
     func stopLoading() {
-        loading.stopAnimating()
+        dismiss(animated: true, completion: nil)
     }
 }

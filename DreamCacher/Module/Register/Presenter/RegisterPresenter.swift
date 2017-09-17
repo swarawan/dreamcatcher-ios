@@ -10,7 +10,6 @@ import UIKit
 
 protocol RegisterDelegate {
     func displayNextView()
-    func onError(message: String)
     func startLoading()
     func stopLoading()
 }
@@ -35,12 +34,9 @@ class RegisterPresenter {
         
         self.delegate?.startLoading()
         service.register(param: param, completionHandler: { success, register in
-            
             self.delegate?.stopLoading()
             if register.success! {
                 self.delegate?.displayNextView()
-            } else {
-                self.delegate?.onError(message: register.message!)
             }
         })
     }

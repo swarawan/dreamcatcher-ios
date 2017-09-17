@@ -17,6 +17,7 @@
                 <outlet property="coverImage" destination="M5S-2N-Z6g" id="tXH-2b-JIO"/>
                 <outlet property="nameLabel" destination="WSO-vT-2Ma" id="9dk-QN-ylM"/>
                 <outlet property="photoImage" destination="2ex-bK-sCW" id="Hme-kY-fvg"/>
+                <outlet property="totalPostLabel" destination="cCY-0u-qDm" id="5je-3v-vXb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

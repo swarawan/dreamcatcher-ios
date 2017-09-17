@@ -10,9 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var interestCollection: UICollectionView!
     @IBOutlet weak var articleTable: UITableView!
     
     fileprivate let presenter = HomePresenter(service: ArticleService())
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var articles = [ArticleModel]()
     
     override func viewDidLoad() {
@@ -38,6 +40,7 @@ class HomeViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
         }
         
+        loadingAlert.initLoading()
         presenter.attachView(delegate: self)
         presenter.loadArticles()
     }
@@ -56,7 +59,10 @@ class HomeViewController: UIViewController {
     }
     
     func editAction() {
+        let selectCategoryViewController = SelectCategoryViewController(nibName: "SelectCategoryViewController", bundle: nil)
+        selectCategoryViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(selectCategoryViewController, animated: true)
     }
 }
 
@@ -86,3 +92,13 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         return 160
     }
 }
+
+//extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        
+//    }
+//}

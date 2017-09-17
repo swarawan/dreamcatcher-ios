@@ -19,16 +19,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     fileprivate let presenter = LoginPresenter(service: LoginService())
-    let loading = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40),
-                                          type: .ballScaleRippleMultiple,
-                                          color: .black, padding: 0)
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.attachView(delegate: self)
         
         setupView()
-        setupLoadingView()
 
         // Do any additional setup after loading the view.
     }
@@ -65,6 +62,8 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     func setupView() {
+        loadingAlert.initLoading()
+        
         self.credentialContainerView.backgroundColor = UIColor(hex: ColorTheme.white)
         self.credentialContainerView.layer.cornerRadius = 30.0
         
@@ -81,15 +80,5 @@ extension LoginViewController {
         self.passwordTextField.dividerActiveColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.passwordTextField.dividerNormalColor = UIColor(hex: ColorTheme.lightBlueGrey)
         self.passwordTextField.clearButtonMode = .whileEditing
-    }
-    
-    func setupLoadingView() {
-        self.loading.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        self.loading.center = self.view.center
-        self.loading.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.view.addSubview(self.loading)
-        self.view.addConstraint(NSLayoutConstraint(item: self.loading, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: self.loading, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0))
     }
 }

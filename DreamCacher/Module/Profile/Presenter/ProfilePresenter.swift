@@ -39,6 +39,7 @@ class ProfilePresenter {
     func loadProfile() {
         self.delegate?.startLoading()
         service.getProfile(completionHandler: { profileModel in
+            self.delegate?.stopLoading()
             if profileModel.success! {
                 self.delegate?.displayProfile(profile: profileModel)
                 self.loadArticle(userId: profileModel.userId!)
@@ -48,7 +49,10 @@ class ProfilePresenter {
     
     private func loadArticle(userId: Int) {
         let param = ProfileParam(userId: userId)
+     
+        self.delegate?.startLoading()
         service.getAllArticleByUser(param: param, completionHandler: { homeModel in
+            self.delegate?.stopLoading()
             if homeModel.success! {
                 self.delegate?.displayUserPosts(articles: homeModel.posts!)
             }

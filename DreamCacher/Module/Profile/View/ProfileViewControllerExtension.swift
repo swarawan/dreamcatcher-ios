@@ -20,6 +20,8 @@ extension ProfileViewController : ProfileDelegate {
     func displayUserPosts(articles: [ArticleModel]) {
         self.articles = articles
         self.articleTable.reloadData()
+        
+        self.totalPostLabel.text = "\(articles.count) Post(s)"
     }
     
     func nextSingleArticle(article: ArticleModel) {
@@ -31,10 +33,10 @@ extension ProfileViewController : ProfileDelegate {
     }
     
     func startLoading() {
-        
+        present(loadingAlert, animated: true, completion: nil)
     }
     
     func stopLoading() {
-        
+        dismiss(animated: true, completion: nil)
     }
 }

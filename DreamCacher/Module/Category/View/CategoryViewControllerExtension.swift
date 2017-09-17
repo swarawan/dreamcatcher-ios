@@ -23,10 +23,10 @@ extension CategoryViewController : CategoryDelegate {
     }
     
     func startLoading() {
-        
+        present(loadingAlert, animated: true, completion: nil)
     }
     
     func stopLoading() {
-        
+        dismiss(animated: true, completion: nil)
     }
 }

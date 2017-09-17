@@ -30,6 +30,7 @@ class InterestCache {
         return ""
     }
     
+    /* stored with format: "interestA,interestB,interestC" as String */
     func saveInterests(interests: String) {
         UserDefaults.standard.set(interests, forKey: "interests")
     }

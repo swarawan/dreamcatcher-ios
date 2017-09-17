@@ -14,6 +14,7 @@ class CategoryDetailViewController: UIViewController {
     @IBOutlet weak var articleTable: UITableView!
     
     fileprivate let presenter = CategoryDetailPresenter(service: CategoryDetailService())
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var interest = InterestItemModel()
     var articles = [ArticleModel]()
     
@@ -31,6 +32,7 @@ class CategoryDetailViewController: UIViewController {
         // setup navigation bar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
         
+        loadingAlert.initLoading()
         categoryImage.image = UIImage().getInterestImage(id: interest.backgroundId!)
         presenter.attachView(delegate: self)
         presenter.loadArticles(category: interest.category!)

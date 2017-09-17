@@ -12,6 +12,7 @@ class CategoryViewController: UIViewController {
 
     @IBOutlet weak var categoryTable: UITableView!
     
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var presenter = CategoryPresenter(service: InterestService())
     var interests = [InterestItemModel]()
     
@@ -34,6 +35,7 @@ class CategoryViewController: UIViewController {
             self.navigationItem.setHidesBackButton(true, animated: true)
         }
         
+        loadingAlert.initLoading()
         presenter.attachView(delegate: self)
         presenter.loadInterest()
     }

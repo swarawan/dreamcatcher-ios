@@ -39,6 +39,7 @@ class CategoryDetailPresenter {
         self.delegate?.startLoading()
         let param = CategoryDetailParam(category: category)
         service.getAllArticleByCategory(param: param, completionHandler: { detailModel in
+            self.delegate?.stopLoading()
             if detailModel.success! {
                 self.delegate?.displayArticles(articles: detailModel.posts!)
             }

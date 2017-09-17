@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2626EEF01F6BA78B002FD6C5 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2626EEEF1F6BA78B002FD6C5 /* UIAlertController.swift */; };
+		262FE9631F6EBC70007D7499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262FE9621F6EBC70007D7499 /* Assets.xcassets */; };
 		2631E16C1F5E7DE900D3AA72 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631E16B1F5E7DE900D3AA72 /* Register.swift */; };
 		2631E16E1F5E81F700D3AA72 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631E16D1F5E81F700D3AA72 /* RegisterService.swift */; };
 		2631E1701F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631E16F1F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift */; };
@@ -14,6 +16,13 @@
 		26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26442B531F5BA9E000542790 /* ColorTheme.swift */; };
 		26442B581F5BAB9800542790 /* JustAnotherHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26442B561F5BAB9800542790 /* JustAnotherHand-Regular.ttf */; };
 		26442B591F5BAB9800542790 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26442B571F5BAB9800542790 /* LICENSE.txt */; };
+		2649ACD61F6BB84E004F8338 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649ACD41F6BB84E004F8338 /* SelectCategoryViewController.swift */; };
+		2649ACD71F6BB84E004F8338 /* SelectCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2649ACD51F6BB84E004F8338 /* SelectCategoryViewController.xib */; };
+		2649ACDB1F6BBA41004F8338 /* SelectCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649ACD91F6BBA41004F8338 /* SelectCategoryTableViewCell.swift */; };
+		2649ACDC1F6BBA41004F8338 /* SelectCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2649ACDA1F6BBA41004F8338 /* SelectCategoryTableViewCell.xib */; };
+		2649ACDE1F6BBB11004F8338 /* SelectCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649ACDD1F6BBB11004F8338 /* SelectCategoryModel.swift */; };
+		2649ACE11F6BBC24004F8338 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649ACDF1F6BBC24004F8338 /* InfoTableViewCell.swift */; };
+		2649ACE21F6BBC24004F8338 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2649ACE01F6BBC24004F8338 /* InfoTableViewCell.xib */; };
 		267B3AB01F6A79A900901A95 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AAE1F6A79A900901A95 /* Lobster-Regular.ttf */; };
 		267B3AB11F6A79AA00901A95 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AAF1F6A79A900901A95 /* OFL.txt */; };
 		267B3AB71F6A7BE100901A95 /* RockoFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB31F6A7BE100901A95 /* RockoFLF-Bold.ttf */; };
@@ -22,6 +31,7 @@
 		267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */; };
 		2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDD1F5E563A008B0658 /* NetworkService.swift */; };
 		2689ABE01F5E56B0008B0658 /* LoginParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDF1F5E56B0008B0658 /* LoginParam.swift */; };
+		26947A891F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */; };
 		269878E51F66269800DA69E6 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269878E41F66269800DA69E6 /* UILabel.swift */; };
 		2698C0D81F677B4200E19355 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0D71F677B4200E19355 /* CategoryPresenter.swift */; };
 		2698C0DB1F677C9A00E19355 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0D91F677C9A00E19355 /* CategoryViewController.swift */; };
@@ -67,7 +77,6 @@
 		26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F3E1F55054A00944844 /* AppDelegate.swift */; };
 		26BB2F411F55054A00944844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F401F55054A00944844 /* ViewController.swift */; };
 		26BB2F441F55054A00944844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F421F55054A00944844 /* Main.storyboard */; };
-		26BB2F461F55054A00944844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F451F55054A00944844 /* Assets.xcassets */; };
 		26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BB2F471F55054A00944844 /* LaunchScreen.storyboard */; };
 		26BB2F541F55054A00944844 /* DreamCacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F531F55054A00944844 /* DreamCacherTests.swift */; };
 		26BB2F5F1F55054A00944844 /* DreamCacherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F5E1F55054A00944844 /* DreamCacherUITests.swift */; };
@@ -117,6 +126,8 @@
 
 /* Begin PBXFileReference section */
 		0C11CD1F375E5C6B811A03DE /* Pods_DreamCacher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamCacher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2626EEEF1F6BA78B002FD6C5 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		262FE9621F6EBC70007D7499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2631E16B1F5E7DE900D3AA72 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		2631E16D1F5E81F700D3AA72 /* RegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		2631E16F1F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -124,6 +135,13 @@
 		26442B531F5BA9E000542790 /* ColorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		26442B561F5BAB9800542790 /* JustAnotherHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JustAnotherHand-Regular.ttf"; sourceTree = "<group>"; };
 		26442B571F5BAB9800542790 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		2649ACD41F6BB84E004F8338 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
+		2649ACD51F6BB84E004F8338 /* SelectCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCategoryViewController.xib; sourceTree = "<group>"; };
+		2649ACD91F6BBA41004F8338 /* SelectCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		2649ACDA1F6BBA41004F8338 /* SelectCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		2649ACDD1F6BBB11004F8338 /* SelectCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryModel.swift; sourceTree = "<group>"; };
+		2649ACDF1F6BBC24004F8338 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		2649ACE01F6BBC24004F8338 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		267B3AAE1F6A79A900901A95 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		267B3AAF1F6A79A900901A95 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		267B3AB31F6A7BE100901A95 /* RockoFLF-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RockoFLF-Bold.ttf"; sourceTree = "<group>"; };
@@ -132,6 +150,7 @@
 		267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoUltraFLF.ttf; sourceTree = "<group>"; };
 		2689ABDD1F5E563A008B0658 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2689ABDF1F5E56B0008B0658 /* LoginParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginParam.swift; sourceTree = "<group>"; };
+		26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCategoryViewControllerExtension.swift; path = DreamCacher/Module/SelectCategory/View/SelectCategoryViewControllerExtension.swift; sourceTree = SOURCE_ROOT; };
 		269878E41F66269800DA69E6 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		2698C0D71F677B4200E19355 /* CategoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		2698C0D91F677C9A00E19355 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +197,6 @@
 		26BB2F3E1F55054A00944844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26BB2F401F55054A00944844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		26BB2F431F55054A00944844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		26BB2F451F55054A00944844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26BB2F481F55054A00944844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26BB2F4A1F55054A00944844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26BB2F4F1F55054A00944844 /* DreamCacherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamCacherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +285,7 @@
 				26C802471F658D67003FBBBA /* Date.swift */,
 				26C802491F65A5B0003FBBBA /* UIImage.swift */,
 				269878E41F66269800DA69E6 /* UILabel.swift */,
+				2626EEEF1F6BA78B002FD6C5 /* UIAlertController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -278,6 +297,53 @@
 				26442B571F5BAB9800542790 /* LICENSE.txt */,
 			);
 			path = JustAnotherHand;
+			sourceTree = "<group>";
+		};
+		2649ACD01F6BB81E004F8338 /* SelectCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2649ACD11F6BB81E004F8338 /* Model */,
+				2649ACD21F6BB81E004F8338 /* Presenter */,
+				2649ACD31F6BB81E004F8338 /* View */,
+			);
+			path = SelectCategory;
+			sourceTree = "<group>";
+		};
+		2649ACD11F6BB81E004F8338 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2649ACDD1F6BBB11004F8338 /* SelectCategoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2649ACD21F6BB81E004F8338 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2649ACD31F6BB81E004F8338 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2649ACD81F6BB92E004F8338 /* TableViewCell */,
+				2649ACD41F6BB84E004F8338 /* SelectCategoryViewController.swift */,
+				2649ACD51F6BB84E004F8338 /* SelectCategoryViewController.xib */,
+				26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2649ACD81F6BB92E004F8338 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2649ACD91F6BBA41004F8338 /* SelectCategoryTableViewCell.swift */,
+				2649ACDA1F6BBA41004F8338 /* SelectCategoryTableViewCell.xib */,
+				2649ACDF1F6BBC24004F8338 /* InfoTableViewCell.swift */,
+				2649ACE01F6BBC24004F8338 /* InfoTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		267B3AAD1F6A79A900901A95 /* Lobster */ = {
@@ -707,8 +773,8 @@
 				2692B4AE1F571B840044DE79 /* Resource */,
 				26BB2F3E1F55054A00944844 /* AppDelegate.swift */,
 				26BB2F401F55054A00944844 /* ViewController.swift */,
+				262FE9621F6EBC70007D7499 /* Assets.xcassets */,
 				26BB2F421F55054A00944844 /* Main.storyboard */,
-				26BB2F451F55054A00944844 /* Assets.xcassets */,
 				26BB2F471F55054A00944844 /* LaunchScreen.storyboard */,
 				26BB2F4A1F55054A00944844 /* Info.plist */,
 			);
@@ -746,6 +812,7 @@
 				26B4E3231F64A5C600343CAD /* Main */,
 				26A1D3C71F60EF3000E8670F /* Profile */,
 				26B47CB31F5E395A00CACAD1 /* Register */,
+				2649ACD01F6BB81E004F8338 /* SelectCategory */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -932,6 +999,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				267B3AB11F6A79AA00901A95 /* OFL.txt in Resources */,
+				2649ACE21F6BBC24004F8338 /* InfoTableViewCell.xib in Resources */,
+				2649ACD71F6BB84E004F8338 /* SelectCategoryViewController.xib in Resources */,
 				267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */,
 				26B47CC61F5E395A00CACAD1 /* LoginViewController.xib in Resources */,
 				26B47CCB1F5E395A00CACAD1 /* RegisterViewController.xib in Resources */,
@@ -941,10 +1010,11 @@
 				26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */,
 				26442B591F5BAB9800542790 /* LICENSE.txt in Resources */,
 				26E011F41F62E277007058F5 /* InterestViewController.xib in Resources */,
+				2649ACDC1F6BBA41004F8338 /* SelectCategoryTableViewCell.xib in Resources */,
+				262FE9631F6EBC70007D7499 /* Assets.xcassets in Resources */,
 				26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */,
 				26442B581F5BAB9800542790 /* JustAnotherHand-Regular.ttf in Resources */,
 				26CAA6D51F5A514800DE4AC6 /* Oswald-ExtraLight.ttf in Resources */,
-				26BB2F461F55054A00944844 /* Assets.xcassets in Resources */,
 				26CAA6D81F5A514800DE4AC6 /* Oswald-Regular.ttf in Resources */,
 				2698C0DC1F677C9A00E19355 /* CategoryViewController.xib in Resources */,
 				26A1D3DB1F61009200E8670F /* DetailArticleTableViewCell.xib in Resources */,
@@ -1123,18 +1193,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26947A891F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift in Sources */,
 				26EDE6BD1F63E06D00F6026F /* InterestItemModel.swift in Sources */,
 				269B31C51F68D2AD003AD97C /* CategoryDetailPresenter.swift in Sources */,
+				2649ACD61F6BB84E004F8338 /* SelectCategoryViewController.swift in Sources */,
 				26E011F81F62E2A1007058F5 /* InterestTableViewCell.swift in Sources */,
 				26C423781F6600DC001F8521 /* DetailArticleViewController.swift in Sources */,
+				2626EEF01F6BA78B002FD6C5 /* UIAlertController.swift in Sources */,
 				2631E16C1F5E7DE900D3AA72 /* Register.swift in Sources */,
 				26B47CBC1F5E395A00CACAD1 /* HomeViewController.swift in Sources */,
 				2631E1701F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift in Sources */,
+				2649ACDE1F6BBB11004F8338 /* SelectCategoryModel.swift in Sources */,
 				269B31BC1F68C5C1003AD97C /* HomeTableViewCell.swift in Sources */,
 				26B47CBB1F5E395A00CACAD1 /* HomeModel.swift in Sources */,
 				26B47CC81F5E395A00CACAD1 /* RegisterParam.swift in Sources */,
 				26ADD94A1F622A8900F67CDF /* HomePresenter.swift in Sources */,
 				26A6CFDE1F6A2D1400786314 /* ProfileParam.swift in Sources */,
+				2649ACDB1F6BBA41004F8338 /* SelectCategoryTableViewCell.swift in Sources */,
 				2698C0E51F6782B400E19355 /* CategoryViewControllerExtension.swift in Sources */,
 				26B47CCD1F5E484100CACAD1 /* ArticleService.swift in Sources */,
 				26EDE6BF1F63E1B000F6026F /* InterestService.swift in Sources */,
@@ -1173,6 +1248,7 @@
 				26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */,
 				269B31B61F68C3B6003AD97C /* CategoryDetailViewController.swift in Sources */,
 				26A1D3CD1F60F04B00E8670F /* ProfileViewController.swift in Sources */,
+				2649ACE11F6BBC24004F8338 /* InfoTableViewCell.swift in Sources */,
 				26B47CC51F5E395A00CACAD1 /* LoginViewController.swift in Sources */,
 				26C8024A1F65A5B0003FBBBA /* UIImage.swift in Sources */,
 				26EDE6C11F63E69800F6026F /* InterestPresenter.swift in Sources */,

@@ -16,8 +16,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var articleTable: UITableView!
+    @IBOutlet weak var totalPostLabel: UILabel!
     
     fileprivate let presenter = ProfilePresenter(service: ProfileService())
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var articles = [ArticleModel]()
     
     override func viewDidLoad() {
@@ -36,6 +38,7 @@ class ProfileViewController: UIViewController {
         articleTable.dataSource = self
         articleTable.register(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
         
+        loadingAlert.initLoading()
         presenter.attachView(delegate: self)
         presenter.loadProfile()
     }

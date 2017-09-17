@@ -13,6 +13,7 @@ class InterestViewController: UIViewController {
 
     @IBOutlet weak var interestTableView: UITableView!
     
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var presenter = InterestPresenter(service: InterestService())
     var interests = [InterestItemModel]()
     var selectedInterest = [InterestItemModel]()
@@ -26,6 +27,7 @@ class InterestViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.white ]
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         
         self.edgesForExtendedLayout = []
         
@@ -33,6 +35,7 @@ class InterestViewController: UIViewController {
         self.interestTableView.dataSource = self
         self.interestTableView.register(UINib.init(nibName: "InterestTableViewCell", bundle: nil), forCellReuseIdentifier: "InterestTableViewCell")
         
+        self.loadingAlert.initLoading()
         self.presenter.attachView(delegate: self)
         self.presenter.loadInterest()
     }

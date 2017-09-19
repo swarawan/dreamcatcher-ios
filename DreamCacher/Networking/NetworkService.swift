@@ -17,6 +17,7 @@ enum NetworkService {
     case getArticlesByUser(request: ProfileParam)
     case getInterests()
     case getProfile()
+    case getBookmark()
 }
 
 extension NetworkService : TargetType {
@@ -41,6 +42,8 @@ extension NetworkService : TargetType {
             return "/v1/categories"
         case .getProfile(_):
             return "/v1/profile"
+        case .getBookmark(_):
+            return "/v1/bookmarks"
         }
     }
     
@@ -59,6 +62,8 @@ extension NetworkService : TargetType {
         case .getInterests(_):
             return .get
         case .getProfile(_):
+            return .get
+        case .getBookmark(_):
             return .get
         }
     }
@@ -89,6 +94,8 @@ extension NetworkService : TargetType {
             ]
         case .getProfile(_):
             return [:]
+        case .getBookmark(_):
+            return [:]
         }
     }
     
@@ -107,6 +114,8 @@ extension NetworkService : TargetType {
         case .getArticlesByUser:
             return URLEncoding.default
         case .getProfile():
+            return URLEncoding.default
+        case .getBookmark(_):
             return URLEncoding.default
         }
     }

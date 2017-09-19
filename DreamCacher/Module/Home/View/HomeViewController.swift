@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var interestCollection: UICollectionView!
     @IBOutlet weak var articleTable: UITableView!
     
     fileprivate let presenter = HomePresenter(service: ArticleService())

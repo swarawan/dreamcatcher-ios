@@ -14,7 +14,7 @@ target 'DreamCacher' do
   pod 'SwiftyJSON'
   pod 'Material'
   pod 'NVActivityIndicatorView' 
- 
+
   # Pods for Taps
   target 'DreamCacherTests' do
     inherit! :search_paths

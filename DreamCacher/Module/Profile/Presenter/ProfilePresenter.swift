@@ -11,6 +11,7 @@ import UIKit
 protocol ProfileDelegate : NSObjectProtocol {
     func displayProfile(profile: ProfileModel)
     func displayUserPosts(articles: [ArticleModel])
+    func displayBookmark(bookmark: [ArticleModel])
     func nextSingleArticle(article: ArticleModel)
     func startLoading()
     func stopLoading()
@@ -42,12 +43,11 @@ class ProfilePresenter {
             self.delegate?.stopLoading()
             if profileModel.success! {
                 self.delegate?.displayProfile(profile: profileModel)
-                self.loadArticle(userId: profileModel.userId!)
             }
         })
     }
     
-    private func loadArticle(userId: Int) {
+    func loadArticle(userId: Int) {
         let param = ProfileParam(userId: userId)
      
         self.delegate?.startLoading()
@@ -55,6 +55,16 @@ class ProfilePresenter {
             self.delegate?.stopLoading()
             if homeModel.success! {
                 self.delegate?.displayUserPosts(articles: homeModel.posts!)
+            }
+        })
+    }
+    
+    func loadBookmark() {
+        self.delegate?.startLoading()
+        service.getBookmark(completionHandler: { bookmarkModel in
+            self.delegate?.stopLoading()
+            if bookmarkModel.success! {
+                self.delegate?.displayUserPosts(articles: bookmarkModel.bookmarks!)
             }
         })
     }

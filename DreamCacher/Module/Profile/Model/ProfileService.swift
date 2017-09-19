@@ -55,5 +55,27 @@ class ProfileService {
             }
         }
     }
-
+    
+    func getBookmark(completionHandler: @escaping (BookmarkModel) -> Void) {
+        
+        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        provider.request(.getBookmark()) { (result) -> Void in
+            switch result {
+            case let .success(response):
+                
+                let json: String = JSON(response.data).rawString()!
+                let bookmarkModel = Mapper<BookmarkModel>().map(JSONString: json)
+                
+                completionHandler(bookmarkModel!)
+                
+            case let .failure(error):
+                
+                var bookmarkModel = BookmarkModel()
+                bookmarkModel.message = error.errorDescription
+                
+                completionHandler(bookmarkModel)
+            }
+        }
+    }
+    
 }

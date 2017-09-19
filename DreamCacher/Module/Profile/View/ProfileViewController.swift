@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ProfileType {
+    case own
+    case otherUser
+}
+
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var coverImage: UIImageView!
@@ -17,10 +22,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var articleTable: UITableView!
     @IBOutlet weak var totalPostLabel: UILabel!
+    @IBOutlet weak var postSegment: UISegmentedControl!
     
-    fileprivate let presenter = ProfilePresenter(service: ProfileService())
+    let presenter = ProfilePresenter(service: ProfileService())
     let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var articles = [ArticleModel]()
+    var type: ProfileType = .own
+    var userId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +39,6 @@ class ProfileViewController: UIViewController {
         
         self.navigationItem.titleView = image
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
         
         articleTable.delegate = self
         articleTable.dataSource = self
@@ -41,11 +47,31 @@ class ProfileViewController: UIViewController {
         loadingAlert.initLoading()
         presenter.attachView(delegate: self)
         presenter.loadProfile()
+        
+        checkProfileType()
+    }
+    
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        if postSegment.selectedSegmentIndex == 0 {
+            presenter.loadArticle(userId: userId)
+        } else if postSegment.selectedSegmentIndex == 1 {
+            presenter.loadBookmark()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func checkProfileType() {
+        switch type {
+        case .otherUser:
+            postSegment.removeSegment(at: 1, animated: true)
+        case .own:
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
+        }
     }
     
     func composeAction() {

@@ -59,6 +59,7 @@
 		26A6CFDE1F6A2D1400786314 /* ProfileParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A6CFDD1F6A2D1400786314 /* ProfileParam.swift */; };
 		26ADD94A1F622A8900F67CDF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADD9491F622A8900F67CDF /* HomePresenter.swift */; };
 		26ADD94C1F62300400F67CDF /* TokenAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADD94B1F62300400F67CDF /* TokenAuth.swift */; };
+		26B1084B1F6FF3480018A183 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B1084A1F6FF3480018A183 /* BookmarkModel.swift */; };
 		26B47CBB1F5E395A00CACAD1 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B47C9E1F5E395A00CACAD1 /* HomeModel.swift */; };
 		26B47CBC1F5E395A00CACAD1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B47CA11F5E395A00CACAD1 /* HomeViewController.swift */; };
 		26B47CBD1F5E395A00CACAD1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B47CA21F5E395A00CACAD1 /* HomeViewController.xib */; };
@@ -178,6 +179,7 @@
 		26A6CFDD1F6A2D1400786314 /* ProfileParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileParam.swift; sourceTree = "<group>"; };
 		26ADD9491F622A8900F67CDF /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		26ADD94B1F62300400F67CDF /* TokenAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenAuth.swift; sourceTree = "<group>"; };
+		26B1084A1F6FF3480018A183 /* BookmarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
 		26B47C9E1F5E395A00CACAD1 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		26B47CA11F5E395A00CACAD1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		26B47CA21F5E395A00CACAD1 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -396,6 +398,37 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		26973F6E1F6F2E2000FD9C1F /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				26973F6F1F6F2E2000FD9C1F /* Model */,
+				26973F701F6F2E2000FD9C1F /* Presenter */,
+				26973F711F6F2E2000FD9C1F /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		26973F6F1F6F2E2000FD9C1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26973F701F6F2E2000FD9C1F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		26973F711F6F2E2000FD9C1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2698C0D31F677AD800E19355 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +553,7 @@
 				26A6CFD51F6A264200786314 /* ProfileModel.swift */,
 				26A6CFD71F6A27EB00786314 /* ProfileService.swift */,
 				26A6CFDD1F6A2D1400786314 /* ProfileParam.swift */,
+				26B1084A1F6FF3480018A183 /* BookmarkModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -805,6 +839,7 @@
 				2698C0D31F677AD800E19355 /* Category */,
 				269B31AF1F68C2EB003AD97C /* CategoryDetail */,
 				269B31B81F68C580003AD97C /* Common */,
+				26973F6E1F6F2E2000FD9C1F /* Compose */,
 				26A1D3CF1F61003700E8670F /* Detail */,
 				26B47C9C1F5E395A00CACAD1 /* Home */,
 				26B47CA61F5E395A00CACAD1 /* Interest */,
@@ -1220,6 +1255,7 @@
 				269B31BF1F68C6CE003AD97C /* CategoryDetailViewControllerExtension.swift in Sources */,
 				2698C0DB1F677C9A00E19355 /* CategoryViewController.swift in Sources */,
 				26A1D3DA1F61009200E8670F /* DetailArticleTableViewCell.swift in Sources */,
+				26B1084B1F6FF3480018A183 /* BookmarkModel.swift in Sources */,
 				26ADD94C1F62300400F67CDF /* TokenAuth.swift in Sources */,
 				2698C0D81F677B4200E19355 /* CategoryPresenter.swift in Sources */,
 				269B31C71F68D3E1003AD97C /* CategoryDetailService.swift in Sources */,

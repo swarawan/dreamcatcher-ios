@@ -20,7 +20,10 @@ class SelectCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Dreamcatcher"
+        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        image.contentMode = .scaleAspectFit
+        
+        self.navigationItem.titleView = image
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.black ]
 

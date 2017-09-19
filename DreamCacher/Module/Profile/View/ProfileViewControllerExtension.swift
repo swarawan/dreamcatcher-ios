@@ -9,19 +9,30 @@
 import UIKit
 
 extension ProfileViewController : ProfileDelegate {
+    
     func displayProfile(profile: ProfileModel) {
+        self.userId = profile.userId!
         self.nameLabel.text = profile.name
         self.addressLabel.text = profile.address
         self.bioLabel.text = profile.bio
         self.photoImage.image = UIImage().getAvatar(id: profile.avatarId!)
         self.coverImage.image = UIImage().getCoverProgile(id: profile.coverPhotoId!)
+        
+        self.presenter.loadArticle(userId: profile.userId!)
     }
     
     func displayUserPosts(articles: [ArticleModel]) {
+        self.articles.removeAll()
         self.articles = articles
         self.articleTable.reloadData()
         
         self.totalPostLabel.text = "\(articles.count) Post(s)"
+    }
+    
+    func displayBookmark(bookmark: [ArticleModel]) {
+        self.articles.removeAll()
+        self.articles = bookmark
+        self.articleTable.reloadData()
     }
     
     func nextSingleArticle(article: ArticleModel) {

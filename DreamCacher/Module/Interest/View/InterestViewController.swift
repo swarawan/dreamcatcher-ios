@@ -22,12 +22,11 @@ class InterestViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Dreamcatcher"
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: ColorTheme.lightNavy)
         self.navigationController?.navigationBar.tintColor = UIColor(hex: ColorTheme.duckEggBlue)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.white ]
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         
         self.edgesForExtendedLayout = []
         

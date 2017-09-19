@@ -24,7 +24,7 @@ class CategoryViewController: UIViewController {
         self.categoryTable.register(UINib.init(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryTableViewCell")
         
         // setup navigation bar
-        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "title-dreamcatcher"))
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image

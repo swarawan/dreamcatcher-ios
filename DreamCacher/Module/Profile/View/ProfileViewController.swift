@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         // setup navigation bar
-        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "title-dreamcatcher"))
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image
@@ -106,7 +106,7 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 145
     }
 }
 

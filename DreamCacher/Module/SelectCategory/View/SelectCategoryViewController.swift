@@ -20,7 +20,7 @@ class SelectCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "title-select-category"))
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image

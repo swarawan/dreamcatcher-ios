@@ -12,23 +12,23 @@ extension UIImage {
     func getAvatar(id: Int) -> UIImage {
         switch id {
         case 1:
-            return #imageLiteral(resourceName: "boy-1")
+            return #imageLiteral(resourceName: "avatar-1")
         case 2:
-            return #imageLiteral(resourceName: "boy-2")
+            return #imageLiteral(resourceName: "avatar-2")
         case 3:
-            return #imageLiteral(resourceName: "girl-1")
+            return #imageLiteral(resourceName: "avatar-4")
         case 4:
-            return #imageLiteral(resourceName: "girl-2")
+            return #imageLiteral(resourceName: "avatar-4")
         case 5:
-            return #imageLiteral(resourceName: "man-1")
+            return #imageLiteral(resourceName: "avatar-5")
         case 6:
-            return #imageLiteral(resourceName: "man-2")
+            return #imageLiteral(resourceName: "avatar-6")
         case 7:
-            return #imageLiteral(resourceName: "man-3")
+            return #imageLiteral(resourceName: "avatar-7")
         case 8:
-            return #imageLiteral(resourceName: "man-4")
+            return #imageLiteral(resourceName: "avatar-8")
         default:
-            return #imageLiteral(resourceName: "man-5")
+            return #imageLiteral(resourceName: "avatar-9")
         }
     }
     

@@ -17,7 +17,7 @@ class DetailArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "title-dreamcatcher"))
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image
@@ -41,7 +41,26 @@ class DetailArticleViewController: UIViewController {
     }
     
     func moreAction() {
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
+        let commentAction = UIAlertAction(title: "Comment(s)", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            
+        })
+        let editAction = UIAlertAction(title: "Edit", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            
+        })
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (alert:UIAlertAction!) -> Void in
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        optionMenu.addAction(commentAction)
+        optionMenu.addAction(editAction)
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
     }
 }
 

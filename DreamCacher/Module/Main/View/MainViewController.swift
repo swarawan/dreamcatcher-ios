@@ -24,13 +24,13 @@ class MainViewController: UITabBarController {
     
     private func setupUI() {
         let homeViewController = HomeViewController()
-        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "Home"), selectedImage: #imageLiteral(resourceName: "Home - Active"))
+        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "home-selected"))
         
         let categoryViewController = CategoryViewController()
-        categoryViewController.tabBarItem = UITabBarItem(title: "Category", image: #imageLiteral(resourceName: "Categories"), selectedImage: #imageLiteral(resourceName: "Categories - Active"))
+        categoryViewController.tabBarItem = UITabBarItem(title: "Category", image: #imageLiteral(resourceName: "categories"), selectedImage: #imageLiteral(resourceName: "categories-selected"))
         
         let profileViewController = ProfileViewController()
-        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "Profile"), selectedImage: #imageLiteral(resourceName: "Profile - Active"))
+        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profile"), selectedImage: #imageLiteral(resourceName: "profile-selected"))
         
         let viewControllerList = [
             homeViewController,

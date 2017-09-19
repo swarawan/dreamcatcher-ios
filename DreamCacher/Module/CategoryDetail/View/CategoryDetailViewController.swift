@@ -21,7 +21,7 @@ class CategoryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImageView(image: #imageLiteral(resourceName: "Title"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "title-dreamcatcher"))
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image
@@ -75,6 +75,6 @@ extension CategoryDetailViewController : UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 145
     }
 }

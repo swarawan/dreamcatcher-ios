@@ -10,7 +10,6 @@ import UIKit
 
 class CategoryDetailViewController: UIViewController {
 
-    @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var articleTable: UITableView!
     
     fileprivate let presenter = CategoryDetailPresenter(service: CategoryDetailService())
@@ -29,15 +28,19 @@ class CategoryDetailViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.black ]
         
+        let header = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 80))
+        header.image = UIImage().getInterestImage(id: interest.backgroundId!)
+        header.contentMode = .center
+        
         self.articleTable.delegate = self
         self.articleTable.dataSource = self
+        self.articleTable.tableHeaderView = header
         self.articleTable.register(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
         
         // setup navigation bar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
         
         loadingAlert.initLoading()
-        categoryImage.image = UIImage().getInterestImage(id: interest.backgroundId!)
         presenter.attachView(delegate: self)
         presenter.loadArticles(category: interest.category!)
     }

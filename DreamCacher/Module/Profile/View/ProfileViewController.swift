@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
         
         articleTable.delegate = self
         articleTable.dataSource = self
-        articleTable.register(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        articleTable.register(UINib.init(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         
         loadingAlert.initLoading()
         presenter.attachView(delegate: self)
@@ -69,8 +69,8 @@ class ProfileViewController: UIViewController {
         case .otherUser:
             postSegment.removeSegment(at: 1, animated: true)
         case .own:
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "compose"), style: .plain, target: self, action: #selector(composeAction))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "setting"), style: .plain, target: self, action: #selector(editAction))
         }
     }
     
@@ -94,8 +94,8 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
-        cell.displayItem(article: articles[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
+        cell.displayArticle(article: articles[indexPath.row])
         
         return cell
     }
@@ -106,7 +106,7 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 145
+        return 70
     }
 }
 

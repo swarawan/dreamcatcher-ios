@@ -31,12 +31,12 @@ class HomeViewController: UIViewController {
         self.articleTable.register(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
         
         // setup navigation bar
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "compose"), style: .plain, target: self, action: #selector(composeAction))
         if Token.getAccessToken().isEmpty {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(loginAction))
         } else {
             self.navigationItem.setHidesBackButton(true, animated: true)
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "edit-interest"), style: .plain, target: self, action: #selector(editAction))
         }
         
         loadingAlert.initLoading()

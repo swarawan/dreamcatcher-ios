@@ -29,6 +29,8 @@
 		267B3AB81F6A7BE100901A95 /* RockoFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB41F6A7BE100901A95 /* RockoFLF.ttf */; };
 		267B3AB91F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */; };
 		267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */; };
+		26898F541F71DEE700D073EC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */; };
+		26898F551F71DEE700D073EC /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */; };
 		2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDD1F5E563A008B0658 /* NetworkService.swift */; };
 		2689ABE01F5E56B0008B0658 /* LoginParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDF1F5E56B0008B0658 /* LoginParam.swift */; };
 		26947A891F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */; };
@@ -74,6 +76,11 @@
 		26B47CCA1F5E395A00CACAD1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B47CB91F5E395A00CACAD1 /* RegisterViewController.swift */; };
 		26B47CCB1F5E395A00CACAD1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B47CBA1F5E395A00CACAD1 /* RegisterViewController.xib */; };
 		26B47CCD1F5E484100CACAD1 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B47CCC1F5E484100CACAD1 /* ArticleService.swift */; };
+		26B48ABB1F736B1800D7FBFB /* DetailArticleParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48ABA1F736B1800D7FBFB /* DetailArticleParam.swift */; };
+		26B48ABD1F736B8F00D7FBFB /* DetailArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48ABC1F736B8F00D7FBFB /* DetailArticleModel.swift */; };
+		26B48ABF1F736E0400D7FBFB /* DetailArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48ABE1F736E0400D7FBFB /* DetailArticleService.swift */; };
+		26B48AC11F7370A700D7FBFB /* DetailArticlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC01F7370A700D7FBFB /* DetailArticlePresenter.swift */; };
+		26B48AC31F73739800D7FBFB /* DetailArticleViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */; };
 		26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4E3271F64A61100343CAD /* MainViewController.swift */; };
 		26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F3E1F55054A00944844 /* AppDelegate.swift */; };
 		26BB2F411F55054A00944844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F401F55054A00944844 /* ViewController.swift */; };
@@ -149,6 +156,8 @@
 		267B3AB41F6A7BE100901A95 /* RockoFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoFLF.ttf; sourceTree = "<group>"; };
 		267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RockoUltraFLF-Bold.ttf"; sourceTree = "<group>"; };
 		267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoUltraFLF.ttf; sourceTree = "<group>"; };
+		26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		2689ABDD1F5E563A008B0658 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2689ABDF1F5E56B0008B0658 /* LoginParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginParam.swift; sourceTree = "<group>"; };
 		26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCategoryViewControllerExtension.swift; path = DreamCacher/Module/SelectCategory/View/SelectCategoryViewControllerExtension.swift; sourceTree = SOURCE_ROOT; };
@@ -194,6 +203,11 @@
 		26B47CB91F5E395A00CACAD1 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		26B47CBA1F5E395A00CACAD1 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		26B47CCC1F5E484100CACAD1 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		26B48ABA1F736B1800D7FBFB /* DetailArticleParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleParam.swift; sourceTree = "<group>"; };
+		26B48ABC1F736B8F00D7FBFB /* DetailArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleModel.swift; sourceTree = "<group>"; };
+		26B48ABE1F736E0400D7FBFB /* DetailArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleService.swift; sourceTree = "<group>"; };
+		26B48AC01F7370A700D7FBFB /* DetailArticlePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticlePresenter.swift; sourceTree = "<group>"; };
+		26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleViewControllerExtension.swift; sourceTree = "<group>"; };
 		26B4E3271F64A61100343CAD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26BB2F3B1F55054A00944844 /* DreamCacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamCacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F3E1F55054A00944844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -368,6 +382,15 @@
 			);
 			name = Rocko;
 			path = ../Rocko;
+			sourceTree = "<group>";
+		};
+		26898F511F71DED100D073EC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */,
+				26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		2689ABDC1F5E5559008B0658 /* Networking */ = {
@@ -569,6 +592,7 @@
 		26A1D3CA1F60EF4600E8670F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26898F511F71DED100D073EC /* TableViewCell */,
 				26A1D3CB1F60F04B00E8670F /* ProfileViewController.swift */,
 				26A1D3CC1F60F04B00E8670F /* ProfileViewController.xib */,
 				26A6CFDB1F6A29ED00786314 /* ProfileViewControllerExtension.swift */,
@@ -589,6 +613,9 @@
 		26A1D3D01F61003700E8670F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				26B48ABA1F736B1800D7FBFB /* DetailArticleParam.swift */,
+				26B48ABC1F736B8F00D7FBFB /* DetailArticleModel.swift */,
+				26B48ABE1F736E0400D7FBFB /* DetailArticleService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -596,6 +623,7 @@
 		26A1D3D11F61003700E8670F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				26B48AC01F7370A700D7FBFB /* DetailArticlePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -606,6 +634,7 @@
 				26A1D3D71F61007200E8670F /* TableViewCell */,
 				26C423761F6600DC001F8521 /* DetailArticleViewController.swift */,
 				26C423771F6600DC001F8521 /* DetailArticleViewController.xib */,
+				26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1034,6 +1063,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				267B3AB11F6A79AA00901A95 /* OFL.txt in Resources */,
+				26898F551F71DEE700D073EC /* ProfileTableViewCell.xib in Resources */,
 				2649ACE21F6BBC24004F8338 /* InfoTableViewCell.xib in Resources */,
 				2649ACD71F6BB84E004F8338 /* SelectCategoryViewController.xib in Resources */,
 				267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */,
@@ -1231,6 +1261,7 @@
 				26947A891F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift in Sources */,
 				26EDE6BD1F63E06D00F6026F /* InterestItemModel.swift in Sources */,
 				269B31C51F68D2AD003AD97C /* CategoryDetailPresenter.swift in Sources */,
+				26898F541F71DEE700D073EC /* ProfileTableViewCell.swift in Sources */,
 				2649ACD61F6BB84E004F8338 /* SelectCategoryViewController.swift in Sources */,
 				26E011F81F62E2A1007058F5 /* InterestTableViewCell.swift in Sources */,
 				26C423781F6600DC001F8521 /* DetailArticleViewController.swift in Sources */,
@@ -1243,6 +1274,7 @@
 				26B47CBB1F5E395A00CACAD1 /* HomeModel.swift in Sources */,
 				26B47CC81F5E395A00CACAD1 /* RegisterParam.swift in Sources */,
 				26ADD94A1F622A8900F67CDF /* HomePresenter.swift in Sources */,
+				26B48AC11F7370A700D7FBFB /* DetailArticlePresenter.swift in Sources */,
 				26A6CFDE1F6A2D1400786314 /* ProfileParam.swift in Sources */,
 				2649ACDB1F6BBA41004F8338 /* SelectCategoryTableViewCell.swift in Sources */,
 				2698C0E51F6782B400E19355 /* CategoryViewControllerExtension.swift in Sources */,
@@ -1250,6 +1282,7 @@
 				26EDE6BF1F63E1B000F6026F /* InterestService.swift in Sources */,
 				2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */,
 				26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */,
+				26B48AC31F73739800D7FBFB /* DetailArticleViewControllerExtension.swift in Sources */,
 				26A1D3C61F60ECC200E8670F /* ArticleModel.swift in Sources */,
 				26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */,
 				269B31BF1F68C6CE003AD97C /* CategoryDetailViewControllerExtension.swift in Sources */,
@@ -1281,13 +1314,16 @@
 				26A6CFD81F6A27EB00786314 /* ProfileService.swift in Sources */,
 				26A6CFD61F6A264200786314 /* ProfileModel.swift in Sources */,
 				26C802481F658D67003FBBBA /* Date.swift in Sources */,
+				26B48ABB1F736B1800D7FBFB /* DetailArticleParam.swift in Sources */,
 				26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */,
 				269B31B61F68C3B6003AD97C /* CategoryDetailViewController.swift in Sources */,
 				26A1D3CD1F60F04B00E8670F /* ProfileViewController.swift in Sources */,
 				2649ACE11F6BBC24004F8338 /* InfoTableViewCell.swift in Sources */,
+				26B48ABD1F736B8F00D7FBFB /* DetailArticleModel.swift in Sources */,
 				26B47CC51F5E395A00CACAD1 /* LoginViewController.swift in Sources */,
 				26C8024A1F65A5B0003FBBBA /* UIImage.swift in Sources */,
 				26EDE6C11F63E69800F6026F /* InterestPresenter.swift in Sources */,
+				26B48ABF1F736E0400D7FBFB /* DetailArticleService.swift in Sources */,
 				2689ABE01F5E56B0008B0658 /* LoginParam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

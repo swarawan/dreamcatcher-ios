@@ -18,6 +18,7 @@ enum NetworkService {
     case getInterests()
     case getProfile()
     case getBookmark()
+    case getSingleArticle(request: DetailArticleParam)
 }
 
 extension NetworkService : TargetType {
@@ -44,6 +45,8 @@ extension NetworkService : TargetType {
             return "/v1/profile"
         case .getBookmark(_):
             return "/v1/bookmarks"
+        case .getSingleArticle(let request):
+            return "/v1/posts/\(request.postId)"
         }
     }
     
@@ -64,6 +67,8 @@ extension NetworkService : TargetType {
         case .getProfile(_):
             return .get
         case .getBookmark(_):
+            return .get
+        case .getSingleArticle(_):
             return .get
         }
     }
@@ -96,28 +101,13 @@ extension NetworkService : TargetType {
             return [:]
         case .getBookmark(_):
             return [:]
+        case .getSingleArticle(let request):
+            return [:]
         }
     }
     
     public var parameterEncoding: Moya.ParameterEncoding {
-        switch self{
-        case .login:
-            return URLEncoding.default
-        case .register:
-            return URLEncoding.default
-        case .getArticles:
-            return URLEncoding.default
-        case .getInterests:
-            return URLEncoding.default
-        case .getArticlesByCategory:
-            return URLEncoding.default
-        case .getArticlesByUser:
-            return URLEncoding.default
-        case .getProfile():
-            return URLEncoding.default
-        case .getBookmark(_):
-            return URLEncoding.default
-        }
+        return URLEncoding.default
     }
     
     public var sampleData: Data {

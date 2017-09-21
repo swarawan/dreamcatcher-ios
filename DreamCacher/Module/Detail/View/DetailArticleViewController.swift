@@ -12,7 +12,10 @@ class DetailArticleViewController: UIViewController {
 
     @IBOutlet weak var detailTableView: UITableView!
     
-    var article = ArticleModel()
+    fileprivate let presenter = DetailArticlePresenter(service: DetailArticleService())
+    let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
+    var postId = 0
+    var singleArticle = ArticleModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,9 @@ class DetailArticleViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_more_horiz"), style: .plain, target: self, action: #selector(moreAction))
         
+        self.loadingAlert.initLoading()
+        self.presenter.attachView(delegate: self)
+        self.presenter.loadSingleArticle(postId: postId)
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,16 +83,21 @@ extension DetailArticleViewController : UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageAction(tapGestureRecognizer:)))
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailArticleTableViewCell", for: indexPath) as! DetailArticleTableViewCell
-        cell.displayItem(article: article)
-        cell.profileImage.isUserInteractionEnabled = true
-        cell.profileImage.addGestureRecognizer(tapGesture)
+        
+        if singleArticle.id != nil {
+            cell.displayItem(article: singleArticle)
+            cell.profileImage.isUserInteractionEnabled = true
+            cell.profileImage.addGestureRecognizer(tapGesture)
+        }
         
         return cell
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let contentHeight = (article.content?.heightWithConstrainedWidth(width: UIScreen.main.bounds.width, font: UIFont.systemFont(ofSize: 12)))!
-        
+        var contentHeight: CGFloat = 0.0
+        if singleArticle.content != nil {
+            contentHeight = (singleArticle.content?.heightWithConstrainedWidth(width: UIScreen.main.bounds.width, font: UIFont.systemFont(ofSize: 12)))!
+        }
         return contentHeight + 350
     }
     

@@ -21,10 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)! ]
         
         // Route to Main
-//        let rootViewController = (Token.getAccessToken().isEmpty ? LoginViewController() : HomeViewController())
-        let rootViewController = LoginViewController()
+        let rootViewController = (Token.getAccessToken().isEmpty ? UINavigationController(rootViewController: LoginViewController()) : MainViewController())
         window = UIWindow.init(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
         return true

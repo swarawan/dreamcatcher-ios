@@ -22,14 +22,6 @@ class DetailArticleTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         featuredImage.layer.cornerRadius = 10
-        
-        profileImage.layer.borderColor = UIColor.white.cgColor
-        profileImage.layer.borderWidth = 5
-        profileImage.layer.cornerRadius = 30
-        profileImage.layer.shadowOpacity = 0.2
-        profileImage.layer.shadowRadius = 2
-        profileImage.layer.shadowColor = UIColor.black.cgColor
-        profileImage.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

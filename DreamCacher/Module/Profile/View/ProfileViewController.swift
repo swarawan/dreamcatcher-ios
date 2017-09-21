@@ -75,7 +75,10 @@ class ProfileViewController: UIViewController {
     }
     
     func composeAction() {
+        let composeViewController = ComposeViewController(nibName: "ComposeViewController", bundle: nil)
+        composeViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(composeViewController, animated: true)
     }
     
     func editAction() {
@@ -102,7 +105,11 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = articles[indexPath.row]
-        presenter.loadSingleArticle(article: article)
+        var articleType: ArticleType = .own
+        if type == .otherUser {
+            articleType = .otherUser
+        }
+        presenter.loadSingleArticle(article: article, type: articleType)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -38,7 +38,7 @@ class CategoryDetailViewController: UIViewController {
         self.articleTable.register(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
         
         // setup navigation bar
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "compose"), style: .plain, target: self, action: #selector(composeAction))
         
         loadingAlert.initLoading()
         presenter.attachView(delegate: self)
@@ -51,7 +51,10 @@ class CategoryDetailViewController: UIViewController {
     }
     
     func composeAction() {
+        let composeViewController = ComposeViewController(nibName: "ComposeViewController", bundle: nil)
+        composeViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(composeViewController, animated: true)
     }
 }
 

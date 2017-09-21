@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ArticleType {
+    case own
+    case otherUser
+}
+
 class DetailArticleViewController: UIViewController {
 
     @IBOutlet weak var detailTableView: UITableView!
@@ -16,6 +21,7 @@ class DetailArticleViewController: UIViewController {
     let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var postId = 0
     var singleArticle = ArticleModel()
+    var type: ArticleType = .own
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +40,11 @@ class DetailArticleViewController: UIViewController {
         self.detailTableView.dataSource = self
         self.detailTableView.register(UINib.init(nibName: "DetailArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailArticleTableViewCell")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_more_horiz"), style: .plain, target: self, action: #selector(moreAction))
+        if type == .own {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_more_horiz"), style: .plain, target: self, action: #selector(moreAction))
+        } else {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "comment"), style: .plain, target: self, action: #selector(commentAction))
+        }
         
         self.loadingAlert.initLoading()
         self.presenter.attachView(delegate: self)
@@ -49,24 +59,28 @@ class DetailArticleViewController: UIViewController {
     func moreAction() {
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let commentAction = UIAlertAction(title: "Comment(s)", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+        let commentMenu = UIAlertAction(title: "Comment(s)", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.commentAction()
+        })
+        let editMenu = UIAlertAction(title: "Edit", style: .default, handler: { (alert:UIAlertAction!) -> Void in
             
         })
-        let editAction = UIAlertAction(title: "Edit", style: .default, handler: { (alert:UIAlertAction!) -> Void in
-            
-        })
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (alert:UIAlertAction!) -> Void in
+        let deleteMenu = UIAlertAction(title: "Delete", style: .destructive, handler: { (alert:UIAlertAction!) -> Void in
             
         })
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelMenu = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        optionMenu.addAction(commentAction)
-        optionMenu.addAction(editAction)
-        optionMenu.addAction(deleteAction)
-        optionMenu.addAction(cancelAction)
+        optionMenu.addAction(commentMenu)
+        optionMenu.addAction(editMenu)
+        optionMenu.addAction(deleteMenu)
+        optionMenu.addAction(cancelMenu)
         
         self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    func commentAction() {
+        
     }
 }
 

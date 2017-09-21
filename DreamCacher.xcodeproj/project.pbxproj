@@ -81,6 +81,10 @@
 		26B48ABF1F736E0400D7FBFB /* DetailArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48ABE1F736E0400D7FBFB /* DetailArticleService.swift */; };
 		26B48AC11F7370A700D7FBFB /* DetailArticlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC01F7370A700D7FBFB /* DetailArticlePresenter.swift */; };
 		26B48AC31F73739800D7FBFB /* DetailArticleViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */; };
+		26B48AC81F738A1D00D7FBFB /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC61F738A1D00D7FBFB /* ComposeViewController.swift */; };
+		26B48AC91F738A1D00D7FBFB /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B48AC71F738A1D00D7FBFB /* ComposeViewController.xib */; };
+		26B48ACD1F738A8600D7FBFB /* ComposeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48ACB1F738A8600D7FBFB /* ComposeTableViewCell.swift */; };
+		26B48ACE1F738A8600D7FBFB /* ComposeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B48ACC1F738A8600D7FBFB /* ComposeTableViewCell.xib */; };
 		26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4E3271F64A61100343CAD /* MainViewController.swift */; };
 		26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F3E1F55054A00944844 /* AppDelegate.swift */; };
 		26BB2F411F55054A00944844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F401F55054A00944844 /* ViewController.swift */; };
@@ -208,6 +212,10 @@
 		26B48ABE1F736E0400D7FBFB /* DetailArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleService.swift; sourceTree = "<group>"; };
 		26B48AC01F7370A700D7FBFB /* DetailArticlePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticlePresenter.swift; sourceTree = "<group>"; };
 		26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleViewControllerExtension.swift; sourceTree = "<group>"; };
+		26B48AC61F738A1D00D7FBFB /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		26B48AC71F738A1D00D7FBFB /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		26B48ACB1F738A8600D7FBFB /* ComposeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTableViewCell.swift; sourceTree = "<group>"; };
+		26B48ACC1F738A8600D7FBFB /* ComposeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeTableViewCell.xib; sourceTree = "<group>"; };
 		26B4E3271F64A61100343CAD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26BB2F3B1F55054A00944844 /* DreamCacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamCacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F3E1F55054A00944844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -448,6 +456,9 @@
 		26973F711F6F2E2000FD9C1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26B48ACA1F738A6D00D7FBFB /* TableViewCell */,
+				26B48AC61F738A1D00D7FBFB /* ComposeViewController.swift */,
+				26B48AC71F738A1D00D7FBFB /* ComposeViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -772,6 +783,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		26B48ACA1F738A6D00D7FBFB /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				26B48ACB1F738A8600D7FBFB /* ComposeTableViewCell.swift */,
+				26B48ACC1F738A8600D7FBFB /* ComposeTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		26B4E3231F64A5C600343CAD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1080,6 +1100,7 @@
 				26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */,
 				26442B581F5BAB9800542790 /* JustAnotherHand-Regular.ttf in Resources */,
 				26CAA6D51F5A514800DE4AC6 /* Oswald-ExtraLight.ttf in Resources */,
+				26B48AC91F738A1D00D7FBFB /* ComposeViewController.xib in Resources */,
 				26CAA6D81F5A514800DE4AC6 /* Oswald-Regular.ttf in Resources */,
 				2698C0DC1F677C9A00E19355 /* CategoryViewController.xib in Resources */,
 				26A1D3DB1F61009200E8670F /* DetailArticleTableViewCell.xib in Resources */,
@@ -1091,6 +1112,7 @@
 				269B31B71F68C3B6003AD97C /* CategoryDetailViewController.xib in Resources */,
 				269B31BD1F68C5C1003AD97C /* HomeTableViewCell.xib in Resources */,
 				26B47CBD1F5E395A00CACAD1 /* HomeViewController.xib in Resources */,
+				26B48ACE1F738A8600D7FBFB /* ComposeTableViewCell.xib in Resources */,
 				267B3AB71F6A7BE100901A95 /* RockoFLF-Bold.ttf in Resources */,
 				26C423791F6600DC001F8521 /* DetailArticleViewController.xib in Resources */,
 				26CAA6D71F5A514800DE4AC6 /* Oswald-Medium.ttf in Resources */,
@@ -1269,6 +1291,7 @@
 				2631E16C1F5E7DE900D3AA72 /* Register.swift in Sources */,
 				26B47CBC1F5E395A00CACAD1 /* HomeViewController.swift in Sources */,
 				2631E1701F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift in Sources */,
+				26B48AC81F738A1D00D7FBFB /* ComposeViewController.swift in Sources */,
 				2649ACDE1F6BBB11004F8338 /* SelectCategoryModel.swift in Sources */,
 				269B31BC1F68C5C1003AD97C /* HomeTableViewCell.swift in Sources */,
 				26B47CBB1F5E395A00CACAD1 /* HomeModel.swift in Sources */,
@@ -1304,6 +1327,7 @@
 				2631E16E1F5E81F700D3AA72 /* RegisterService.swift in Sources */,
 				269B31C31F68D0F7003AD97C /* CategoryDetailParam.swift in Sources */,
 				26B47CC21F5E395A00CACAD1 /* Login.swift in Sources */,
+				26B48ACD1F738A8600D7FBFB /* ComposeTableViewCell.swift in Sources */,
 				2698C0E01F677D6E00E19355 /* CategoryTableViewCell.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
 				26A6CFDC1F6A29ED00786314 /* ProfileViewControllerExtension.swift in Sources */,

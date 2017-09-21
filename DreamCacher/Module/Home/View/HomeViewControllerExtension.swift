@@ -13,6 +13,7 @@ extension HomeViewController : HomeDelegate {
     func nextSingleArticle(article: ArticleModel) {
         let detailArticleViewController = DetailArticleViewController(nibName: "DetailArticleViewController", bundle: nil)
         detailArticleViewController.postId = article.id!
+        detailArticleViewController.type = .otherUser
         detailArticleViewController.hidesBottomBarWhenPushed = true
         
         self.navigationController?.pushViewController(detailArticleViewController, animated: true)

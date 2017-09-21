@@ -54,7 +54,10 @@ class HomeViewController: UIViewController {
     }
     
     func composeAction() {
+        let composeViewController = ComposeViewController(nibName: "ComposeViewController", bundle: nil)
+        composeViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(composeViewController, animated: true)
     }
     
     func editAction() {

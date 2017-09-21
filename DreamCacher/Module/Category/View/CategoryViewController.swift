@@ -28,7 +28,7 @@ class CategoryViewController: UIViewController {
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "compose"), style: .plain, target: self, action: #selector(composeAction))
         if Token.getAccessToken().isEmpty {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(loginAction))
         } else {
@@ -50,7 +50,10 @@ class CategoryViewController: UIViewController {
     }
     
     func composeAction() {
+        let composeViewController = ComposeViewController(nibName: "ComposeViewController", bundle: nil)
+        composeViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(composeViewController, animated: true)
     }
 }
 

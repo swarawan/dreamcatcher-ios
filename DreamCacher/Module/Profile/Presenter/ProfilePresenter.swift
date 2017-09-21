@@ -12,7 +12,7 @@ protocol ProfileDelegate : NSObjectProtocol {
     func displayProfile(profile: ProfileModel)
     func displayUserPosts(articles: [ArticleModel])
     func displayBookmark(bookmark: [ArticleModel])
-    func nextSingleArticle(article: ArticleModel)
+    func nextSingleArticle(article: ArticleModel, type: ArticleType)
     func startLoading()
     func stopLoading()
 }
@@ -33,8 +33,8 @@ class ProfilePresenter {
         self.delegate = nil
     }
     
-    func loadSingleArticle(article: ArticleModel) {
-        self.delegate?.nextSingleArticle(article: article)
+    func loadSingleArticle(article: ArticleModel, type: ArticleType) {
+        self.delegate?.nextSingleArticle(article: article, type: type)
     }
     
     func loadProfile() {

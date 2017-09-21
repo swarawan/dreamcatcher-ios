@@ -35,9 +35,10 @@ extension ProfileViewController : ProfileDelegate {
         self.articleTable.reloadData()
     }
     
-    func nextSingleArticle(article: ArticleModel) {
+    func nextSingleArticle(article: ArticleModel, type: ArticleType) {
         let detailArticleViewController = DetailArticleViewController(nibName: "DetailArticleViewController", bundle: nil)
         detailArticleViewController.postId = article.id!
+        detailArticleViewController.type = type
         detailArticleViewController.hidesBottomBarWhenPushed = true
         
         self.navigationController?.pushViewController(detailArticleViewController, animated: true)

@@ -12,8 +12,6 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tabBarController?.delegate = self
         setupUI()
     }
 
@@ -40,18 +38,6 @@ class MainViewController: UITabBarController {
         
         viewControllers = viewControllerList.map { viewController in
             UINavigationController(rootViewController: viewController)
-        }
-    }
-}
-
-extension MainViewController : UITabBarControllerDelegate {
-     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.title == "Home" {
-            print("homeeey")
-        } else if item.title == "Categories" {
-            item.title = "Categories"
-        }else if item.title == "Profile" {
-            item.title = "Profile"
         }
     }
 }

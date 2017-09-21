@@ -50,7 +50,10 @@ class HomeViewController: UIViewController {
     }
     
     func loginAction() {
+        let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        loginViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(loginViewController, animated: true)
     }
     
     func composeAction() {

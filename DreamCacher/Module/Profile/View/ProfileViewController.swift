@@ -43,12 +43,36 @@ class ProfileViewController: UIViewController {
         articleTable.delegate = self
         articleTable.dataSource = self
         articleTable.register(UINib.init(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadingAlert.initLoading()
         presenter.attachView(delegate: self)
-        presenter.loadProfile()
+        
+        if !Token.getAccessToken().isEmpty {
+            presenter.loadProfile()
+        } else {
+            userMustSignIn()
+        }
         
         checkProfileType()
+    }
+    
+    func userMustSignIn() {
+        let alertController = UIAlertController(title: "Dreamcatcher", message: "You must login to use this feature!", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Sign In Now", style: .default, handler: { action in
+            let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            loginViewController.hidesBottomBarWhenPushed = true
+            
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .default, handler: { action in
+            self.parent?.tabBarController?.selectedIndex = 0
+        })
+        
+        alertController.addAction(okButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
@@ -82,7 +106,10 @@ class ProfileViewController: UIViewController {
     }
     
     func editAction() {
+        let editProfileViewController = EditProfileViewController(nibName: "EditProfileViewController", bundle: nil)
+        editProfileViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(editProfileViewController, animated: true)
     }
 }
 

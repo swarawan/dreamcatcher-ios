@@ -40,13 +40,25 @@ class EditProfileViewController: UIViewController {
         
     }
     
-    @IBAction func signOut(_ sender: UIButton) {
+    func logoutNow() {
         Token.saveAccessToken(accessToken: "")
         
         let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
         loginViewController.hidesBottomBarWhenPushed = true
         
         self.navigationController?.pushViewController(loginViewController, animated: true)
+    }
+    
+    @IBAction func signOut(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Dreamcatcher", message: "Sign Out Now?", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.logoutNow()
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        alertController.addAction(okButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func chooseImageAction(_ sender: UIButton) {

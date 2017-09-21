@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Pt-2t-z6D">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Pt-2t-z6D">
                         <rect key="frame" x="8" y="8" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="06y-YK-r1E"/>
@@ -97,7 +97,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="boy-1" width="512" height="512"/>
+        <image name="avatar-1" width="101" height="100"/>
         <image name="red" width="750" height="300"/>
     </resources>
 </document>

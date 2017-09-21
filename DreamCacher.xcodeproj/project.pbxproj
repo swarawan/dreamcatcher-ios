@@ -29,6 +29,7 @@
 		267B3AB81F6A7BE100901A95 /* RockoFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB41F6A7BE100901A95 /* RockoFLF.ttf */; };
 		267B3AB91F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */; };
 		267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */; };
+		2681E6741F73EBB10037E33E /* ComposeViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */; };
 		26898F541F71DEE700D073EC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */; };
 		26898F551F71DEE700D073EC /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */; };
 		2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDD1F5E563A008B0658 /* NetworkService.swift */; };
@@ -83,8 +84,6 @@
 		26B48AC31F73739800D7FBFB /* DetailArticleViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */; };
 		26B48AC81F738A1D00D7FBFB /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48AC61F738A1D00D7FBFB /* ComposeViewController.swift */; };
 		26B48AC91F738A1D00D7FBFB /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B48AC71F738A1D00D7FBFB /* ComposeViewController.xib */; };
-		26B48ACD1F738A8600D7FBFB /* ComposeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B48ACB1F738A8600D7FBFB /* ComposeTableViewCell.swift */; };
-		26B48ACE1F738A8600D7FBFB /* ComposeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B48ACC1F738A8600D7FBFB /* ComposeTableViewCell.xib */; };
 		26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4E3271F64A61100343CAD /* MainViewController.swift */; };
 		26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F3E1F55054A00944844 /* AppDelegate.swift */; };
 		26BB2F411F55054A00944844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB2F401F55054A00944844 /* ViewController.swift */; };
@@ -160,6 +159,7 @@
 		267B3AB41F6A7BE100901A95 /* RockoFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoFLF.ttf; sourceTree = "<group>"; };
 		267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RockoUltraFLF-Bold.ttf"; sourceTree = "<group>"; };
 		267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoUltraFLF.ttf; sourceTree = "<group>"; };
+		2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewControllerExtension.swift; sourceTree = "<group>"; };
 		26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		2689ABDD1F5E563A008B0658 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -214,8 +214,6 @@
 		26B48AC21F73739800D7FBFB /* DetailArticleViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArticleViewControllerExtension.swift; sourceTree = "<group>"; };
 		26B48AC61F738A1D00D7FBFB /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		26B48AC71F738A1D00D7FBFB /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
-		26B48ACB1F738A8600D7FBFB /* ComposeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTableViewCell.swift; sourceTree = "<group>"; };
-		26B48ACC1F738A8600D7FBFB /* ComposeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeTableViewCell.xib; sourceTree = "<group>"; };
 		26B4E3271F64A61100343CAD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26BB2F3B1F55054A00944844 /* DreamCacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamCacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BB2F3E1F55054A00944844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -456,9 +454,9 @@
 		26973F711F6F2E2000FD9C1F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				26B48ACA1F738A6D00D7FBFB /* TableViewCell */,
 				26B48AC61F738A1D00D7FBFB /* ComposeViewController.swift */,
 				26B48AC71F738A1D00D7FBFB /* ComposeViewController.xib */,
+				2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -783,15 +781,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		26B48ACA1F738A6D00D7FBFB /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				26B48ACB1F738A8600D7FBFB /* ComposeTableViewCell.swift */,
-				26B48ACC1F738A8600D7FBFB /* ComposeTableViewCell.xib */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
 		26B4E3231F64A5C600343CAD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1112,7 +1101,6 @@
 				269B31B71F68C3B6003AD97C /* CategoryDetailViewController.xib in Resources */,
 				269B31BD1F68C5C1003AD97C /* HomeTableViewCell.xib in Resources */,
 				26B47CBD1F5E395A00CACAD1 /* HomeViewController.xib in Resources */,
-				26B48ACE1F738A8600D7FBFB /* ComposeTableViewCell.xib in Resources */,
 				267B3AB71F6A7BE100901A95 /* RockoFLF-Bold.ttf in Resources */,
 				26C423791F6600DC001F8521 /* DetailArticleViewController.xib in Resources */,
 				26CAA6D71F5A514800DE4AC6 /* Oswald-Medium.ttf in Resources */,
@@ -1300,6 +1288,7 @@
 				26B48AC11F7370A700D7FBFB /* DetailArticlePresenter.swift in Sources */,
 				26A6CFDE1F6A2D1400786314 /* ProfileParam.swift in Sources */,
 				2649ACDB1F6BBA41004F8338 /* SelectCategoryTableViewCell.swift in Sources */,
+				2681E6741F73EBB10037E33E /* ComposeViewControllerExtension.swift in Sources */,
 				2698C0E51F6782B400E19355 /* CategoryViewControllerExtension.swift in Sources */,
 				26B47CCD1F5E484100CACAD1 /* ArticleService.swift in Sources */,
 				26EDE6BF1F63E1B000F6026F /* InterestService.swift in Sources */,
@@ -1327,7 +1316,6 @@
 				2631E16E1F5E81F700D3AA72 /* RegisterService.swift in Sources */,
 				269B31C31F68D0F7003AD97C /* CategoryDetailParam.swift in Sources */,
 				26B47CC21F5E395A00CACAD1 /* Login.swift in Sources */,
-				26B48ACD1F738A8600D7FBFB /* ComposeTableViewCell.swift in Sources */,
 				2698C0E01F677D6E00E19355 /* CategoryTableViewCell.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
 				26A6CFDC1F6A29ED00786314 /* ProfileViewControllerExtension.swift in Sources */,

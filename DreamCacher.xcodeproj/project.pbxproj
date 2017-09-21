@@ -30,6 +30,8 @@
 		267B3AB91F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */; };
 		267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */; };
 		2681E6741F73EBB10037E33E /* ComposeViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */; };
+		2681E67B1F73F6190037E33E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681E6791F73F6190037E33E /* EditProfileViewController.swift */; };
+		2681E67C1F73F6190037E33E /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2681E67A1F73F6190037E33E /* EditProfileViewController.xib */; };
 		26898F541F71DEE700D073EC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */; };
 		26898F551F71DEE700D073EC /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */; };
 		2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDD1F5E563A008B0658 /* NetworkService.swift */; };
@@ -160,6 +162,8 @@
 		267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RockoUltraFLF-Bold.ttf"; sourceTree = "<group>"; };
 		267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoUltraFLF.ttf; sourceTree = "<group>"; };
 		2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewControllerExtension.swift; sourceTree = "<group>"; };
+		2681E6791F73F6190037E33E /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		2681E67A1F73F6190037E33E /* EditProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		26898F521F71DEE700D073EC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		2689ABDD1F5E563A008B0658 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -388,6 +392,39 @@
 			);
 			name = Rocko;
 			path = ../Rocko;
+			sourceTree = "<group>";
+		};
+		2681E6751F73F5F40037E33E /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2681E6761F73F5F40037E33E /* Model */,
+				2681E6771F73F5F40037E33E /* Presenter */,
+				2681E6781F73F5F40037E33E /* View */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		2681E6761F73F5F40037E33E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2681E6771F73F5F40037E33E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2681E6781F73F5F40037E33E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2681E6791F73F6190037E33E /* EditProfileViewController.swift */,
+				2681E67A1F73F6190037E33E /* EditProfileViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		26898F511F71DED100D073EC /* TableViewCell */ = {
@@ -879,6 +916,7 @@
 				269B31B81F68C580003AD97C /* Common */,
 				26973F6E1F6F2E2000FD9C1F /* Compose */,
 				26A1D3CF1F61003700E8670F /* Detail */,
+				2681E6751F73F5F40037E33E /* EditProfile */,
 				26B47C9C1F5E395A00CACAD1 /* Home */,
 				26B47CA61F5E395A00CACAD1 /* Interest */,
 				26B47CA91F5E395A00CACAD1 /* Login */,
@@ -1079,6 +1117,7 @@
 				26B47CC61F5E395A00CACAD1 /* LoginViewController.xib in Resources */,
 				26B47CCB1F5E395A00CACAD1 /* RegisterViewController.xib in Resources */,
 				26CAA6D91F5A514800DE4AC6 /* Oswald-SemiBold.ttf in Resources */,
+				2681E67C1F73F6190037E33E /* EditProfileViewController.xib in Resources */,
 				2698C0E11F677D6E00E19355 /* CategoryTableViewCell.xib in Resources */,
 				26CAA6D31F5A514800DE4AC6 /* OFL.txt in Resources */,
 				26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */,
@@ -1316,6 +1355,7 @@
 				2631E16E1F5E81F700D3AA72 /* RegisterService.swift in Sources */,
 				269B31C31F68D0F7003AD97C /* CategoryDetailParam.swift in Sources */,
 				26B47CC21F5E395A00CACAD1 /* Login.swift in Sources */,
+				2681E67B1F73F6190037E33E /* EditProfileViewController.swift in Sources */,
 				2698C0E01F677D6E00E19355 /* CategoryTableViewCell.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
 				26A6CFDC1F6A29ED00786314 /* ProfileViewControllerExtension.swift in Sources */,

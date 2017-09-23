@@ -107,11 +107,18 @@ extension NetworkService : TargetType {
     }
     
     public var headers: [String : String]? {
-        let accessToken = Token.getAccessToken()
-        return [
-            "Content-type" : "application/json",
-            "Authorization" : accessToken
-        ]
+        switch self {
+        case .login:
+            return ["Content-type" : "application/json"]
+        case .register:
+            return ["Content-type" : "application/json"]
+        default:
+            let accessToken = Token.getAccessToken()
+            return [
+                "Content-type" : "application/json",
+                "Authorization" : accessToken
+            ]
+        }
     }
     
     public var parameterEncoding: Moya.ParameterEncoding {

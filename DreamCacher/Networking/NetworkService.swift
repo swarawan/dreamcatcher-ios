@@ -39,8 +39,8 @@ let endpointClosure = { (target: NetworkService) -> Endpoint<NetworkService> in
 extension NetworkService : TargetType {
     
     public var baseURL: URL {
-        //        return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
-        return URL(string: "http://dreamcatcherz.herokuapp.com")!
+        return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
+//        return URL(string: "http://dreamcatcherz.herokuapp.com")!
     }
     
     public var path: String {
@@ -69,15 +69,15 @@ extension NetworkService : TargetType {
     public var method: Moya.Method {
         switch self {
         case .login,
-             .register,
-             .getInterests:
+             .register:
             return .post
         case .getArticles,
              .getArticlesByCategory,
              .getArticlesByUser,
              .getProfile,
              .getBookmark,
-             .getSingleArticle:
+             .getSingleArticle,
+             .getInterests:
             return .get
         }
     }

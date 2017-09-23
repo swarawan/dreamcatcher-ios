@@ -11,8 +11,10 @@ import UIKit
 extension RegisterViewController : RegisterDelegate {
     
     func displayNextView() {
-        let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
-        self.navigationController?.pushViewController(interestViewController, animated: true)
+        dismiss(animated: true, completion: {
+            let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
+            self.navigationController?.pushViewController(interestViewController, animated: true)
+        })
     }
     
     func startLoading() {
@@ -22,6 +24,6 @@ extension RegisterViewController : RegisterDelegate {
     }
     
     func stopLoading() {
-        dismiss(animated: true, completion: nil)
+        
     }
 }

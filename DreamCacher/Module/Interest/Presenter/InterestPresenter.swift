@@ -12,8 +12,6 @@ protocol InterestDelegate : NSObjectProtocol {
     func displayMainPage()
     func displayInterest(interest: [InterestItemModel])
     func onError(message: String)
-    func startLoading()
-    func stopLoading()
 }
 
 class InterestPresenter {
@@ -47,9 +45,7 @@ class InterestPresenter {
     
     func loadInterest() {
         
-        self.delegate?.startLoading()
         service.loadInterest(completionHandler: { interestModel in
-            self.delegate?.stopLoading()
             if interestModel.success! {
                 self.delegate?.displayInterest(interest: interestModel.interests!)
             } else {

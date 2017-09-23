@@ -21,10 +21,25 @@ enum NetworkService {
     case getSingleArticle(request: DetailArticleParam)
 }
 
+let endpointClosure = { (target: NetworkService) -> Endpoint<NetworkService> in
+    let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
+    
+    switch target {
+    case .login,
+         .register:
+        return defaultEndpoint.adding(newHTTPHeaderFields: ["Content-Type": "application/json"])
+    default:
+        let accessToken = Token.getAccessToken()
+        return defaultEndpoint.adding(newHTTPHeaderFields: [
+            "Content-Type": "application/json",
+            "Authorization": "\(accessToken)"])
+    }
+}
+
 extension NetworkService : TargetType {
     
     public var baseURL: URL {
-//        return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
+        //        return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
         return URL(string: "http://dreamcatcherz.herokuapp.com")!
     }
     
@@ -53,23 +68,16 @@ extension NetworkService : TargetType {
     
     public var method: Moya.Method {
         switch self {
-        case .login(_):
+        case .login,
+             .register,
+             .getInterests:
             return .post
-        case .register(_):
-            return .post
-        case .getArticles(_):
-            return .get
-        case .getArticlesByCategory(_):
-            return .get
-        case .getArticlesByUser(_):
-            return .get
-        case .getInterests(_):
-            return .get
-        case .getProfile(_):
-            return .get
-        case .getBookmark(_):
-            return .get
-        case .getSingleArticle(_):
+        case .getArticles,
+             .getArticlesByCategory,
+             .getArticlesByUser,
+             .getProfile,
+             .getBookmark,
+             .getSingleArticle:
             return .get
         }
     }
@@ -87,37 +95,42 @@ extension NetworkService : TargetType {
                 "email" : request.email,
                 "password" : request.password
             ]
-        case .getArticles():
-            return [:]
-        case .getInterests():
-            return [:]
         case .getArticlesByCategory(let request):
             return [
                 "categories" : request.category
             ]
-        case .getArticlesByUser(_):
-            return [:]
-        case .getProfile(_):
-            return [:]
-        case .getBookmark(_):
-            return [:]
-        case .getSingleArticle(_):
+        case .getArticles,
+             .getInterests,
+             .getArticlesByUser,
+             .getProfile,
+             .getBookmark,
+             .getSingleArticle:
             return [:]
         }
     }
     
     public var headers: [String : String]? {
+        return [:]
+        //        switch self {
+        //        case .login,
+        //             .register:
+        //            return ["Content-type" : "application/json"]
+        //        default:
+        //            let accessToken: String = Token.getAccessToken()
+        //            return [
+        //                "Content-type" : "application/json",
+        //                "Authorization" : "\(accessToken)"
+        //            ]
+        //        }
+    }
+    
+    public var authorizationType: Moya.AuthorizationType {
         switch self {
-        case .login:
-            return ["Content-type" : "application/json"]
-        case .register:
-            return ["Content-type" : "application/json"]
+        case .register,
+             .login:
+            return AuthorizationType.none
         default:
-            let accessToken = Token.getAccessToken()
-            return [
-                "Content-type" : "application/json",
-                "Authorization" : accessToken
-            ]
+            return AuthorizationType.bearer
         }
     }
     

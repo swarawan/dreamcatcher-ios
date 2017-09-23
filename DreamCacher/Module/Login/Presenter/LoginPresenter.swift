@@ -56,11 +56,11 @@ class LoginPresenter {
         } else {
             service.login(param: param, completionHandler: { login in
                 
-                self.delegate?.stopLoading()
                 if login.success! {
                     Token.saveAccessToken(accessToken: login.token!)
                     self.delegate?.displayInterestView()
                 } else {
+                    self.delegate?.stopLoading()
                     self.delegate?.error(message: login.message!)
                 }
             })

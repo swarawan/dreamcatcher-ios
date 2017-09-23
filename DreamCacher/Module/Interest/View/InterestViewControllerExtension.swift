@@ -27,14 +27,4 @@ extension InterestViewController : InterestDelegate {
     func onError(message: String) {
         
     }
-    
-    func startLoading() {
-        if !loadingAlert.isBeingDismissed {
-            present(loadingAlert, animated: true, completion: nil)
-        }
-    }
-    
-    func stopLoading() {
-        dismiss(animated: true, completion: nil)
-    }
 }

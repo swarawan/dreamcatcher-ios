@@ -25,13 +25,22 @@ extension LoginViewController : LoginDelegate {
     }
     
     func displayInterestView() {
-        let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
-        self.navigationController?.pushViewController(interestViewController, animated: true)
+        if Token.getAccessToken().isEmpty {
+            let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
+            self.navigationController?.pushViewController(interestViewController, animated: true)
+        } else {
+            dismiss(animated: true, completion: {
+                let interestViewController = InterestViewController(nibName: "InterestViewController", bundle: nil)
+                self.navigationController?.pushViewController(interestViewController, animated: true)
+            })
+        }
     }
     
     func displayRegisterView() {
-        let registerViewController = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
-        self.navigationController?.pushViewController(registerViewController, animated: true)
+        dismiss(animated: true, completion: {
+            let registerViewController = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+            self.navigationController?.pushViewController(registerViewController, animated: true)
+        })
     }
     
     func startLoading() {

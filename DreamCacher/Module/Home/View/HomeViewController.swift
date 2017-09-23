@@ -21,10 +21,7 @@ class HomeViewController: UIViewController {
         
         let image = UIImageView(image: #imageLiteral(resourceName: "title-dreamcatcher"))
         image.contentMode = .scaleAspectFit
-        
         self.navigationItem.titleView = image
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
-                                                                         NSForegroundColorAttributeName: UIColor.black ]
         
         self.articleTable.delegate = self
         self.articleTable.dataSource = self

@@ -27,6 +27,7 @@ struct AuthPlugin : PluginType {
         var request = request
         let accessToken = Token.getAccessToken()
         request.addValue(accessToken, forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return request
     }
 }
@@ -34,8 +35,8 @@ struct AuthPlugin : PluginType {
 extension NetworkService : TargetType {
     
     public var baseURL: URL {
-        return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
-//        return URL(string: "http://dreamcatcherz.herokuapp.com")!
+//        return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
+        return URL(string: "http://dreamcatcherz.herokuapp.com")!
     }
     
     public var path: String {
@@ -117,7 +118,6 @@ extension NetworkService : TargetType {
     }
     
     public var parameterEncoding: Moya.ParameterEncoding {
-//        return JSONEncoding.default
         return URLEncoding.default
     }
     
@@ -132,20 +132,4 @@ extension NetworkService : TargetType {
     public var headers: [String : String] {
         return ["Content-type" : "application/json"]
     }
-//        switch self {
-//        case .login:
-//            return ["Content-type" : "application/json"]
-//        case .register:
-//            return ["Content-type" : "application/json"]
-//        default:
-//            return ["Content-type" : "application/json"]
-////            let accessToken = Token.getAccessToken()
-////            return [
-////                "Content-type" : "application/json",
-////                "Authorization" : accessToken
-////            ]
-//        }
-//        
-//    }
-    
 }

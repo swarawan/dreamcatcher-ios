@@ -38,7 +38,7 @@ class HomeTableViewCell: UITableViewCell, HomeTableViewData {
         titleLabel.text = article.postTitle
         contributorLabel.text = article.name
         categoryLabel.text = article.categories
-        dateLabel.text = article.publishedAt?.convertDateSystem()
+        dateLabel.text = article.updatedAt?.convertDateSystem()
         profileImage.image = UIImage().getAvatar(id: article.avatar!)
         featuredImage.image = UIImage().getPostBackground(id: article.background!)
     }

@@ -17,7 +17,8 @@ struct ArticleModel : Mappable {
     var background: Int?
     var categories: String?
     var content: String?
-    var publishedAt : String?
+    var publishedAt: String?
+    var updatedAt: String?
     
     init() {
         
@@ -36,5 +37,6 @@ struct ArticleModel : Mappable {
         self.categories <- map["categories"]
         self.content <- map["content"]
         self.publishedAt <- map["published_at"]
+        self.updatedAt <- map["updated_at"]
     }
 }

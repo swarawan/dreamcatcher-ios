@@ -43,7 +43,9 @@ class DetailArticleViewController: UIViewController {
         if type == .own {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_more_horiz"), style: .plain, target: self, action: #selector(moreAction))
         } else {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "comment"), style: .plain, target: self, action: #selector(commentAction))
+            if !Token.getAccessToken().isEmpty {
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "comment"), style: .plain, target: self, action: #selector(commentAction))
+            }
         }
         
         self.loadingAlert.initLoading()

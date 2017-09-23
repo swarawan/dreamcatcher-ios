@@ -21,10 +21,21 @@ enum NetworkService {
     case getSingleArticle(request: DetailArticleParam)
 }
 
+struct AuthPlugin : PluginType {
+    
+    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+        var request = request
+        let accessToken = Token.getAccessToken()
+        request.addValue(accessToken, forHTTPHeaderField: "Authorization")
+        return request
+    }
+}
+
 extension NetworkService : TargetType {
     
     public var baseURL: URL {
         return URL(string: "http://private-2932ba-morpheus3.apiary-mock.com")!
+//        return URL(string: "http://dreamcatcherz.herokuapp.com")!
     }
     
     public var path: String {
@@ -37,12 +48,12 @@ extension NetworkService : TargetType {
             return "/v1/posts"
         case .getArticlesByCategory(_):
             return "/v1/categories/showposts"
-        case .getArticlesByUser(_):
-            return "/v1/profile/posts"
+        case .getArticlesByUser(let request):
+            return "/v1/profile/\(request.userId)/posts"
         case .getInterests(_):
             return "/v1/categories"
         case .getProfile(_):
-            return "/v1/profile"
+            return "/v1/ownprofile"
         case .getBookmark(_):
             return "/v1/bookmarks"
         case .getSingleArticle(let request):
@@ -82,6 +93,7 @@ extension NetworkService : TargetType {
             ]
         case .register(let request):
             return [
+                "name" : request.name,
                 "email" : request.email,
                 "password" : request.password
             ]
@@ -93,20 +105,19 @@ extension NetworkService : TargetType {
             return [
                 "categories" : request.category
             ]
-        case .getArticlesByUser(let request):
-            return [
-                "id_user" : request.userId
-            ]
+        case .getArticlesByUser(_):
+            return [:]
         case .getProfile(_):
             return [:]
         case .getBookmark(_):
             return [:]
-        case .getSingleArticle(let request):
+        case .getSingleArticle(_):
             return [:]
         }
     }
     
     public var parameterEncoding: Moya.ParameterEncoding {
+//        return JSONEncoding.default
         return URLEncoding.default
     }
     
@@ -121,5 +132,20 @@ extension NetworkService : TargetType {
     public var headers: [String : String] {
         return ["Content-type" : "application/json"]
     }
+//        switch self {
+//        case .login:
+//            return ["Content-type" : "application/json"]
+//        case .register:
+//            return ["Content-type" : "application/json"]
+//        default:
+//            return ["Content-type" : "application/json"]
+////            let accessToken = Token.getAccessToken()
+////            return [
+////                "Content-type" : "application/json",
+////                "Authorization" : accessToken
+////            ]
+//        }
+//        
+//    }
     
 }

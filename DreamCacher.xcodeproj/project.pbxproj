@@ -23,12 +23,23 @@
 		2649ACDE1F6BBB11004F8338 /* SelectCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649ACDD1F6BBB11004F8338 /* SelectCategoryModel.swift */; };
 		2649ACE11F6BBC24004F8338 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649ACDF1F6BBC24004F8338 /* InfoTableViewCell.swift */; };
 		2649ACE21F6BBC24004F8338 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2649ACE01F6BBC24004F8338 /* InfoTableViewCell.xib */; };
+		267565471F7486DA0048EADB /* EditCoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267565451F7486DA0048EADB /* EditCoverTableViewCell.swift */; };
+		267565481F7486DA0048EADB /* EditCoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267565461F7486DA0048EADB /* EditCoverTableViewCell.xib */; };
+		2675654B1F74874B0048EADB /* EditCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267565491F74874B0048EADB /* EditCoverViewController.swift */; };
+		2675654C1F74874B0048EADB /* EditCoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2675654A1F74874B0048EADB /* EditCoverViewController.xib */; };
 		267B3AB01F6A79A900901A95 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AAE1F6A79A900901A95 /* Lobster-Regular.ttf */; };
 		267B3AB11F6A79AA00901A95 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AAF1F6A79A900901A95 /* OFL.txt */; };
 		267B3AB71F6A7BE100901A95 /* RockoFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB31F6A7BE100901A95 /* RockoFLF-Bold.ttf */; };
 		267B3AB81F6A7BE100901A95 /* RockoFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB41F6A7BE100901A95 /* RockoFLF.ttf */; };
 		267B3AB91F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */; };
 		267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */; };
+		267C89441F7623EC00B1B02E /* EditProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C89421F7623EC00B1B02E /* EditProfileImageViewController.swift */; };
+		267C89451F7623EC00B1B02E /* EditProfileImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267C89431F7623EC00B1B02E /* EditProfileImageViewController.xib */; };
+		267C89491F7624A800B1B02E /* EditProfileImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C89471F7624A800B1B02E /* EditProfileImageCollectionViewCell.swift */; };
+		267C894A1F7624A800B1B02E /* EditProfileImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267C89481F7624A800B1B02E /* EditProfileImageCollectionViewCell.xib */; };
+		267C894C1F76259D00B1B02E /* EditProfileImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C894B1F76259D00B1B02E /* EditProfileImageModel.swift */; };
+		267C894E1F7625DC00B1B02E /* EditProfileImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C894D1F7625DC00B1B02E /* EditProfileImagePresenter.swift */; };
+		267C89501F76303B00B1B02E /* EditProfileImageViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C894F1F76303B00B1B02E /* EditProfileImageViewControllerExtension.swift */; };
 		2681E6741F73EBB10037E33E /* ComposeViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */; };
 		2681E67B1F73F6190037E33E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681E6791F73F6190037E33E /* EditProfileViewController.swift */; };
 		2681E67C1F73F6190037E33E /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2681E67A1F73F6190037E33E /* EditProfileViewController.xib */; };
@@ -36,6 +47,9 @@
 		26898F551F71DEE700D073EC /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */; };
 		2689ABDE1F5E563A008B0658 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDD1F5E563A008B0658 /* NetworkService.swift */; };
 		2689ABE01F5E56B0008B0658 /* LoginParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689ABDF1F5E56B0008B0658 /* LoginParam.swift */; };
+		26916C5B1F749DDB00DF2C55 /* CoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C5A1F749DDB00DF2C55 /* CoverModel.swift */; };
+		26916C5D1F749F1500DF2C55 /* EditCoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C5C1F749F1500DF2C55 /* EditCoverPresenter.swift */; };
+		26916C5F1F74A09800DF2C55 /* EditCoverViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C5E1F74A09800DF2C55 /* EditCoverViewControllerExtension.swift */; };
 		26947A891F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */; };
 		269878E51F66269800DA69E6 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269878E41F66269800DA69E6 /* UILabel.swift */; };
 		2698C0D81F677B4200E19355 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C0D71F677B4200E19355 /* CategoryPresenter.swift */; };
@@ -155,12 +169,23 @@
 		2649ACDD1F6BBB11004F8338 /* SelectCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryModel.swift; sourceTree = "<group>"; };
 		2649ACDF1F6BBC24004F8338 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		2649ACE01F6BBC24004F8338 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		267565451F7486DA0048EADB /* EditCoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCoverTableViewCell.swift; sourceTree = "<group>"; };
+		267565461F7486DA0048EADB /* EditCoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCoverTableViewCell.xib; sourceTree = "<group>"; };
+		267565491F74874B0048EADB /* EditCoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCoverViewController.swift; sourceTree = "<group>"; };
+		2675654A1F74874B0048EADB /* EditCoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCoverViewController.xib; sourceTree = "<group>"; };
 		267B3AAE1F6A79A900901A95 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		267B3AAF1F6A79A900901A95 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		267B3AB31F6A7BE100901A95 /* RockoFLF-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RockoFLF-Bold.ttf"; sourceTree = "<group>"; };
 		267B3AB41F6A7BE100901A95 /* RockoFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoFLF.ttf; sourceTree = "<group>"; };
 		267B3AB51F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RockoUltraFLF-Bold.ttf"; sourceTree = "<group>"; };
 		267B3AB61F6A7BE100901A95 /* RockoUltraFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockoUltraFLF.ttf; sourceTree = "<group>"; };
+		267C89421F7623EC00B1B02E /* EditProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageViewController.swift; sourceTree = "<group>"; };
+		267C89431F7623EC00B1B02E /* EditProfileImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileImageViewController.xib; sourceTree = "<group>"; };
+		267C89471F7624A800B1B02E /* EditProfileImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		267C89481F7624A800B1B02E /* EditProfileImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		267C894B1F76259D00B1B02E /* EditProfileImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageModel.swift; sourceTree = "<group>"; };
+		267C894D1F7625DC00B1B02E /* EditProfileImagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImagePresenter.swift; sourceTree = "<group>"; };
+		267C894F1F76303B00B1B02E /* EditProfileImageViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageViewControllerExtension.swift; sourceTree = "<group>"; };
 		2681E6731F73EBB10037E33E /* ComposeViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewControllerExtension.swift; sourceTree = "<group>"; };
 		2681E6791F73F6190037E33E /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		2681E67A1F73F6190037E33E /* EditProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +193,9 @@
 		26898F531F71DEE700D073EC /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		2689ABDD1F5E563A008B0658 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2689ABDF1F5E56B0008B0658 /* LoginParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginParam.swift; sourceTree = "<group>"; };
+		26916C5A1F749DDB00DF2C55 /* CoverModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverModel.swift; sourceTree = "<group>"; };
+		26916C5C1F749F1500DF2C55 /* EditCoverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCoverPresenter.swift; sourceTree = "<group>"; };
+		26916C5E1F74A09800DF2C55 /* EditCoverViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCoverViewControllerExtension.swift; sourceTree = "<group>"; };
 		26947A881F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCategoryViewControllerExtension.swift; path = DreamCacher/Module/SelectCategory/View/SelectCategoryViewControllerExtension.swift; sourceTree = SOURCE_ROOT; };
 		269878E41F66269800DA69E6 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		2698C0D71F677B4200E19355 /* CategoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
@@ -372,6 +400,89 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		267565381F74852D0048EADB /* EditProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				267565391F74852D0048EADB /* Model */,
+				2675653A1F74852D0048EADB /* Presenter */,
+				2675653B1F74852D0048EADB /* View */,
+			);
+			path = EditProfileImage;
+			sourceTree = "<group>";
+		};
+		267565391F74852D0048EADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				267C894B1F76259D00B1B02E /* EditProfileImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2675653A1F74852D0048EADB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				267C894D1F7625DC00B1B02E /* EditProfileImagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2675653B1F74852D0048EADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				267C89461F76244900B1B02E /* CollectionViewCell */,
+				267C89421F7623EC00B1B02E /* EditProfileImageViewController.swift */,
+				267C89431F7623EC00B1B02E /* EditProfileImageViewController.xib */,
+				267C894F1F76303B00B1B02E /* EditProfileImageViewControllerExtension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2675653C1F7485370048EADB /* EditCover */ = {
+			isa = PBXGroup;
+			children = (
+				2675653D1F7485370048EADB /* Model */,
+				2675653E1F7485370048EADB /* Presenter */,
+				2675653F1F7485370048EADB /* View */,
+			);
+			path = EditCover;
+			sourceTree = "<group>";
+		};
+		2675653D1F7485370048EADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26916C5A1F749DDB00DF2C55 /* CoverModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2675653E1F7485370048EADB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				26916C5C1F749F1500DF2C55 /* EditCoverPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2675653F1F7485370048EADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				267565441F7486C10048EADB /* TableViewCell */,
+				267565491F74874B0048EADB /* EditCoverViewController.swift */,
+				2675654A1F74874B0048EADB /* EditCoverViewController.xib */,
+				26916C5E1F74A09800DF2C55 /* EditCoverViewControllerExtension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		267565441F7486C10048EADB /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				267565451F7486DA0048EADB /* EditCoverTableViewCell.swift */,
+				267565461F7486DA0048EADB /* EditCoverTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		267B3AAD1F6A79A900901A95 /* Lobster */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +503,15 @@
 			);
 			name = Rocko;
 			path = ../Rocko;
+			sourceTree = "<group>";
+		};
+		267C89461F76244900B1B02E /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				267C89471F7624A800B1B02E /* EditProfileImageCollectionViewCell.swift */,
+				267C89481F7624A800B1B02E /* EditProfileImageCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		2681E6751F73F5F40037E33E /* EditProfile */ = {
@@ -916,7 +1036,9 @@
 				269B31B81F68C580003AD97C /* Common */,
 				26973F6E1F6F2E2000FD9C1F /* Compose */,
 				26A1D3CF1F61003700E8670F /* Detail */,
+				2675653C1F7485370048EADB /* EditCover */,
 				2681E6751F73F5F40037E33E /* EditProfile */,
+				267565381F74852D0048EADB /* EditProfileImage */,
 				26B47C9C1F5E395A00CACAD1 /* Home */,
 				26B47CA61F5E395A00CACAD1 /* Interest */,
 				26B47CA91F5E395A00CACAD1 /* Login */,
@@ -1115,14 +1237,17 @@
 				2649ACD71F6BB84E004F8338 /* SelectCategoryViewController.xib in Resources */,
 				267B3ABA1F6A7BE100901A95 /* RockoUltraFLF.ttf in Resources */,
 				26B47CC61F5E395A00CACAD1 /* LoginViewController.xib in Resources */,
+				2675654C1F74874B0048EADB /* EditCoverViewController.xib in Resources */,
 				26B47CCB1F5E395A00CACAD1 /* RegisterViewController.xib in Resources */,
 				26CAA6D91F5A514800DE4AC6 /* Oswald-SemiBold.ttf in Resources */,
 				2681E67C1F73F6190037E33E /* EditProfileViewController.xib in Resources */,
 				2698C0E11F677D6E00E19355 /* CategoryTableViewCell.xib in Resources */,
+				267C89451F7623EC00B1B02E /* EditProfileImageViewController.xib in Resources */,
 				26CAA6D31F5A514800DE4AC6 /* OFL.txt in Resources */,
 				26BB2F491F55054A00944844 /* LaunchScreen.storyboard in Resources */,
 				26442B591F5BAB9800542790 /* LICENSE.txt in Resources */,
 				26E011F41F62E277007058F5 /* InterestViewController.xib in Resources */,
+				267C894A1F7624A800B1B02E /* EditProfileImageCollectionViewCell.xib in Resources */,
 				2649ACDC1F6BBA41004F8338 /* SelectCategoryTableViewCell.xib in Resources */,
 				262FE9631F6EBC70007D7499 /* Assets.xcassets in Resources */,
 				26CAA6D61F5A514800DE4AC6 /* Oswald-Light.ttf in Resources */,
@@ -1137,6 +1262,7 @@
 				267B3AB91F6A7BE100901A95 /* RockoUltraFLF-Bold.ttf in Resources */,
 				267B3AB01F6A79A900901A95 /* Lobster-Regular.ttf in Resources */,
 				26E011F91F62E2A1007058F5 /* InterestTableViewCell.xib in Resources */,
+				267565481F7486DA0048EADB /* EditCoverTableViewCell.xib in Resources */,
 				269B31B71F68C3B6003AD97C /* CategoryDetailViewController.xib in Resources */,
 				269B31BD1F68C5C1003AD97C /* HomeTableViewCell.xib in Resources */,
 				26B47CBD1F5E395A00CACAD1 /* HomeViewController.xib in Resources */,
@@ -1307,6 +1433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26916C5D1F749F1500DF2C55 /* EditCoverPresenter.swift in Sources */,
 				26947A891F6EA91900297A20 /* SelectCategoryViewControllerExtension.swift in Sources */,
 				26EDE6BD1F63E06D00F6026F /* InterestItemModel.swift in Sources */,
 				269B31C51F68D2AD003AD97C /* CategoryDetailPresenter.swift in Sources */,
@@ -1315,6 +1442,7 @@
 				26E011F81F62E2A1007058F5 /* InterestTableViewCell.swift in Sources */,
 				26C423781F6600DC001F8521 /* DetailArticleViewController.swift in Sources */,
 				2626EEF01F6BA78B002FD6C5 /* UIAlertController.swift in Sources */,
+				267C894E1F7625DC00B1B02E /* EditProfileImagePresenter.swift in Sources */,
 				2631E16C1F5E7DE900D3AA72 /* Register.swift in Sources */,
 				26B47CBC1F5E395A00CACAD1 /* HomeViewController.swift in Sources */,
 				2631E1701F5E84BE00D3AA72 /* RegisterViewControllerExtension.swift in Sources */,
@@ -1335,13 +1463,19 @@
 				26442B541F5BA9E000542790 /* ColorTheme.swift in Sources */,
 				26B48AC31F73739800D7FBFB /* DetailArticleViewControllerExtension.swift in Sources */,
 				26A1D3C61F60ECC200E8670F /* ArticleModel.swift in Sources */,
+				267C89501F76303B00B1B02E /* EditProfileImageViewControllerExtension.swift in Sources */,
 				26B4E3281F64A61100343CAD /* MainViewController.swift in Sources */,
 				269B31BF1F68C6CE003AD97C /* CategoryDetailViewControllerExtension.swift in Sources */,
+				267C894C1F76259D00B1B02E /* EditProfileImageModel.swift in Sources */,
+				267565471F7486DA0048EADB /* EditCoverTableViewCell.swift in Sources */,
+				267C89441F7623EC00B1B02E /* EditProfileImageViewController.swift in Sources */,
 				2698C0DB1F677C9A00E19355 /* CategoryViewController.swift in Sources */,
 				26A1D3DA1F61009200E8670F /* DetailArticleTableViewCell.swift in Sources */,
 				26B1084B1F6FF3480018A183 /* BookmarkModel.swift in Sources */,
 				26ADD94C1F62300400F67CDF /* TokenAuth.swift in Sources */,
 				2698C0D81F677B4200E19355 /* CategoryPresenter.swift in Sources */,
+				26916C5F1F74A09800DF2C55 /* EditCoverViewControllerExtension.swift in Sources */,
+				2675654B1F74874B0048EADB /* EditCoverViewController.swift in Sources */,
 				269B31C71F68D3E1003AD97C /* CategoryDetailService.swift in Sources */,
 				26B47CC41F5E395A00CACAD1 /* LoginPresenter.swift in Sources */,
 				26EDE6BB1F63D8D400F6026F /* InterestModel.swift in Sources */,
@@ -1359,6 +1493,7 @@
 				2698C0E01F677D6E00E19355 /* CategoryTableViewCell.swift in Sources */,
 				26E011F31F62E277007058F5 /* InterestViewController.swift in Sources */,
 				26A6CFDC1F6A29ED00786314 /* ProfileViewControllerExtension.swift in Sources */,
+				267C89491F7624A800B1B02E /* EditProfileImageCollectionViewCell.swift in Sources */,
 				26A6CFDA1F6A28E000786314 /* ProfilePresenter.swift in Sources */,
 				269878E51F66269800DA69E6 /* UILabel.swift in Sources */,
 				26BB2F411F55054A00944844 /* ViewController.swift in Sources */,
@@ -1366,6 +1501,7 @@
 				26A6CFD81F6A27EB00786314 /* ProfileService.swift in Sources */,
 				26A6CFD61F6A264200786314 /* ProfileModel.swift in Sources */,
 				26C802481F658D67003FBBBA /* Date.swift in Sources */,
+				26916C5B1F749DDB00DF2C55 /* CoverModel.swift in Sources */,
 				26B48ABB1F736B1800D7FBFB /* DetailArticleParam.swift in Sources */,
 				26BB2F3F1F55054A00944844 /* AppDelegate.swift in Sources */,
 				269B31B61F68C3B6003AD97C /* CategoryDetailViewController.swift in Sources */,
@@ -1532,7 +1668,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D7X2P7E75;
 				INFOPLIST_FILE = DreamCacher/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swarawan.DreamCacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1548,7 +1684,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D7X2P7E75;
 				INFOPLIST_FILE = DreamCacher/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swarawan.DreamCacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";

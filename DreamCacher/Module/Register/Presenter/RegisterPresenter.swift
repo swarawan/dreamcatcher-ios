@@ -36,6 +36,7 @@ class RegisterPresenter {
         service.register(param: param, completionHandler: { success, register in
             self.delegate?.stopLoading()
             if register.success! {
+                Token.saveAccessToken(accessToken: register.token!)
                 self.delegate?.displayNextView()
             }
         })

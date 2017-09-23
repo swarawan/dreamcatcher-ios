@@ -28,13 +28,15 @@ class CategoryViewController: UIViewController {
         image.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = image
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "compose"), style: .plain, target: self, action: #selector(composeAction))
         if Token.getAccessToken().isEmpty {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(loginAction))
         } else {
             self.navigationItem.setHidesBackButton(true, animated: true)
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "compose"), style: .plain, target: self, action: #selector(composeAction))
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadingAlert.initLoading()
         presenter.attachView(delegate: self)
         presenter.loadInterest()

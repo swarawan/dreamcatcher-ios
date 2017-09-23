@@ -21,12 +21,19 @@ class InterestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Dreamcatcher"
+        let image = UIImageView(image: #imageLiteral(resourceName: "title-dreamcatcher"))
+        image.contentMode = .scaleAspectFit
+        
+        self.navigationItem.titleView = image
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: ColorTheme.lightNavy)
         self.navigationController?.navigationBar.tintColor = UIColor(hex: ColorTheme.duckEggBlue)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Lobster", size: 18)!,
                                                                          NSForegroundColorAttributeName: UIColor.white ]
+        
+        if !Token.getAccessToken().isEmpty {
+            self.navigationItem.setHidesBackButton(true, animated: true)
+        }
         
         self.edgesForExtendedLayout = []
         

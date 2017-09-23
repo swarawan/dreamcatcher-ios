@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,6 +45,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="155" id="38w-Lj-eEg"/>
                         <constraint firstItem="vM7-Vx-RsN" firstAttribute="top" secondItem="UtV-ch-I97" secondAttribute="top" constant="30" id="8y1-iP-k2y"/>
                         <constraint firstItem="vM7-Vx-RsN" firstAttribute="leading" secondItem="UtV-ch-I97" secondAttribute="leading" constant="32" id="OP8-nM-UGI"/>
                         <constraint firstAttribute="trailing" secondItem="vM7-Vx-RsN" secondAttribute="trailing" constant="33" id="ash-Qa-gOP"/>

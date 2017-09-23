@@ -10,6 +10,7 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var featuredImage: UIImageView!
     @IBOutlet weak var selectCategoryButton: UIButton!
     @IBOutlet weak var arrowLabel: UILabel!
@@ -18,6 +19,7 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var violetButton: UIButton!
+    @IBOutlet weak var bodyTextView: UITextView!
     
     let loadingAlert = UIAlertController(title: nil, message: "Please wait", preferredStyle: .alert)
     var presenter = CategoryPresenter(service: InterestService())
@@ -38,6 +40,7 @@ class ComposeViewController: UIViewController {
         // setup navigation bar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Preview", style: .plain, target: self, action: #selector(previewAction))
         
+        setupTextView()
         selectButton(button: blueButton)
         
         loadingAlert.initLoading()
@@ -103,6 +106,10 @@ class ComposeViewController: UIViewController {
             })
             optionMenu.addAction(categoryMenu)
         }
+        
+        let cancelMenu = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        optionMenu.addAction(cancelMenu)
+        
         self.present(optionMenu, animated: true, completion: nil)
     }
     
@@ -110,3 +117,33 @@ class ComposeViewController: UIViewController {
         selectCategoryButton.titleLabel?.text = named
     }
 }
+
+extension ComposeViewController : UITextViewDelegate {
+    
+    func setupTextView() {
+        self.bodyTextView.delegate = self
+        self.bodyTextView.text = "Insert Body"
+        self.bodyTextView.textColor = UIColor.gray
+        
+        self.titleTextView.delegate = self
+        self.titleTextView.text = "Insert Title"
+        self.titleTextView.textColor = UIColor.gray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.gray {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+        textView.becomeFirstResponder()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Insert Body"
+            textView.textColor = UIColor.gray
+        }
+        textView.resignFirstResponder()
+    }
+}
+

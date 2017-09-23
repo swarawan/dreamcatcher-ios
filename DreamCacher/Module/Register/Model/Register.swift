@@ -23,6 +23,6 @@ struct Register : Mappable {
     mutating func mapping(map: Map) {
         self.success <- map["success"]
         self.message <- map["message"]
-        self.token <- map["token"]
+        self.token <- map["data"]["token"]
     }
 }

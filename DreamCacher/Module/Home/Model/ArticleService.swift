@@ -16,7 +16,7 @@ class ArticleService {
     
     func getAllArticle(completionHandler: @escaping (HomeModel) -> Void) {
         
-        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true), AuthPlugin()])
         provider.request(.getArticles()) { (result) -> Void in
             switch result {
             case let .success(response):

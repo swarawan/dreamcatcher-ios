@@ -14,6 +14,7 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var fullnameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
+    @IBOutlet weak var changeCoverView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,9 @@ class EditProfileViewController: UIViewController {
         // setup navigation bar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveAction))
 
+        let changeCoverGesture = UITapGestureRecognizer(target: self, action: #selector(changeCoverAction))
+        self.changeCoverView.addGestureRecognizer(changeCoverGesture)
+        self.changeCoverView.isUserInteractionEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,10 +66,16 @@ class EditProfileViewController: UIViewController {
     }
     
     @IBAction func chooseImageAction(_ sender: UIButton) {
-    
+        let editProfileImageViewController = EditProfileImageViewController(nibName: "EditProfileImageViewController", bundle: nil)
+        editProfileImageViewController.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(editProfileImageViewController, animated: true)
     }
     
-    @IBAction func changeImageAction(_ sender: UIButton) {
+    func changeCoverAction() {
+        let editCoverViewController = EditCoverViewController(nibName: "EditCoverViewController", bundle: nil)
+        editCoverViewController.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(editCoverViewController, animated: true)
     }
 }

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Route to Main
         let rootViewController = (Token.getAccessToken().isEmpty ? UINavigationController(rootViewController: LoginViewController()) : MainViewController())
+//        let rootViewController = UINavigationController(rootViewController: LoginViewController())
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()

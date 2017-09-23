@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import SCLAlertView
 
 extension LoginViewController : LoginDelegate {
+    
+    func error(message: String) {
+        SCLAlertView().showError("Error", subTitle: message)
+    }
     
     func displayMainView() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -30,7 +35,9 @@ extension LoginViewController : LoginDelegate {
     }
     
     func startLoading() {
-        present(loadingAlert, animated: true, completion: nil)
+        if !loadingAlert.isBeingDismissed {
+            present(loadingAlert, animated: true, completion: nil)
+        }
     }
     
     func stopLoading() {

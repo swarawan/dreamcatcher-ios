@@ -14,6 +14,7 @@ target 'DreamCacher' do
   pod 'SwiftyJSON'
   pod 'Material'
   pod 'NVActivityIndicatorView' 
+  pod 'SCLAlertView'
 
   # Pods for Taps
   target 'DreamCacherTests' do

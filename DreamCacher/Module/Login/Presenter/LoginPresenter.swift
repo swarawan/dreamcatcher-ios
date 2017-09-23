@@ -12,6 +12,7 @@ protocol LoginDelegate : NSObjectProtocol {
     func displayMainView()
     func displayRegisterView()
     func displayInterestView()
+    func error(message: String)
     func startLoading()
     func stopLoading()
 }
@@ -47,15 +48,22 @@ class LoginPresenter {
     }
     
     func login(param: LoginParam) {
-        
         self.delegate?.startLoading()
-        service.login(param: param, completionHandler: { login in
-            
+        
+        if param.email.isEmpty || param.password.isEmpty {
             self.delegate?.stopLoading()
-            if login.success! {
-                Token.saveAccessToken(accessToken: login.token!)
-                self.delegate?.displayInterestView()
-            }
-        })
+            self.delegate?.error(message: "Email / Password cannot be empty")
+        } else {
+            service.login(param: param, completionHandler: { login in
+                
+                self.delegate?.stopLoading()
+                if login.success! {
+                    Token.saveAccessToken(accessToken: login.token!)
+                    self.delegate?.displayInterestView()
+                } else {
+                    self.delegate?.error(message: login.message!)
+                }
+            })
+        }
     }
 }

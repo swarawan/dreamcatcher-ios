@@ -45,7 +45,9 @@ extension ProfileViewController : ProfileDelegate {
     }
     
     func startLoading() {
-        present(loadingAlert, animated: true, completion: nil)
+        if !loadingAlert.isBeingDismissed {
+            present(loadingAlert, animated: true, completion: nil)
+        }
     }
     
     func stopLoading() {

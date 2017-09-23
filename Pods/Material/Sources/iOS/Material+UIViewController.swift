@@ -30,39 +30,35 @@
 
 import UIKit
 
-@objc(DynamicFontTypeDelegate)
-public protocol DynamicFontTypeDelegate {
+internal extension UIViewController {
     /**
-     A delegation method that is executed when the dynamic type
-     is changed.
-     - Parameter dynamicFontType: A DynamicFontType.
+     Finds a view controller with a given type based on
+     the view controller subclass.
+     - Returns: An optional of type T.
      */
-    func dynamicFontType(dynamicFontType: DynamicFontType)
-}
-
-@objc(DynamicFontType)
-open class DynamicFontType: NSObject {
-    /// A weak reference to a DynamicFontTypeDelegate.
-    open weak var delegate: DynamicFontTypeDelegate?
-    
-    /// Initializer.
-    public override init() {
-        super.init()
-        prepare()
+    func traverseViewControllerHierarchyForClassType<T: UIViewController>() -> T? {
+        var v: UIViewController? = self
+        while nil != v {
+            if v is T {
+                return v as? T
+            }
+            v = v?.parent as? TransitionController
+        }
+        
+        return Application.rootViewController?.traverseTransitionViewControllerHierarchyForClassType()
     }
     
-    @objc
-    internal func handleContentSizeChange() {
-        delegate?.dynamicFontType(dynamicFontType: self)
-    }
-    
-    /// Prepare the instance object.
-    private func prepare() {
-        prepareContentSizeObservation()
-    }
-    
-    /// Prepares observation for content size changes.
-    private func prepareContentSizeObservation() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleContentSizeChange), name: .UIContentSizeCategoryDidChange, object: nil)
+    /**
+     Traverses the child view controllers to find the correct view controller type T.
+     - Returns: An optional of type T.
+     */
+    func traverseTransitionViewControllerHierarchyForClassType<T: UIViewController>() -> T? {
+        if let v = self as? T {
+            return v
+        } else if let v = self as? TransitionController {
+            return v.rootViewController.traverseTransitionViewControllerHierarchyForClassType()
+        }
+        
+        return nil
     }
 }

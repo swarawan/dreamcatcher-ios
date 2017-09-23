@@ -21,17 +21,6 @@ enum NetworkService {
     case getSingleArticle(request: DetailArticleParam)
 }
 
-struct AuthPlugin : PluginType {
-    
-    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
-        var request = request
-        let accessToken = Token.getAccessToken()
-        request.addValue(accessToken, forHTTPHeaderField: "Authorization")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        return request
-    }
-}
-
 extension NetworkService : TargetType {
     
     public var baseURL: URL {
@@ -117,6 +106,14 @@ extension NetworkService : TargetType {
         }
     }
     
+    public var headers: [String : String]? {
+        let accessToken = Token.getAccessToken()
+        return [
+            "Content-type" : "application/json",
+            "Authorization" : accessToken
+        ]
+    }
+    
     public var parameterEncoding: Moya.ParameterEncoding {
         return URLEncoding.default
     }
@@ -126,10 +123,6 @@ extension NetworkService : TargetType {
     }
     
     public var task: Task {
-        return .request
-    }
-    
-    public var headers: [String : String] {
-        return ["Content-type" : "application/json"]
+        return Task.requestPlain
     }
 }

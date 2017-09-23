@@ -17,7 +17,7 @@ class InterestService {
     
     func loadInterest(completionHandler: @escaping (InterestModel) -> Void) {
         
-        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true), AuthPlugin()])
+        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
         provider.request(.getInterests()) { (result) -> Void in
             switch result {
             case let .success(response):

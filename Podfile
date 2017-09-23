@@ -9,7 +9,7 @@ target 'DreamCacher' do
   pod 'Moya'
   pod 'Alamofire'
   pod 'ObjectMapper', '~> 2.2'
-  pod 'Kingfisher'
+  pod 'Kingfisher', '3.11.0'
   pod 'Hue'
   pod 'SwiftyJSON'
   pod 'Material'

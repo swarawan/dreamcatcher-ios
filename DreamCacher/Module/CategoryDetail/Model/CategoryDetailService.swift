@@ -16,7 +16,7 @@ class CategoryDetailService {
     
     func getAllArticleByCategory(param: CategoryDetailParam, completionHandler: @escaping (HomeModel) -> Void) {
         
-        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true), AuthPlugin()])
+        let provider = MoyaProvider<NetworkService>(plugins: [NetworkLoggerPlugin(verbose: true)])
         provider.request(.getArticlesByCategory(request: param)) { (result) -> Void in
             switch result {
             case let .success(response):

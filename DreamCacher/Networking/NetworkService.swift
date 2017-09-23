@@ -122,7 +122,14 @@ extension NetworkService : TargetType {
     }
     
     public var parameterEncoding: Moya.ParameterEncoding {
-        return URLEncoding.default
+        switch self {
+        case .login:
+            return JSONEncoding.default
+        case .register:
+            return JSONEncoding.default
+        default:
+            return URLEncoding.default
+        }
     }
     
     public var sampleData: Data {
@@ -130,6 +137,6 @@ extension NetworkService : TargetType {
     }
     
     public var task: Task {
-        return Task.requestPlain
+        return Task.requestParameters(parameters: parameters!, encoding: parameterEncoding)
     }
 }

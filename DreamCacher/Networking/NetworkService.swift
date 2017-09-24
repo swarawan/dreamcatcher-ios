@@ -51,8 +51,8 @@ extension NetworkService : TargetType {
             return "/v1/register"
         case .getArticles(_):
             return "/v1/posts"
-        case .getArticlesByCategory(_):
-            return "/v1/categories/showposts"
+        case .getArticlesByCategory(let request):
+            return "/v1/categories/\(request.category)"
         case .getArticlesByUser(let request):
             return "/v1/profile/\(request.userId)/posts"
         case .getInterests(_):
@@ -95,10 +95,8 @@ extension NetworkService : TargetType {
                 "email" : request.email,
                 "password" : request.password
             ]
-        case .getArticlesByCategory(let request):
-            return [
-                "categories" : request.category
-            ]
+        case .getArticlesByCategory(_):
+            return [:]
         case .getArticles,
              .getInterests,
              .getArticlesByUser,
